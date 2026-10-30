@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SafarSaathi — Geospatial Tourism Intelligence &amp; Disaster-Resilience Command Center</title>
+<!-- Tailwind CSS v3 with Forms & Container Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#080a0f',
+            surface: {
+              DEFAULT: '#0c0e14',
+              card: '#12151e',
+              hover: '#1a1d29'
+            },
+            gold: {
+              300: '#ffd700',
+              400: '#f2ca50',
+              500: '#d4af37',
+              600: '#b8860b',
+              700: '#8c6600'
+            }
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'Plus Jakarta Sans', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+          },
+          letterSpacing: {
+            widest: '.2em',
+            ultra: '.28em'
+          }
+        }
+      }
+    };
+  </script>
+<!-- Google Fonts: Space Grotesk, JetBrains Mono & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-styling">
+    body {
+      background-color: #080a0f;
+      color: #e2e2e9;
+      font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Luminous gold glows matching Obsidian Sovereign luxury */
+    .glow-gold-card {
+      box-shadow: 0 0 30px -4px rgba(212, 175, 55, 0.28), inset 0 0 18px rgba(212, 175, 55, 0.08);
+    }
+    
+    .glow-gold-btn {
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.42);
+    }
+
+    .subtle-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+    }
+
+    /* Topographic Elevation Vignette with Amber-Gold Radiance */
+    .hero-vignette {
+      background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.08) 0%, rgba(12, 14, 20, 0.95) 75%, #080a0f 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#080a0f] text-slate-200 antialiased selection:bg-[#d4af37] selection:text-black">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-[#d4af37]/15 bg-[#080a0f]/85 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<!-- Logo & Tier Badge -->
+<div class="flex items-center space-x-3">
+<a class="flex items-center space-x-2.5 text-white tracking-tight text-xl font-bold" href="#">
+<svg class="w-5 h-5 text-[#f2ca50]" fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24">
+<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="tracking-tight font-extrabold text-white">SafarSaathi</span>
+</a>
+<span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded border border-[#d4af37]/40 text-[#f2ca50] bg-[#d4af37]/10 font-medium">
+          R-TIER v4.2
+        </span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8 text-xs font-medium text-slate-400">
+<a class="text-white hover:text-[#f2ca50] transition-colors" href="#">Overview</a>
+<a class="hover:text-[#f2ca50] transition-colors" href="#">Digital Twin</a>
+<a class="hover:text-[#f2ca50] transition-colors" href="#">Intelligence</a>
+<a class="hover:text-[#f2ca50] transition-colors" href="#">What-If Simulation</a>
+<a class="hover:text-[#f2ca50] transition-colors flex items-center gap-1.5" href="#">
+<span>Disaster Mode</span>
+<span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+</a>
+</nav>
+<!-- Right System Telemetry & Quick Action -->
+<div class="flex items-center space-x-5 text-xs font-mono">
+<div class="hidden lg:flex items-center space-x-2 text-[11px] text-[#f2ca50] bg-[#d4af37]/10 px-2.5 py-1 rounded border border-[#d4af37]/30">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#f2ca50] animate-ping"></span>
+<span>TELEMETRY NOMINAL</span>
+</div>
+<div class="flex items-center space-x-3 text-slate-400 border-l border-white/10 pl-4">
+<!-- Research Settings Button -->
+<button aria-label="Settings" class="p-1.5 hover:text-[#f2ca50] transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- User / Auth -->
+<button aria-label="Account Access" class="p-1.5 hover:text-[#f2ca50] transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden subtle-grid">
+<!-- Atmospheric Radial Glow & Backdrop Elevation Simulation -->
+<div class="absolute inset-0 hero-vignette pointer-events-none"></div>
+<div class="relative max-w-5xl mx-auto px-6 text-center">
+<!-- Eyebrow Category Tag -->
+<div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 text-[#f2ca50] text-[10px] md:text-xs font-mono font-medium tracking-ultra uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#f2ca50] shadow-[0_0_6px_#f2ca50]"></span>
+        Geospatial Resilience &amp; Tourism Intelligence
+      </div>
+<!-- Giant Bold Title Matching Reference Scale -->
+<h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+        SafarSaathi
+      </h1>
+<!-- High-Precision Sub-headline -->
+<p class="max-w-2xl mx-auto text-sm md:text-base text-slate-300 font-normal leading-relaxed mb-8">
+        AI-Driven Geospatial Intelligence &amp; Carrying Capacity Analytics for Mountain Destinations. Precision decision support for regional administrators, NDMA, and tourism authorities.
+      </p>
+<!-- Active Sync Badge with Golden Glow -->
+<div class="inline-flex items-center space-x-2 text-[#f2ca50] font-mono text-[11px] tracking-wider px-4 py-1.5 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/35 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+<span class="text-xs text-[#ffd700]">▶</span>
+<span>REAL-TIME SATELLITE &amp; SENSOR SYNCHRONIZATION ACTIVE</span>
+</div>
+<!-- Atmospheric subtle chevron indicator -->
+<div class="mt-14 flex justify-center text-[#d4af37]/50 animate-bounce">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: CorridorSelectionSection -->
+<section class="relative py-16 border-t border-[#d4af37]/15 bg-[#080a0f]" data-purpose="corridor-selector">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Section Header with Filters -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+<div>
+<h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Select Operational Corridor</h2>
+<p class="mt-2 text-xs md:text-sm text-slate-400 max-w-xl">
+            Access localized carrying capacity models, predictive choke hazards, live InSAR slip telemetry, and hydraulic flood vectors for vulnerable destination sectors.
+          </p>
+</div>
+<!-- Filter Pills Matching Reference Structure -->
+<div class="inline-flex p-1 bg-[#0c0e14] border border-[#d4af37]/20 rounded-lg self-start md:self-auto font-mono text-xs">
+<button class="px-3 py-1.5 bg-[#d4af37]/20 text-[#f2ca50] border border-[#d4af37]/40 rounded font-medium shadow-sm">
+            Active Corridors
+          </button>
+<button class="px-3 py-1.5 text-slate-400 hover:text-white transition-colors">
+            Waitlist / Scheduled
+          </button>
+</div>
+</div>
+<!-- 4 Card Corridor Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+<!-- Card 1: Garhwal Arc -->
+<div class="group relative bg-[#0c0e14] border border-[#d4af37]/20 hover:border-[#d4af37]/45 p-5 rounded-xl transition duration-200 cursor-pointer flex flex-col justify-between h-52">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-slate-400 group-hover:text-[#f2ca50] transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[9px] font-mono tracking-wider px-2 py-0.5 rounded bg-white/[0.04] text-slate-400 border border-white/5 uppercase">
+                TIER-1 MONITORED
+              </span>
+</div>
+<h3 class="text-lg font-bold text-white group-hover:text-[#f2ca50] transition-colors">Garhwal Arc</h3>
+<p class="text-xs text-slate-400 mt-1">Rishikesh-Devprayag-Kedarnath corridor</p>
+</div>
+<div class="text-[10px] font-mono text-slate-500 tracking-wider">
+            NODES: 32 DEPLOYED // SMR: 0.12mm/hr
+          </div>
+</div>
+<!-- Card 2: Rishikesh Core (SELECTED / ACTIVE STATE) -->
+<div class="group relative bg-[#12151e] border-2 border-[#d4af37] p-5 rounded-xl transition duration-200 cursor-pointer flex flex-col justify-between h-52 glow-gold-card">
+<!-- Selected Glow Dot Indicator -->
+<span class="absolute top-3.5 right-3.5 w-2 h-2 rounded-full bg-[#ffd700] shadow-[0_0_8px_#ffd700]"></span>
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-8 h-8 rounded-lg bg-[#d4af37]/20 border border-[#d4af37]/50 flex items-center justify-center text-[#f2ca50]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[9px] font-mono tracking-wider px-2 py-0.5 rounded bg-[#d4af37]/20 text-[#f2ca50] border border-[#d4af37]/40 uppercase mr-4 font-semibold">
+                PRIMARY • 108 Kms²
+              </span>
+</div>
+<h3 class="text-lg font-bold text-white tracking-tight">Rishikesh Core</h3>
+<p class="text-xs text-slate-300 mt-1">Tapovan, Laxman Jhula &amp; Ganga Riverbank</p>
+</div>
+<div class="text-[10px] font-mono text-[#f2ca50] font-semibold tracking-wider">
+            ACTIVE TWIN MESH // 42,180 PAX CURRENT
+          </div>
+</div>
+<!-- Card 3: Kumaon Belt -->
+<div class="group relative bg-[#0c0e14] border border-[#d4af37]/20 hover:border-[#d4af37]/45 p-5 rounded-xl transition duration-200 cursor-pointer flex flex-col justify-between h-52">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-slate-400 group-hover:text-[#f2ca50] transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[9px] font-mono tracking-wider px-2 py-0.5 rounded bg-white/[0.04] text-slate-400 border border-white/5 uppercase">
+                ELEVATED STRESS
+              </span>
+</div>
+<h3 class="text-lg font-bold text-white group-hover:text-[#f2ca50] transition-colors">Kumaon Belt</h3>
+<p class="text-xs text-slate-400 mt-1">Nainital, Bhimtal &amp; Almora Lake Basin</p>
+</div>
+<div class="text-[10px] font-mono text-slate-500 tracking-wider">
+            LAKE BASIN SENSORS // 18 SITES
+          </div>
+</div>
+<!-- Card 4: Upper Mandakini -->
+<div class="group relative bg-[#0c0e14] border border-[#d4af37]/20 hover:border-[#d4af37]/45 p-5 rounded-xl transition duration-200 cursor-pointer flex flex-col justify-between h-52">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-slate-400 group-hover:text-[#f2ca50] transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[9px] font-mono tracking-wider px-2 py-0.5 rounded bg-amber-950/40 text-amber-400 border border-amber-500/30 uppercase">
+                HIGH HAZARD SENSITIVITY
+              </span>
+</div>
+<h3 class="text-lg font-bold text-white group-hover:text-[#f2ca50] transition-colors">Upper Mandakini</h3>
+<p class="text-xs text-slate-400 mt-1">Sonprayag to Kedarnath Base Transit</p>
+</div>
+<div class="text-[10px] font-mono text-slate-500 tracking-wider">
+            INSAR SLIP RADAR // 4 HIGH-DEF ARRAYS
+          </div>
+</div>
+</div>
+<!-- Action Button Centered Matching Reference Flow -->
+<div class="flex justify-center mt-8">
+<a class="inline-flex items-center space-x-2 px-8 py-3.5 rounded-lg bg-gradient-to-r from-[#f2ca50] via-[#d4af37] to-[#b8860b] hover:from-[#ffe088] hover:to-[#d4af37] text-slate-950 font-bold text-sm transition-all duration-200 glow-gold-btn shadow-[0_0_25px_rgba(212,175,55,0.4)]" href="#dashboard">
+<span>Continue to Overview Dashboard</span>
+<span class="text-base font-bold">→</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: CorridorSelectionSection -->
+<!-- BEGIN: DataResidencySection -->
+<section class="py-20 border-t border-[#d4af37]/15 bg-[#0a0c12]" data-purpose="data-residency-metrics">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Data Governance -->
+<div class="lg:col-span-6">
+<h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-snug">
+            Data Residency &amp;<br/>Institutional Integrity
+          </h2>
+<p class="mt-4 text-slate-300 text-sm md:text-base leading-relaxed max-w-lg">
+            Our architecture leverages decentralized edge telemetry nodes, Sentinel-1 InSAR radar, and CWC hydrologic stations compliant with NDMA-CSIR research protocols and Indian DPDP Act 2023.
+          </p>
+<div class="mt-6 flex flex-wrap gap-4 text-xs font-mono text-slate-400">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#f2ca50] shadow-[0_0_6px_#f2ca50]"></span>
+              CSIR-CBRI Verified Models
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#f2ca50] shadow-[0_0_6px_#f2ca50]"></span>
+              256-Bit Geospatial Sharding
+            </span>
+</div>
+</div>
+<!-- Right Column: High-Impact Metrics Matching Reference Layout -->
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:pl-10">
+<!-- Metric Card 1 -->
+<div class="border-l-2 border-[#d4af37]/60 pl-5">
+<span class="block text-[11px] font-mono text-slate-400 uppercase tracking-widest">
+              Total Telemetry Records
+            </span>
+<div class="mt-2 text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-sans">
+              142.8M
+            </div>
+<span class="mt-2 block text-[10px] font-mono text-[#f2ca50] tracking-wider uppercase font-medium">
+              InSAR &amp; IoT Sensor Points
+            </span>
+</div>
+<!-- Metric Card 2 -->
+<div class="border-l-2 border-[#d4af37]/60 pl-5">
+<span class="block text-[11px] font-mono text-slate-400 uppercase tracking-widest">
+              Model Confidence
+            </span>
+<div class="mt-2 text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-sans">
+              98.4%
+            </div>
+<span class="mt-2 block text-[10px] font-mono text-[#f2ca50] tracking-wider uppercase font-medium">
+              Validated Historic Surges
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DataResidencySection -->
+<!-- BEGIN: GlobalFooter -->
+<footer class="border-t border-[#d4af37]/15 bg-[#06080c] py-10 text-xs">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-white/[0.04]">
+<!-- Brand & Protocol Meta -->
+<div>
+<span class="font-bold text-white text-sm">SafarSaathi</span>
+<span class="text-slate-400 text-[11px] ml-2 font-mono">
+            // Collaborative Prototype v4.2 | CSIR - NDMA - MoT Framework
+          </span>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-wrap items-center gap-6 font-mono text-[11px] text-slate-400">
+<a class="hover:text-[#f2ca50] transition-colors uppercase" href="#">Privacy Policy</a>
+<a class="hover:text-[#f2ca50] transition-colors uppercase" href="#">Research Protocol</a>
+<a class="hover:text-[#f2ca50] transition-colors uppercase" href="#">API Specification</a>
+<a class="hover:text-[#f2ca50] transition-colors uppercase" href="#">System Architecture</a>
+<a class="text-[#f2ca50] hover:underline uppercase font-medium" href="#">Officer Login</a>
+</div>
+</div>
+<!-- Legal & Research Notice -->
+<div class="mt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono text-slate-500">
+<div>© 2025 SAFARSAATHI GEOSPATIAL INTELLIGENCE PROGRAM. ALL RIGHTS RESERVED.</div>
+<div class="mt-2 sm:mt-0 tracking-wide text-[#f2ca50]/90">
+          RESEARCH DEMO / SIMULATION MODE • NOT A LIVE CIVIL DEFENSE DISPATCH
+        </div>
+</div>
+</div>
+</footer>
+<!-- END: GlobalFooter -->
+<!-- Minor Interactivity for Corridor Card Selection -->
+<script data-purpose="corridor-card-selection">
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('[data-purpose="corridor-selector"] .grid > div');
+      
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          // Reset other cards
+          cards.forEach(c => {
+            c.classList.remove('border-2', 'border-[#d4af37]', 'bg-[#12151e]', 'glow-gold-card');
+            c.classList.add('border', 'border-[#d4af37]/20', 'bg-[#0c0e14]');
+            const dot = c.querySelector('.corridor-active-dot');
+            if (dot) dot.remove();
+          });
+
+          // Set current card active
+          card.classList.remove('border', 'border-[#d4af37]/20', 'bg-[#0c0e14]');
+          card.classList.add('border-2', 'border-[#d4af37]', 'bg-[#12151e]', 'glow-gold-card');
+
+          // Add glowing dot indicator if not present
+          if (!card.querySelector('.corridor-active-dot')) {
+            const dot = document.createElement('span');
+            dot.className = 'corridor-active-dot absolute top-3.5 right-3.5 w-2 h-2 rounded-full bg-[#ffd700] shadow-[0_0_8px_#ffd700]';
+            card.appendChild(dot);
+          }
+        });
+      });
+    });
+  </script>
+</body></html>
+The above content shows the entire, complete file contents of the requested file.

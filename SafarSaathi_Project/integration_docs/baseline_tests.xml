@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="54" tests="120" time="60.959" timestamp="2026-10-29T23:13:16.256031+05:30" hostname="LAPTOP-CBF2P5J1"><testcase classname="tests.test_api" name="test_health_and_model_listing_are_read_only" time="0.616" /><testcase classname="tests.test_api" name="test_review_endpoint_rejects_unknown_model" time="0.011" /><testcase classname="tests.test_api" name="test_http_round_trip_health_and_malformed_request" time="0.530"><skipped type="pytest.skip" message="Sandbox blocks loopback sockets; exercised in the unsandboxed integration check.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_api.py:33: Sandbox blocks loopback sockets; exercised in the unsandboxed integration check.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload0]" time="0.504"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload1]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload2]" time="0.513"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload3]" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload4]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload5]" time="0.511"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload6]" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload7]" time="0.512"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload8]" time="0.502"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload9]" time="0.508"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_review_request_schema[payload10]" time="0.515"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload0]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload1]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload2]" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload3]" time="0.512"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload4]" time="0.513"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload5]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload6]" time="0.512"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload7]" time="0.512"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload8]" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload9]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload10]" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload11]" time="0.515"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_forecast_request_schema[payload12]" time="0.510"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[malformed-json-/reviews/classify]" time="0.515"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[malformed-json-/tourism/forecast]" time="0.515"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[invalid-utf8-/reviews/classify]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[invalid-utf8-/tourism/forecast]" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[nonfinite-json-/reviews/classify]" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[nonfinite-json-/tourism/forecast]" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[oversized-body-/reviews/classify]" time="0.515"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[oversized-body-/tourism/forecast]" time="0.513"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[plain-text-/reviews/classify]" time="0.513"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[plain-text-/tourism/forecast]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[form-content-/reviews/classify]" time="0.513"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_http_body_validation[form-content-/tourism/forecast]" time="0.517"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_wrong_methods_are_json[/tourism/forecast-GET]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_wrong_methods_are_json[/reviews/classify-GET]" time="0.513"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_wrong_methods_are_json[/health-POST]" time="0.513"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_wrong_methods_are_json[/models-PUT]" time="0.511"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_wrong_methods_are_json[/tourism/forecast-DELETE]" time="0.514"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_wrong_methods_are_json[/tourism/forecast-PATCH]" time="0.515"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_valid_requests_and_unknown_models" time="0.511"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_artifact_and_registry_failures_are_safe[missing_review]" time="0.639"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_artifact_and_registry_failures_are_safe[corrupt_review]" time="0.605"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_artifact_and_registry_failures_are_safe[missing_forecast]" time="0.611"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_artifact_and_registry_failures_are_safe[corrupt_forecast]" time="0.612"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_artifact_and_registry_failures_are_safe[bad_registry]" time="0.610"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_artifact_and_registry_failures_are_safe[invalid_utf8_registry]" time="0.609"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_unexpected_error_does_not_expose_exception" time="0.511"><skipped type="pytest.skip" message="Sandbox blocks real HTTP; rerun with loopback access.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_final_quality.py:41: Sandbox blocks real HTTP; rerun with loopback access.</skipped></testcase><testcase classname="tests.test_final_quality" name="test_baselines_align_origins_and_never_use_future_targets" time="0.125" /><testcase classname="tests.test_final_quality" name="test_metric_denominators_and_invalid_arrays" time="0.001" /><testcase classname="tests.test_final_quality" name="test_windows_path_edge_cases[models/foo:stream]" time="0.001" /><testcase classname="tests.test_final_quality" name="test_windows_path_edge_cases[models/a\x00b]" time="0.001" /><testcase classname="tests.test_final_quality" name="test_windows_path_edge_cases[//server/share/file]" time="0.001" /><testcase classname="tests.test_final_quality" name="test_windows_path_edge_cases[C:/foo]" time="0.001" /><testcase classname="tests.test_final_quality" name="test_atomic_duplicate_ids_and_unverified_entry_are_rejected" time="0.012" /><testcase classname="tests.test_final_quality" name="test_normalized_time_duplicates_and_empty_labels_rejected" time="0.025" /><testcase classname="tests.test_flood_baseline" name="test_country_event_splits_and_invalid_metadata" time="0.026" /><testcase classname="tests.test_flood_baseline" name="test_image_and_metric_contracts" time="0.003" /><testcase classname="tests.test_flood_baseline" name="test_synthetic_training_reload_and_geotiff" time="2.591" /><testcase classname="tests.test_india_scope" name="test_archive_counting_deduplicates_storms_and_does_not_manufacture_binary_labels" time="0.015" /><testcase classname="tests.test_india_scope" name="test_archive_schema_rejects_incomplete_rows[missing_column]" time="0.002" /><testcase classname="tests.test_india_scope" name="test_archive_schema_rejects_incomplete_rows[bad_date]" time="0.006" /><testcase classname="tests.test_india_scope" name="test_archive_schema_rejects_incomplete_rows[missing_sid]" time="0.005" /><testcase classname="tests.test_india_scope" name="test_chronological_selection_and_first_test_prediction_do_not_use_future_targets[cyclone_count]" time="0.148" /><testcase classname="tests.test_india_scope" name="test_chronological_selection_and_first_test_prediction_do_not_use_future_targets[pm25]" time="0.116" /><testcase classname="tests.test_india_scope" name="test_invalid_target_series_is_rejected[dates0-values0]" time="0.002" /><testcase classname="tests.test_india_scope" name="test_invalid_target_series_is_rejected[dates1-values1]" time="0.002" /><testcase classname="tests.test_india_scope" name="test_invalid_target_series_is_rejected[dates2-values2]" time="0.002" /><testcase classname="tests.test_india_scope" name="test_invalid_target_series_is_rejected[dates3-values3]" time="0.002" /><testcase classname="tests.test_india_scope" name="test_worldbank_rejects_other_geography_and_duplicates" time="0.001" /><testcase classname="tests.test_india_scope" name="test_source_checksum_detects_changed_input" time="0.011" /><testcase classname="tests.test_india_scope" name="test_small_valid_fixture_training_reload_overwrite_refusal_and_corrupt_artifact" time="0.195" /><testcase classname="tests.test_india_scope" name="test_real_indicator_snapshot_preserves_missingness_estimates_and_registry_separation" time="0.016" /><testcase classname="tests.test_india_scope" name="test_indicator_integrity_failure_is_rejected" time="0.011" /><testcase classname="tests.test_india_scope" name="test_actual_scoped_http_and_unavailable_broad_models" time="0.767"><failure message="urllib.error.URLError: &lt;urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions&gt;">self = &lt;urllib.request.HTTPHandler object at 0x0000029E5F4C7E00&gt;
+http_class = &lt;class 'http.client.HTTPConnection'&gt;
+req = &lt;urllib.request.Request object at 0x0000029E5FA63C70&gt;, http_conn_args = {}
+host = '127.0.0.1:64090'
+h = &lt;http.client.HTTPConnection object at 0x0000029E5F6386E0&gt;
+headers = {'Connection': 'close', 'Content-Length': '33', 'Content-Type': 'application/json', 'Host': '127.0.0.1:64090', ...}
+
+    def do_open(self, http_class, req, **http_conn_args):
+        """Return an HTTPResponse object for the request, using http_class.
+    
+        http_class must implement the HTTPConnection API from http.client.
+        """
+        host = req.host
+        if not host:
+            raise URLError('no host given')
+    
+        # will parse host:port
+        h = http_class(host, timeout=req.timeout, **http_conn_args)
+        h.set_debuglevel(self._debuglevel)
+    
+        headers = dict(req.unredirected_hdrs)
+        headers.update({k: v for k, v in req.headers.items()
+                        if k not in headers})
+    
+        # TODO(jhylton): Should this be redesigned to handle
+        # persistent connections?
+    
+        # We want to make an HTTP/1.1 request, but the addinfourl
+        # class isn't prepared to deal with a persistent connection.
+        # It will try to read all remaining data from the socket,
+        # which will block while the server waits for the next request.
+        # So make sure the connection gets closed after the (only)
+        # request.
+        headers["Connection"] = "close"
+        headers = {name.title(): val for name, val in headers.items()}
+    
+        if req._tunnel_host:
+            tunnel_headers = {}
+            proxy_auth_hdr = "Proxy-Authorization"
+            if proxy_auth_hdr in headers:
+                tunnel_headers[proxy_auth_hdr] = headers[proxy_auth_hdr]
+                # Proxy-Authorization should not be sent to origin
+                # server.
+                del headers[proxy_auth_hdr]
+            h.set_tunnel(req._tunnel_host, headers=tunnel_headers)
+    
+        try:
+            try:
+&gt;               h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+
+C:\Python314\Lib\urllib\request.py:1321: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Python314\Lib\http\client.py:1367: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+C:\Python314\Lib\http\client.py:1413: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+C:\Python314\Lib\http\client.py:1362: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+C:\Python314\Lib\http\client.py:1122: in _send_output
+    self.send(msg)
+C:\Python314\Lib\http\client.py:1066: in send
+    self.connect()
+C:\Python314\Lib\http\client.py:1032: in connect
+    self.sock = self._create_connection(
+C:\Python314\Lib\socket.py:874: in create_connection
+    raise exceptions[0]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+address = ('127.0.0.1', 64090), timeout = 10, source_address = None
+
+    def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT,
+                          source_address=None, *, all_errors=False):
+        """Connect to *address* and return the socket object.
+    
+        Convenience function.  Connect to *address* (a 2-tuple ``(host,
+        port)``) and return the socket object.  Passing the optional
+        *timeout* parameter will set the timeout on the socket instance
+        before attempting to connect.  If no *timeout* is supplied, the
+        global default timeout setting returned by :func:`getdefaulttimeout`
+        is used.  If *source_address* is set it must be a tuple of (host, port)
+        for the socket to bind as a source address before making the connection.
+        A host of '' or port 0 tells the OS to use the default. When a connection
+        cannot be created, raises the last error if *all_errors* is False,
+        and an ExceptionGroup of all errors if *all_errors* is True.
+        """
+    
+        host, port = address
+        exceptions = []
+        for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+            af, socktype, proto, canonname, sa = res
+            sock = None
+            try:
+                sock = socket(af, socktype, proto)
+                if timeout is not _GLOBAL_DEFAULT_TIMEOUT:
+                    sock.settimeout(timeout)
+                if source_address:
+                    sock.bind(source_address)
+&gt;               sock.connect(sa)
+E               PermissionError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions
+
+C:\Python314\Lib\socket.py:859: PermissionError
+
+During handling of the above exception, another exception occurred:
+
+    def test_actual_scoped_http_and_unavailable_broad_models():
+        status_map={item['model_id']:item['status'] for item in capabilities(settings().project_root)}
+        assert status_map['flood_segmentation_model']=='EXPERIMENTAL'
+        assert status_map['tourism_demand_forecaster']=='EXPERIMENTAL'
+        assert status_map['disaster_risk_predictor']=='DATA_INSUFFICIENT'
+        assert status_map['destination_stress_predictor']=='DATA_INSUFFICIENT'
+        broad={item['model_id']:item for item in capabilities(settings().project_root)}
+        assert broad['disaster_risk_predictor']['scoped_forecast']['status']=='EXPERIMENTAL'
+        assert broad['destination_stress_predictor']['historical_indicators']['status']=='INDICATOR_ONLY'
+        server=ThreadingHTTPServer(('127.0.0.1',0),Handler);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        def call(path,payload):
+            request=Request(f'http://127.0.0.1:{server.server_port}'+path,data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
+            try:response=urlopen(request,timeout=10)
+            except HTTPError as exc:response=exc
+            with response:return response.status,json.loads(response.read())
+        try:
+            for path,region in [('/disaster/cyclone-count','NI'),('/environment/pm25-forecast','IND')]:
+&gt;               status,body=call(path,{'geography':region,'horizon':1});assert status==200 and np.isfinite(body['forecasts'][0]['prediction'])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_india_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_india_scope.py:102: in call
+    try:response=urlopen(request,timeout=10)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\urllib\request.py:187: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\urllib\request.py:487: in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\urllib\request.py:504: in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+C:\Python314\Lib\urllib\request.py:464: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+C:\Python314\Lib\urllib\request.py:1350: in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib.request.HTTPHandler object at 0x0000029E5F4C7E00&gt;
+http_class = &lt;class 'http.client.HTTPConnection'&gt;
+req = &lt;urllib.request.Request object at 0x0000029E5FA63C70&gt;, http_conn_args = {}
+host = '127.0.0.1:64090'
+h = &lt;http.client.HTTPConnection object at 0x0000029E5F6386E0&gt;
+headers = {'Connection': 'close', 'Content-Length': '33', 'Content-Type': 'application/json', 'Host': '127.0.0.1:64090', ...}
+
+    def do_open(self, http_class, req, **http_conn_args):
+        """Return an HTTPResponse object for the request, using http_class.
+    
+        http_class must implement the HTTPConnection API from http.client.
+        """
+        host = req.host
+        if not host:
+            raise URLError('no host given')
+    
+        # will parse host:port
+        h = http_class(host, timeout=req.timeout, **http_conn_args)
+        h.set_debuglevel(self._debuglevel)
+    
+        headers = dict(req.unredirected_hdrs)
+        headers.update({k: v for k, v in req.headers.items()
+                        if k not in headers})
+    
+        # TODO(jhylton): Should this be redesigned to handle
+        # persistent connections?
+    
+        # We want to make an HTTP/1.1 request, but the addinfourl
+        # class isn't prepared to deal with a persistent connection.
+        # It will try to read all remaining data from the socket,
+        # which will block while the server waits for the next request.
+        # So make sure the connection gets closed after the (only)
+        # request.
+        headers["Connection"] = "close"
+        headers = {name.title(): val for name, val in headers.items()}
+    
+        if req._tunnel_host:
+            tunnel_headers = {}
+            proxy_auth_hdr = "Proxy-Authorization"
+            if proxy_auth_hdr in headers:
+                tunnel_headers[proxy_auth_hdr] = headers[proxy_auth_hdr]
+                # Proxy-Authorization should not be sent to origin
+                # server.
+                del headers[proxy_auth_hdr]
+            h.set_tunnel(req._tunnel_host, headers=tunnel_headers)
+    
+        try:
+            try:
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+&gt;               raise URLError(err)
+E               urllib.error.URLError: &lt;urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions&gt;
+
+C:\Python314\Lib\urllib\request.py:1324: URLError</failure></testcase><testcase classname="tests.test_integrity_audit" name="test_fast_and_full_checksum_policy" time="0.016" /><testcase classname="tests.test_model_http_integration" name="test_forecasting_and_unavailable_routes_over_http" time="0.516"><skipped type="pytest.skip" message="Sandbox blocks loopback; rerun this integration test outside sandbox.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_model_http_integration.py:33: Sandbox blocks loopback; rerun this integration test outside sandbox.</skipped></testcase><testcase classname="tests.test_model_http_integration" name="test_frontend_client_with_real_backend" time="0.511"><skipped type="pytest.skip" message="Sandbox blocks loopback; rerun this integration test outside sandbox.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_model_http_integration.py:62: Sandbox blocks loopback; rerun this integration test outside sandbox.</skipped></testcase><testcase classname="tests.test_monthly_forecasting" name="test_monthly_schema_and_past_only_features" time="0.026" /><testcase classname="tests.test_monthly_forecasting" name="test_monthly_invalid_horizons[None]" time="0.001" /><testcase classname="tests.test_monthly_forecasting" name="test_monthly_invalid_horizons[True]" time="0.001" /><testcase classname="tests.test_monthly_forecasting" name="test_monthly_invalid_horizons[0]" time="0.001" /><testcase classname="tests.test_monthly_forecasting" name="test_monthly_invalid_horizons[7]" time="0.001" /><testcase classname="tests.test_monthly_forecasting" name="test_monthly_invalid_horizons[1]" time="0.001" /><testcase classname="tests.test_monthly_forecasting" name="test_monthly_invalid_horizons[1.5]" time="0.001" /><testcase classname="tests.test_monthly_forecasting" name="test_monthly_training_serialization_and_replay_on_fixture" time="0.432" /><testcase classname="tests.test_monthly_forecasting" name="test_real_monthly_inference_readonly" time="0.527"><skipped type="pytest.skip" message="Sandbox blocks HTTP; run outside sandbox.">C:\Users\Arpit Kumar\SafarSaathi\SafarSaathi_Project\tests\test_monthly_forecasting.py:59: Sandbox blocks HTTP; run outside sandbox.</skipped></testcase><testcase classname="tests.test_pipeline" name="test_raw_roots_are_external_to_outputs" time="0.005" /><testcase classname="tests.test_pipeline" name="test_registry_models_can_be_reloaded_if_present" time="0.285" /><testcase classname="tests.test_registry_integrity" name="test_existing_and_unrelated_entries_survive_registration" time="0.032" /><testcase classname="tests.test_registry_integrity" name="test_corrupt_registry_is_not_silently_replaced" time="0.009" /><testcase classname="tests.test_registry_integrity" name="test_missing_artifact_is_explicit" time="0.008" /><testcase classname="tests.test_registry_integrity" name="test_failed_atomic_update_keeps_old_registry" time="0.014" /><testcase classname="tests.test_registry_integrity" name="test_skipped_training_does_not_erase_registry" time="0.022" /><testcase classname="tests.test_registry_integrity" name="test_windows_legacy_path_is_normalized_and_traversal_is_rejected" time="0.012" /><testcase classname="tests.test_remaining_models" name="test_missing_discovery_and_training" time="0.013" /><testcase classname="tests.test_remaining_models" name="test_invalid_tourism_targets[duplicate]" time="0.008" /><testcase classname="tests.test_remaining_models" name="test_invalid_tourism_targets[gap]" time="0.010" /><testcase classname="tests.test_remaining_models" name="test_invalid_tourism_targets[negative]" time="0.009" /><testcase classname="tests.test_remaining_models" name="test_invalid_tourism_targets[missing]" time="0.010" /><testcase classname="tests.test_remaining_models" name="test_invalid_tourism_targets[wrong_indicator]" time="0.008" /><testcase classname="tests.test_remaining_models" name="test_invalid_tourism_targets[nonfinite]" time="0.010" /><testcase classname="tests.test_remaining_models" name="test_past_only_features_and_recursive_predictions" time="0.008" /><testcase classname="tests.test_remaining_models" name="test_training_reload_evaluation_registry_preservation" time="0.078" /><testcase classname="tests.test_remaining_models" name="test_inference_schema[UK-1]" time="0.004" /><testcase classname="tests.test_remaining_models" name="test_inference_schema[IND-0]" time="0.003" /><testcase classname="tests.test_remaining_models" name="test_inference_schema[IND-True]" time="0.003" /><testcase classname="tests.test_remaining_models" name="test_inference_schema[IND-4]" time="0.004" /><testcase classname="tests.test_remaining_models" name="test_inference_schema[IND-1]" time="0.004" /><testcase classname="tests.test_remaining_models" name="test_future_observed_table_validation[disaster_risk]" time="0.012" /><testcase classname="tests.test_remaining_models" name="test_future_observed_table_validation[destination_stress]" time="0.012" /><testcase classname="tests.test_remaining_models" name="test_flood_pair_alignment_and_labels" time="0.001" /><testcase classname="tests.test_remaining_models" name="test_api_schema_and_unavailable_tasks" time="0.379" /><testcase classname="tests.test_server_instance" name="test_health_identifies_current_api_schema" time="0.033" /><testcase classname="tests.test_server_instance" name="test_duplicate_port_binding_cannot_silently_start_stale_instance" time="0.005" /></testsuite></testsuites>

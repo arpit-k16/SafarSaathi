@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-30",
+  "mode": "Actual UI interactions against localhost:5173 and Python localhost:8000; not mocked",
+  "overview": {
+    "annual": "17.91M",
+    "fileCount": "1,035"
+  },
+  "checks": [
+    "Tourism: annual forecast origin 2019, 2020 estimate 18571916.67",
+    "Tourism: monthly forecast origin 2024-12, 2025-01 estimate 1060621",
+    "Twin: selected actual Rishikesh source point 78.292 longitude / 30.109 latitude",
+    "Stress: historical IND indicators load; explicit absent stress-model label",
+    "PM2.5: 2024 scoped estimate 52.63, source origin 2023",
+    "Cyclone: 2025-01 NI basin archive-count estimate 0.18",
+    "Scenario: 100 baseline visitors, 120 capacity, +5% demand, 50% availability -> 105 visitors, 60 served, 45 unserved",
+    "Scenario response shown unchanged on Simulation Results and Disaster Mode",
+    "Invalid capacity zero rejected with visible validation message",
+    "Zero available capacity returns null utilization, displayed as undefined",
+    "Fresh tab Simulation Results shows no submitted scenario",
+    "Review inference: POSITIVE for the submitted sample hotel review",
+    "Model Center: six models and actual monthly FTA schema/target displayed",
+    "Satellite: actual scene metadata; supported local STURM tile returned 128x128 mask, threshold 0.3, 4507 reference-positive pixels",
+    "Data Hub pagination shows files 21-40 of 1035",
+    "JSON report generated with six registered models, sixteen catalog groups and recomputed scenario",
+    "Optimizer and explanation show unavailable engine; explicit availability call returns unavailable error",
+    "Live Geospatial Map recovers actual static source rows after backend restart",
+    "Help displays actual local health metadata",
+    "Notifications/settings show NOT IMPLEMENTED",
+    "Stopped own backend: API unavailable visible, no fake fallback; navigation and session results remain usable",
+    "Desktop 1440x960: original sidebar/background/font signatures match",
+    "Mobile 390x844: inherited fixed 288px sidebar limitation remains; original document overflow 578px, integrated empty-results page measured 489px before overflow containment adjustment",
+    "Actual JSON report link downloaded safarsaathi-report.json; file parsed and validated with six model entries and copied into integration_docs/phase2_downloaded_report.json"
+  ],
+  "style": {
+    "sidebarWidth": 288,
+    "sidebar": "rgb(12, 14, 19)",
+    "main": "rgb(17, 19, 25)",
+    "font": "Space Grotesk / Plus Jakarta Sans / Inter / system-ui / sans-serif"
+  },
+  "limitations": [
+    "No claim of automated screenshot pixel equality: necessary text/data/inputs changed.",
+    "Original fixed navigation mobile layout retained under no-redesign instruction.",
+    "Cloud font/Tailwind resources remain existing external dependencies."
+  ]
+}

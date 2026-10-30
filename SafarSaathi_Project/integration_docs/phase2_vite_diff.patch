@@ -1,0 +1,14 @@
+diff --git a/integration_docs/phase2_frontend_backup_20261030_082633/frontend/vite.config.js b/frontend/vite.config.js
+index 9982072..3b559e4 100644
+--- a/integration_docs/phase2_frontend_backup_20261030_082633/frontend/vite.config.js
++++ b/frontend/vite.config.js
+@@ -4,4 +4,9 @@ import { defineConfig } from 'vite'
+ // https://vite.dev/config/
+ export default defineConfig({
+   plugins: [react()],
++  cacheDir: process.env.SAFARSAATHI_VITE_CACHE || 'node_modules/.vite',
++  build: {
++    outDir: process.env.SAFARSAATHI_VITE_OUT || 'dist',
++    emptyOutDir: false,
++  },
+ })

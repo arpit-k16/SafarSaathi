@@ -1,0 +1,13 @@
+{
+  "comparison": "File presence and sizes only outside frontend; frontend separately SHA-256 verified",
+  "removed_original_paths": [],
+  "original_paths_with_size_changes": [
+    "README.md",
+    "tests/test_model_http_integration.py",
+    "src/safarsaathi_ml/artifacts.py",
+    "src/safarsaathi_ml/http_api.py",
+    ".pytest_cache/v/cache/lastfailed",
+    ".pytest_cache/v/cache/nodeids"
+  ],
+  "git_available": false
+}

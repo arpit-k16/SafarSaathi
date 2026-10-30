@@ -1,0 +1,14 @@
+
+> frontend@0.0.0 build
+> vite build --configLoader runner
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 32 modules transformed.
+rendering chunks...
+computing gzip size...
+../integration_docs/phase2_runtime/npm-build/index.html                   6.75 kB │ gzip:   1.78 kB
+../integration_docs/phase2_runtime/npm-build/assets/index-EZgbuKje.css    1.44 kB │ gzip:   0.71 kB
+../integration_docs/phase2_runtime/npm-build/assets/index-DWReEAEb.js   354.59 kB │ gzip: 100.04 kB
+
+✓ built in 194ms

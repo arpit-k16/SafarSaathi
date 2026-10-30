@@ -1,0 +1,21 @@
+
+> frontend@0.0.0 test
+> node --test tests/*.test.js
+
+✔ client sends bounded JSON POSTs with no credentials and handles JSON (23.105ms)
+✔ HTTP unavailable, validation and invalid JSON responses are explicit errors (1.8806ms)
+✔ timeout, network failure and no automatic POST retry (20.3579ms)
+✔ API URL rejects embedded credentials and non-HTTP protocols (0.3243ms)
+✔ GET cache deduplicates pending requests and retries failures without fake fallback (0.4219ms)
+✔ scenario adapter accepts explicit numeric inputs and rejects blank, boolean, invalid bounds (0.3649ms)
+✔ map adapter preserves longitude/latitude, filters bad coordinates and handles degenerate extents (0.3054ms)
+✔ empty/unavailable adapters never manufacture metrics (0.3914ms)
+✔ actual client round trip with saved models, data, scenarios and reports (7800.2781ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7947.4842

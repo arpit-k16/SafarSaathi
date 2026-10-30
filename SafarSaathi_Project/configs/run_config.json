@@ -1,0 +1,10 @@
+{
+  "random_seed": 20261024,
+  "raw_data_policy": "immutable",
+  "hash_max_bytes": 50000000,
+  "nlp": {
+    "test_fraction": 0.2,
+    "tfidf_ngram_range": [1, 2],
+    "max_features": 30000
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "original_files": 475,
+  "current_files": 484,
+  "modified_original_files": [
+    "package.json",
+    "src/App.jsx",
+    "src/components/Header.jsx",
+    "src/components/Sidebar.jsx",
+    "src/pages/AuxiliaryView.jsx",
+    "src/pages/DestinationDigitalTwin.jsx",
+    "src/pages/DisasterMode.jsx",
+    "src/pages/LandingPage.jsx",
+    "src/pages/OverviewDashboard.jsx",
+    "src/pages/WhatIfSimulator.jsx",
+    "vite.config.js"
+  ],
+  "added_files": [
+    ".env.example",
+    "src/components/ApiState.jsx",
+    "src/components/IntegrationDetails.jsx",
+    "src/components/SourceLocationOverlay.jsx",
+    "src/hooks/useApi.js",
+    "src/services/api/adapters.js",
+    "src/services/api/client.js",
+    "src/services/api/resources.js",
+    "tests/api.test.js"
+  ],
+  "removed_original_files": [],
+  "unexpected_modified_files": [],
+  "backup_matches_original_sha256": true,
+  "all_css_assets_lockfile_and_dependencies_unchanged": true,
+  "passed": true
+}

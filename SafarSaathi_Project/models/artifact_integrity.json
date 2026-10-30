@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "provenance": "Artifacts matched the prior verified release ZIP before pinning.",
+  "artifacts": {
+    "models/nlp/nlp-20261024T182952Z/pipeline.joblib": "e52b83b7e1ab82a4c36559285f287bd7f98203a74931cee2689c7be70c536150",
+    "models/tourism_demand/20261025T111230951433Z/pipeline.joblib": "3b2f5aaab559fda07638f088e689bbd55d206f29995d9d6e52f40f6fb8cd7e7c"
+  }
+}

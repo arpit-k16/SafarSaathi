@@ -5,5 +5,5 @@ __pycache__/
 data/interim/
 data/processed/
 outputs/
-models/*/*/
-!models/registry.json
+# Persisted inference artifacts are intentionally versioned: Render must serve
+# genuine saved models rather than silently falling back to demonstrations.

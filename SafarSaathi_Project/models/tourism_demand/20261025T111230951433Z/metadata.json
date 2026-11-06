@@ -1,0 +1,413 @@
+{
+  "model_id": "tourism_demand_forecaster",
+  "model_version": "20261025T111230951433Z",
+  "task": "annual tourism demand forecasting",
+  "task_type": "time_series_regression",
+  "target_definition": "India annual international tourist arrivals, World Bank ST.INT.ARVL",
+  "trained_at": "2026-10-25T11:12:30+00:00",
+  "training_completed": true,
+  "evaluation_independently_reproduced": true,
+  "reproduction_scope": "Saved evaluation estimator reloaded and test metrics replayed; separate CLI replay available.",
+  "dataset_provenance": {
+    "path": "worldbank_un_tourism/API_ST.INT.ARVL_India_1995-2025.json",
+    "format": "World Bank JSON",
+    "sha256": "6cd0c77c9560fcbf4c1514d89c53dcc0e9d077904d6156f38a87730ee95ac579",
+    "rows": 31,
+    "observed_rows": 25,
+    "duplicate_keys": 0,
+    "columns": {
+      "destination": "ISO3 string",
+      "year": "int",
+      "arrivals": "float/count"
+    },
+    "missing_rates": {
+      "destination": 0.0,
+      "year": 0.0,
+      "arrivals": 0.1935483870967742
+    },
+    "missing_target_years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020
+    ],
+    "observed_years": [
+      1995,
+      2019
+    ],
+    "geography": "India national total; not Uttarakhand or individual destinations",
+    "units": "international tourist arrivals per calendar year; annual dates have no time zone",
+    "imputation": "none; trailing null targets excluded, internal gaps rejected",
+    "source_updated": "2026-07-13"
+  },
+  "feature_schema": {
+    "input": {
+      "destination": "IND only",
+      "horizon": "integer 1..3 years after latest observed year"
+    },
+    "features": [
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "past_3_mean",
+      "lag_1_minus_lag_2"
+    ],
+    "output": "annual predicted international tourist arrivals; non-negative counts",
+    "external_features": "none; all features derived strictly from prior observations"
+  },
+  "method": "drift",
+  "split": {
+    "train_years": [
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009
+    ],
+    "validation_years": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014
+    ],
+    "test_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "strategy": "Fixed chronological blocks; select using validation one-year MAE only; freeze fit through validation for rolling-origin test; final refit all observed years.",
+    "test_history": "Past actual observations permitted at successive origins; multi-step forecasts recursive, never use future actuals."
+  },
+  "training_configuration": {
+    "seed": 20261025,
+    "ridge_alpha": 10.0,
+    "max_horizon": 3,
+    "normalization": "StandardScaler fit on training features only",
+    "compute": "CPU; <100 rows, <10 MB incremental expected memory; expected <10 seconds, no downloads"
+  },
+  "validation_comparison": {
+    "naive": {
+      "MAE": 1587800.0,
+      "RMSE": 2777248.0983880428,
+      "MASE": 5.797913406364111,
+      "WAPE": 0.2049408849192008,
+      "n": 5
+    },
+    "drift": {
+      "MAE": 1370371.4285714282,
+      "RMSE": 2658931.366591642,
+      "MASE": 5.003964527908189,
+      "WAPE": 0.17687689459593012,
+      "n": 5
+    },
+    "ridge": {
+      "MAE": 1700770.858454752,
+      "RMSE": 2873723.9346707705,
+      "MASE": 6.210430886376247,
+      "WAPE": 0.2195222854115793,
+      "n": 5
+    }
+  },
+  "metrics": {
+    "by_destination": {
+      "IND": {
+        "MAE": 578589.4736842103,
+        "RMSE": 710022.7072955804,
+        "MASE": 2.1127419487686345,
+        "WAPE": 0.036743304905390954,
+        "n": 5
+      }
+    },
+    "by_horizon": {
+      "1": {
+        "MAE": 578589.4736842103,
+        "RMSE": 710022.7072955804,
+        "MASE": 2.1127419487686345,
+        "WAPE": 0.036743304905390954,
+        "n": 5
+      },
+      "2": {
+        "MAE": 1080394.7368421033,
+        "RMSE": 1190166.1805798877,
+        "MASE": 3.945103368750508,
+        "WAPE": 0.06602870813397117,
+        "n": 4
+      },
+      "3": {
+        "MAE": 1572175.4385964882,
+        "RMSE": 1719247.848706409,
+        "MASE": 5.740859713184881,
+        "WAPE": 0.09269902350215144,
+        "n": 3
+      }
+    },
+    "predictions": [
+      {
+        "destination": "IND",
+        "origin_year": 2014,
+        "year": 2015,
+        "horizon": 1,
+        "actual": 13284000.0,
+        "prediction": 13685052.631578948
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2014,
+        "year": 2016,
+        "horizon": 2,
+        "actual": 14570000.0,
+        "prediction": 14263105.263157897
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2014,
+        "year": 2017,
+        "horizon": 3,
+        "actual": 15543000.0,
+        "prediction": 14841157.894736845
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2015,
+        "year": 2016,
+        "horizon": 1,
+        "actual": 14570000.0,
+        "prediction": 13862052.631578948
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2015,
+        "year": 2017,
+        "horizon": 2,
+        "actual": 15543000.0,
+        "prediction": 14440105.263157897
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2015,
+        "year": 2018,
+        "horizon": 3,
+        "actual": 17423000.0,
+        "prediction": 15018157.894736845
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2016,
+        "year": 2017,
+        "horizon": 1,
+        "actual": 15543000.0,
+        "prediction": 15148052.631578948
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2016,
+        "year": 2018,
+        "horizon": 2,
+        "actual": 17423000.0,
+        "prediction": 15726105.263157897
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2016,
+        "year": 2019,
+        "horizon": 3,
+        "actual": 17914000.0,
+        "prediction": 16304157.894736845
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2017,
+        "year": 2018,
+        "horizon": 1,
+        "actual": 17423000.0,
+        "prediction": 16121052.631578948
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2017,
+        "year": 2019,
+        "horizon": 2,
+        "actual": 17914000.0,
+        "prediction": 16699105.263157897
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2018,
+        "year": 2019,
+        "horizon": 1,
+        "actual": 17914000.0,
+        "prediction": 18001052.63157895
+      }
+    ]
+  },
+  "baseline_metrics": {
+    "by_destination": {
+      "IND": {
+        "MAE": 961400.0,
+        "RMSE": 1132018.9927735312,
+        "MASE": 3.510589462702139,
+        "WAPE": 0.06105367439733787,
+        "n": 5
+      }
+    },
+    "by_horizon": {
+      "1": {
+        "MAE": 961400.0,
+        "RMSE": 1132018.9927735312,
+        "MASE": 3.510589462702139,
+        "WAPE": 0.06105367439733787,
+        "n": 5
+      },
+      "2": {
+        "MAE": 2236500.0,
+        "RMSE": 2291544.239154025,
+        "MASE": 8.166666666666668,
+        "WAPE": 0.13668449197860963,
+        "n": 4
+      },
+      "3": {
+        "MAE": 3306333.3333333335,
+        "RMSE": 3378744.983964707,
+        "MASE": 12.07320466005912,
+        "WAPE": 0.19494889937106918,
+        "n": 3
+      }
+    },
+    "predictions": [
+      {
+        "destination": "IND",
+        "origin_year": 2014,
+        "year": 2015,
+        "horizon": 1,
+        "actual": 13284000.0,
+        "prediction": 13107000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2014,
+        "year": 2016,
+        "horizon": 2,
+        "actual": 14570000.0,
+        "prediction": 13107000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2014,
+        "year": 2017,
+        "horizon": 3,
+        "actual": 15543000.0,
+        "prediction": 13107000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2015,
+        "year": 2016,
+        "horizon": 1,
+        "actual": 14570000.0,
+        "prediction": 13284000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2015,
+        "year": 2017,
+        "horizon": 2,
+        "actual": 15543000.0,
+        "prediction": 13284000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2015,
+        "year": 2018,
+        "horizon": 3,
+        "actual": 17423000.0,
+        "prediction": 13284000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2016,
+        "year": 2017,
+        "horizon": 1,
+        "actual": 15543000.0,
+        "prediction": 14570000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2016,
+        "year": 2018,
+        "horizon": 2,
+        "actual": 17423000.0,
+        "prediction": 14570000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2016,
+        "year": 2019,
+        "horizon": 3,
+        "actual": 17914000.0,
+        "prediction": 14570000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2017,
+        "year": 2018,
+        "horizon": 1,
+        "actual": 17423000.0,
+        "prediction": 15543000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2017,
+        "year": 2019,
+        "horizon": 2,
+        "actual": 17914000.0,
+        "prediction": 15543000.0
+      },
+      {
+        "destination": "IND",
+        "origin_year": 2018,
+        "year": 2019,
+        "horizon": 1,
+        "actual": 17914000.0,
+        "prediction": 17423000.0
+      }
+    ]
+  },
+  "metric_definitions": {
+    "MASE": "MAE / mean absolute first difference in initial training series",
+    "WAPE": "sum absolute error / sum absolute actual; fraction, null if zero denominator"
+  },
+  "software_versions": {
+    "python": "3.14.6",
+    "scikit_learn": "1.9.1",
+    "numpy": "2.4.6",
+    "joblib": "1.6.0"
+  },
+  "latest_observed_year": 2019,
+  "geographic_scope": "IND",
+  "limitations": [
+    "Experimental historical India national annual forecast; not an Uttarakhand or destination forecast.",
+    "Latest observation is 2019. Horizon is anchored to that year, not today. No current-demand claim.",
+    "Only 25 annual observations; five test origins and no pandemic/post-pandemic outcomes.",
+    "Large 2014 level change may reflect source/measurement changes; not reconciled with ministry counts.",
+    "Vintage backtest uses the locally collected revised series, not historical publication vintages.",
+    "No calibrated uncertainty intervals; forecasts are estimates, not observed facts."
+  ],
+  "artifact": "models/tourism_demand/20261025T111230951433Z/pipeline.joblib",
+  "artifact_sha256": "3b2f5aaab559fda07638f088e689bbd55d206f29995d9d6e52f40f6fb8cd7e7c",
+  "persistence_test_passed": true
+}

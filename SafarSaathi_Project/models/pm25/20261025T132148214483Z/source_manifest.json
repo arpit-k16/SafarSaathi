@@ -1,0 +1,23 @@
+{
+  "source": {
+    "source": "https://api.worldbank.org/v2/country/IND/indicator/EN.ATM.PM25.MC.M3?format=json&date=1990%3A2023&per_page=100",
+    "downloaded_at": "2026-10-25T13:17:29.853991+00:00",
+    "original_filename": "PM25_India_1990_2023.json",
+    "bytes": 8966,
+    "sha256": "cd2c7a0e3f4e8df96c02393c12119466c8fb645ae8033e33d29e39acdd086ac9",
+    "license_access_terms": "World Bank WDI indicator page: CC BY 4.0; underlying GBD/IHME population-weighted modeled exposure; no underlying restricted raw GBD download.",
+    "http_last_modified": "Sun, 25 Oct 2026 13:17:30 GMT",
+    "transformation_history": [
+      "Unmodified public download; stored separately from original raw collection."
+    ]
+  },
+  "rows": 34,
+  "coverage": [
+    "1990",
+    "2023"
+  ],
+  "missing_targets": 0,
+  "target": "National population-weighted modeled annual PM2.5 exposure",
+  "units": "micrograms/m\u00b3",
+  "measurement": "GBD/IHME modeled exposure republished by World Bank; not a raw sensor measurement or tourism-attribution label."
+}

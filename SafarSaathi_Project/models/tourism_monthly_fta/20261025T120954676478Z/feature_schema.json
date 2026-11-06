@@ -1,0 +1,12 @@
+{
+  "destination": "IND only",
+  "horizon": "integer 1..6 months",
+  "derived_features": [
+    "lag1",
+    "lag2",
+    "lag12",
+    "past3mean",
+    "calendar_sin",
+    "calendar_cos"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "input": {
+    "destination": "IND only",
+    "horizon": "integer 1..3 years after latest observed year"
+  },
+  "features": [
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "past_3_mean",
+    "lag_1_minus_lag_2"
+  ],
+  "output": "annual predicted international tourist arrivals; non-negative counts",
+  "external_features": "none; all features derived strictly from prior observations"
+}

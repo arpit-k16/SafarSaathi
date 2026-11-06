@@ -1,0 +1,723 @@
+{
+  "model_id": "india_pm25_exposure_forecaster",
+  "model_version": "20261025T132148214483Z",
+  "trained_at": "2026-10-25T13:21:48+00:00",
+  "task": "India national population-weighted modeled annual PM2.5 exposure (World Bank EN.ATM.PM25.MC.M3 / GBD2023).",
+  "task_type": "environmental_indicator_forecasting",
+  "quality_status": "TRAINED_BUT_EXPERIMENTAL",
+  "training_completed": true,
+  "persistence_test_passed": true,
+  "artifact": "models/pm25/20261025T132148214483Z/pipeline.joblib",
+  "artifact_sha256": "012204a357ae9ade97269aaf952f0ca2cac26ff3178c2702495246ab48883366",
+  "method": "ridge",
+  "target_definition": "India national population-weighted modeled annual PM2.5 exposure (World Bank EN.ATM.PM25.MC.M3 / GBD2023).",
+  "feature_schema": {
+    "geography": "IND",
+    "horizon_max": 1,
+    "features": "past exposure only: up to three lags, past mean, past difference depending on selected method",
+    "frequency": "annual",
+    "units": "micrograms/m\u00b3"
+  },
+  "latest_observed_date": "2023",
+  "dataset_provenance": {
+    "source": {
+      "source": "https://api.worldbank.org/v2/country/IND/indicator/EN.ATM.PM25.MC.M3?format=json&date=1990%3A2023&per_page=100",
+      "downloaded_at": "2026-10-25T13:17:29.853991+00:00",
+      "original_filename": "PM25_India_1990_2023.json",
+      "bytes": 8966,
+      "sha256": "cd2c7a0e3f4e8df96c02393c12119466c8fb645ae8033e33d29e39acdd086ac9",
+      "license_access_terms": "World Bank WDI indicator page: CC BY 4.0; underlying GBD/IHME population-weighted modeled exposure; no underlying restricted raw GBD download.",
+      "http_last_modified": "Sun, 25 Oct 2026 13:17:30 GMT",
+      "transformation_history": [
+        "Unmodified public download; stored separately from original raw collection."
+      ]
+    },
+    "rows": 34,
+    "coverage": [
+      "1990",
+      "2023"
+    ],
+    "missing_targets": 0,
+    "target": "National population-weighted modeled annual PM2.5 exposure",
+    "units": "micrograms/m\u00b3",
+    "measurement": "GBD/IHME modeled exposure republished by World Bank; not a raw sensor measurement or tourism-attribution label."
+  },
+  "metrics": {
+    "selected_method": "ridge",
+    "selection": "Lowest MAE on validation only; test never selects method.",
+    "methods": {
+      "naive": {
+        "validation": {
+          "MAE": 1.4896254578699282,
+          "RMSE": 1.8951025128138386,
+          "MASE": 1.7861280049881512,
+          "WAPE": 0.02821425637942964,
+          "n": 7,
+          "year_folds": {
+            "2010": {
+              "MAE": 0.5438530763387988,
+              "RMSE": 0.5438530763387988,
+              "MASE": 0.6521043293907695,
+              "WAPE": 0.010515573941135144,
+              "n": 1
+            },
+            "2011": {
+              "MAE": 3.307008153585599,
+              "RMSE": 3.307008153585599,
+              "MASE": 3.965251697758755,
+              "WAPE": 0.06009919817306194,
+              "n": 1
+            },
+            "2012": {
+              "MAE": 2.0061990668508045,
+              "RMSE": 2.0061990668508045,
+              "MASE": 2.4055230245643457,
+              "WAPE": 0.037838798567219514,
+              "n": 1
+            },
+            "2013": {
+              "MAE": 0.7502501451212993,
+              "RMSE": 0.7502501451212993,
+              "MASE": 0.8995837093599053,
+              "WAPE": 0.014353530875188425,
+              "n": 1
+            },
+            "2014": {
+              "MAE": 0.582158293945902,
+              "RMSE": 0.582158293945902,
+              "MASE": 0.6980340102670924,
+              "WAPE": 0.011263099198147195,
+              "n": 1
+            },
+            "2015": {
+              "MAE": 0.25162731934019433,
+              "RMSE": 0.25162731934019433,
+              "MASE": 0.30171248720217697,
+              "WAPE": 0.004892085476888165,
+              "n": 1
+            },
+            "2016": {
+              "MAE": 2.9862821499068986,
+              "RMSE": 2.9862821499068986,
+              "MASE": 3.5806867763740127,
+              "WAPE": 0.05487282680277476,
+              "n": 1
+            }
+          },
+          "MAE_difference_vs_baseline": 0.0
+        },
+        "test": {
+          "MAE": 2.647731155149728,
+          "RMSE": 2.9820780178834174,
+          "MASE": 3.174748887988931,
+          "WAPE": 0.04903505413333673,
+          "n": 7,
+          "year_folds": {
+            "2017": {
+              "MAE": 0.7505496245161964,
+              "RMSE": 0.7505496245161964,
+              "MASE": 0.8999427986405809,
+              "WAPE": 0.013603709144500131,
+              "n": 1
+            },
+            "2018": {
+              "MAE": 1.507098943739102,
+              "RMSE": 1.507098943739102,
+              "MASE": 1.8070795014135173,
+              "WAPE": 0.026589830593634695,
+              "n": 1
+            },
+            "2019": {
+              "MAE": 3.0813754300327005,
+              "RMSE": 3.0813754300327005,
+              "MASE": 3.6947079014974724,
+              "WAPE": 0.057490333284747085,
+              "n": 1
+            },
+            "2020": {
+              "MAE": 1.404781256155296,
+              "RMSE": 1.404781256155296,
+              "MASE": 1.6843959864174798,
+              "WAPE": 0.02691493816116221,
+              "n": 1
+            },
+            "2021": {
+              "MAE": 3.4301052322878007,
+              "RMSE": 3.4301052322878007,
+              "MASE": 4.112850638445919,
+              "WAPE": 0.06166650641525672,
+              "n": 1
+            },
+            "2022": {
+              "MAE": 4.965728007935603,
+              "RMSE": 4.965728007935603,
+              "MASE": 5.954131498806776,
+              "WAPE": 0.09802505113819014,
+              "n": 1
+            },
+            "2023": {
+              "MAE": 3.3944795913813977,
+              "RMSE": 3.3944795913813977,
+              "MASE": 4.070133890700773,
+              "WAPE": 0.06279999833969013,
+              "n": 1
+            }
+          },
+          "MAE_difference_vs_baseline": 0.0
+        }
+      },
+      "drift": {
+        "validation": {
+          "MAE": 1.539881692821989,
+          "RMSE": 1.9249963390230749,
+          "MASE": 1.8463874938408036,
+          "WAPE": 0.029166134779540945,
+          "n": 7,
+          "year_folds": {
+            "2010": {
+              "MAE": 0.5996113171099893,
+              "RMSE": 0.5996113171099893,
+              "MASE": 0.7189609709875806,
+              "WAPE": 0.011593677438506573,
+              "n": 1
+            },
+            "2011": {
+              "MAE": 3.2812304786699116,
+              "RMSE": 3.2812304786699116,
+              "MASE": 3.9343431047113273,
+              "WAPE": 0.05963073316745893,
+              "n": 1
+            },
+            "2012": {
+              "MAE": 2.188225812179347,
+              "RMSE": 2.188225812179347,
+              "MASE": 2.6237812892646963,
+              "WAPE": 0.0412719939385767,
+              "n": 1
+            },
+            "2013": {
+              "MAE": 0.8328120808053256,
+              "RMSE": 0.8328120808053256,
+              "MASE": 0.9985791881845875,
+              "WAPE": 0.015933077777860995,
+              "n": 1
+            },
+            "2014": {
+              "MAE": 0.6285110087253472,
+              "RMSE": 0.6285110087253472,
+              "MASE": 0.7536130026489642,
+              "WAPE": 0.012159891754559402,
+              "n": 1
+            },
+            "2015": {
+              "MAE": 0.2717920754227521,
+              "RMSE": 0.2717920754227521,
+              "MASE": 0.32589093780701117,
+              "WAPE": 0.005284124428124233,
+              "n": 1
+            },
+            "2016": {
+              "MAE": 2.9769890768412495,
+              "RMSE": 2.9769890768412495,
+              "MASE": 3.569543963281457,
+              "WAPE": 0.0547020669203528,
+              "n": 1
+            }
+          },
+          "MAE_difference_vs_baseline": 0.050256234952060774
+        },
+        "test": {
+          "MAE": 2.666873402669652,
+          "RMSE": 3.0347292694544485,
+          "MASE": 3.1977013047814324,
+          "WAPE": 0.049389561856504775,
+          "n": 7,
+          "year_folds": {
+            "2017": {
+              "MAE": 0.6267569715720356,
+              "RMSE": 0.6267569715720356,
+              "MASE": 0.7515098331141207,
+              "WAPE": 0.011359967771684253,
+              "n": 1
+            },
+            "2018": {
+              "MAE": 1.3600930696256128,
+              "RMSE": 1.3600930696256128,
+              "MASE": 1.6308128383643195,
+              "WAPE": 0.023996197770000033,
+              "n": 1
+            },
+            "2019": {
+              "MAE": 3.2769560566328195,
+              "RMSE": 3.2769560566328195,
+              "MASE": 3.92921788020254,
+              "WAPE": 0.06113935160873664,
+              "n": 1
+            },
+            "2020": {
+              "MAE": 1.4873633980439394,
+              "RMSE": 1.4873633980439394,
+              "MASE": 1.7834156933914262,
+              "WAPE": 0.028497172571259898,
+              "n": 1
+            },
+            "2021": {
+              "MAE": 3.3971018703339553,
+              "RMSE": 3.3971018703339553,
+              "MASE": 4.073278121251687,
+              "WAPE": 0.06107317125676235,
+              "n": 1
+            },
+            "2022": {
+              "MAE": 5.108315301190544,
+              "RMSE": 5.108315301190544,
+              "MASE": 6.125100084428482,
+              "WAPE": 0.1008397696831115,
+              "n": 1
+            },
+            "2023": {
+              "MAE": 3.4115271512886594,
+              "RMSE": 3.4115271512886594,
+              "MASE": 4.090574682717454,
+              "WAPE": 0.06311538887454268,
+              "n": 1
+            }
+          },
+          "MAE_difference_vs_baseline": 0.019142247519924105
+        }
+      },
+      "ridge": {
+        "validation": {
+          "MAE": 1.2897053683561086,
+          "RMSE": 1.9931298876785628,
+          "MASE": 1.546414814834314,
+          "WAPE": 0.024427669199987147,
+          "n": 7,
+          "year_folds": {
+            "2010": {
+              "MAE": 0.6440720479972057,
+              "RMSE": 0.6440720479972057,
+              "MASE": 0.7722713894826122,
+              "WAPE": 0.012453339953001909,
+              "n": 1
+            },
+            "2011": {
+              "MAE": 4.159003536358043,
+              "RMSE": 4.159003536358043,
+              "MASE": 4.986832528866799,
+              "WAPE": 0.07558275218131469,
+              "n": 1
+            },
+            "2012": {
+              "MAE": 0.08373520991050043,
+              "RMSE": 0.08373520991050043,
+              "MASE": 0.10040228745725807,
+              "WAPE": 0.0015793247006942693,
+              "n": 1
+            },
+            "2013": {
+              "MAE": 0.5865804921811204,
+              "RMSE": 0.5865804921811204,
+              "MASE": 0.7033364250921098,
+              "WAPE": 0.011222258682727323,
+              "n": 1
+            },
+            "2014": {
+              "MAE": 0.3611299452820802,
+              "RMSE": 0.3611299452820802,
+              "MASE": 0.4330110668426054,
+              "WAPE": 0.006986832343423611,
+              "n": 1
+            },
+            "2015": {
+              "MAE": 0.09414853276891222,
+              "RMSE": 0.09414853276891222,
+              "MASE": 0.1128883304985664,
+              "WAPE": 0.00183041599392643,
+              "n": 1
+            },
+            "2016": {
+              "MAE": 3.0992678139948993,
+              "RMSE": 3.0992678139948993,
+              "MASE": 3.7161616756002473,
+              "WAPE": 0.05694893430550709,
+              "n": 1
+            }
+          },
+          "MAE_difference_vs_baseline": -0.19992008951381957
+        },
+        "test": {
+          "MAE": 2.5454047768139674,
+          "RMSE": 2.6587779351138745,
+          "MASE": 3.052054952389937,
+          "WAPE": 0.047140005426747573,
+          "n": 7,
+          "year_folds": {
+            "2017": {
+              "MAE": 2.505628965991974,
+              "RMSE": 2.505628965991974,
+              "MASE": 3.0043619640250214,
+              "WAPE": 0.04541451566158751,
+              "n": 1
+            },
+            "2018": {
+              "MAE": 2.8560348514053118,
+              "RMSE": 2.8560348514053118,
+              "MASE": 3.424514400157783,
+              "WAPE": 0.05038918193385073,
+              "n": 1
+            },
+            "2019": {
+              "MAE": 2.0921412991744575,
+              "RMSE": 2.0921412991744575,
+              "MASE": 2.508571631281886,
+              "WAPE": 0.03903383514908045,
+              "n": 1
+            },
+            "2020": {
+              "MAE": 1.3258170362520119,
+              "RMSE": 1.3258170362520119,
+              "MASE": 1.5897143308266999,
+              "WAPE": 0.025402021408942706,
+              "n": 1
+            },
+            "2021": {
+              "MAE": 3.4849662606321914,
+              "RMSE": 3.4849662606321914,
+              "MASE": 4.178631481939614,
+              "WAPE": 0.06265279917517025,
+              "n": 1
+            },
+            "2022": {
+              "MAE": 3.598050583644387,
+              "RMSE": 3.598050583644387,
+              "MASE": 4.314224677658779,
+              "WAPE": 0.07102666354175995,
+              "n": 1
+            },
+            "2023": {
+              "MAE": 1.9551944405974382,
+              "RMSE": 1.9551944405974382,
+              "MASE": 2.3443661808397764,
+              "WAPE": 0.03617232165279337,
+              "n": 1
+            }
+          },
+          "MAE_difference_vs_baseline": -0.10232637833576064
+        }
+      }
+    },
+    "predictions": {
+      "naive": {
+        "validation": [
+          {
+            "origin": "2009",
+            "date": "2010",
+            "actual": 51.7188200456979,
+            "prediction": 52.2626731220367
+          },
+          {
+            "origin": "2010",
+            "date": "2011",
+            "actual": 55.0258281992835,
+            "prediction": 51.7188200456979
+          },
+          {
+            "origin": "2011",
+            "date": "2012",
+            "actual": 53.0196291324327,
+            "prediction": 55.0258281992835
+          },
+          {
+            "origin": "2012",
+            "date": "2013",
+            "actual": 52.2693789873114,
+            "prediction": 53.0196291324327
+          },
+          {
+            "origin": "2013",
+            "date": "2014",
+            "actual": 51.6872206933655,
+            "prediction": 52.2693789873114
+          },
+          {
+            "origin": "2014",
+            "date": "2015",
+            "actual": 51.4355933740253,
+            "prediction": 51.6872206933655
+          },
+          {
+            "origin": "2015",
+            "date": "2016",
+            "actual": 54.4218755239322,
+            "prediction": 51.4355933740253
+          }
+        ],
+        "test": [
+          {
+            "origin": "2016",
+            "date": "2017",
+            "actual": 55.1724251484484,
+            "prediction": 54.4218755239322
+          },
+          {
+            "origin": "2017",
+            "date": "2018",
+            "actual": 56.6795240921875,
+            "prediction": 55.1724251484484
+          },
+          {
+            "origin": "2018",
+            "date": "2019",
+            "actual": 53.5981486621548,
+            "prediction": 56.6795240921875
+          },
+          {
+            "origin": "2019",
+            "date": "2020",
+            "actual": 52.1933674059995,
+            "prediction": 53.5981486621548
+          },
+          {
+            "origin": "2020",
+            "date": "2021",
+            "actual": 55.6234726382873,
+            "prediction": 52.1933674059995
+          },
+          {
+            "origin": "2021",
+            "date": "2022",
+            "actual": 50.6577446303517,
+            "prediction": 55.6234726382873
+          },
+          {
+            "origin": "2022",
+            "date": "2023",
+            "actual": 54.0522242217331,
+            "prediction": 50.6577446303517
+          }
+        ]
+      },
+      "drift": {
+        "validation": [
+          {
+            "origin": "2009",
+            "date": "2010",
+            "actual": 51.7188200456979,
+            "prediction": 52.31843136280789
+          },
+          {
+            "origin": "2010",
+            "date": "2011",
+            "actual": 55.0258281992835,
+            "prediction": 51.74459772061359
+          },
+          {
+            "origin": "2011",
+            "date": "2012",
+            "actual": 53.0196291324327,
+            "prediction": 55.207854944612045
+          },
+          {
+            "origin": "2012",
+            "date": "2013",
+            "actual": 52.2693789873114,
+            "prediction": 53.102191068116724
+          },
+          {
+            "origin": "2013",
+            "date": "2014",
+            "actual": 51.6872206933655,
+            "prediction": 52.315731702090844
+          },
+          {
+            "origin": "2014",
+            "date": "2015",
+            "actual": 51.4355933740253,
+            "prediction": 51.707385449448054
+          },
+          {
+            "origin": "2015",
+            "date": "2016",
+            "actual": 54.4218755239322,
+            "prediction": 51.44488644709095
+          }
+        ],
+        "test": [
+          {
+            "origin": "2016",
+            "date": "2017",
+            "actual": 55.1724251484484,
+            "prediction": 54.54566817687636
+          },
+          {
+            "origin": "2017",
+            "date": "2018",
+            "actual": 56.6795240921875,
+            "prediction": 55.319431022561886
+          },
+          {
+            "origin": "2018",
+            "date": "2019",
+            "actual": 53.5981486621548,
+            "prediction": 56.87510471878762
+          },
+          {
+            "origin": "2019",
+            "date": "2020",
+            "actual": 52.1933674059995,
+            "prediction": 53.68073080404344
+          },
+          {
+            "origin": "2020",
+            "date": "2021",
+            "actual": 55.6234726382873,
+            "prediction": 52.22637076795335
+          },
+          {
+            "origin": "2021",
+            "date": "2022",
+            "actual": 50.6577446303517,
+            "prediction": 55.766059931542244
+          },
+          {
+            "origin": "2022",
+            "date": "2023",
+            "actual": 54.0522242217331,
+            "prediction": 50.64069707044444
+          }
+        ]
+      },
+      "ridge": {
+        "validation": [
+          {
+            "origin": "2009",
+            "date": "2010",
+            "actual": 51.7188200456979,
+            "prediction": 51.0747479977007
+          },
+          {
+            "origin": "2010",
+            "date": "2011",
+            "actual": 55.0258281992835,
+            "prediction": 50.86682466292546
+          },
+          {
+            "origin": "2011",
+            "date": "2012",
+            "actual": 53.0196291324327,
+            "prediction": 53.1033643423432
+          },
+          {
+            "origin": "2012",
+            "date": "2013",
+            "actual": 52.2693789873114,
+            "prediction": 52.85595947949252
+          },
+          {
+            "origin": "2013",
+            "date": "2014",
+            "actual": 51.6872206933655,
+            "prediction": 52.04835063864758
+          },
+          {
+            "origin": "2014",
+            "date": "2015",
+            "actual": 51.4355933740253,
+            "prediction": 51.529741906794214
+          },
+          {
+            "origin": "2015",
+            "date": "2016",
+            "actual": 54.4218755239322,
+            "prediction": 51.3226077099373
+          }
+        ],
+        "test": [
+          {
+            "origin": "2016",
+            "date": "2017",
+            "actual": 55.1724251484484,
+            "prediction": 52.66679618245642
+          },
+          {
+            "origin": "2017",
+            "date": "2018",
+            "actual": 56.6795240921875,
+            "prediction": 53.82348924078219
+          },
+          {
+            "origin": "2018",
+            "date": "2019",
+            "actual": 53.5981486621548,
+            "prediction": 55.690289961329256
+          },
+          {
+            "origin": "2019",
+            "date": "2020",
+            "actual": 52.1933674059995,
+            "prediction": 53.519184442251515
+          },
+          {
+            "origin": "2020",
+            "date": "2021",
+            "actual": 55.6234726382873,
+            "prediction": 52.13850637765511
+          },
+          {
+            "origin": "2021",
+            "date": "2022",
+            "actual": 50.6577446303517,
+            "prediction": 54.25579521399609
+          },
+          {
+            "origin": "2022",
+            "date": "2023",
+            "actual": 54.0522242217331,
+            "prediction": 52.09702978113566
+          }
+        ]
+      }
+    },
+    "MASE_denominator": 0.8339970336447471,
+    "splits": {
+      "train": {
+        "start": "1990",
+        "end": "2009",
+        "n": 20
+      },
+      "validation": {
+        "start": "2010",
+        "end": "2016",
+        "n": 7
+      },
+      "test": {
+        "start": "2017",
+        "end": "2023",
+        "n": 7
+      }
+    },
+    "leakage": {
+      "chronological": true,
+      "cutoff_feature_rule": "Only calendar fields for cyclone counts; only observed past annual exposure prefixes for PM2.5. No contemporaneous/future weather, impact or tourism features.",
+      "geographic_holdout": "NOT_APPLICABLE: one basin or one country; no geographic generalization claim.",
+      "publication_time_vintages": "UNAVAILABLE: revised-vintage retrospective experiment, not simulated historical availability."
+    },
+    "classification_metrics": "NOT_APPLICABLE: count/continuous regression; no fabricated binary negative labels or calibrated probabilities."
+  },
+  "dependencies": {
+    "python": "3.14.6",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "limitations": [
+    "National modeled exposure only; not destination occupancy, ecological carrying capacity or tourism-caused pollution.",
+    "Underlying indicator is modeled by GBD/IHME, not a local sensor outcome.",
+    "Only 34 annual observations; seven held-out annual targets, no independent geographic holdout.",
+    "Revised source vintage published in 2026, not historical publication-time data. Past-prefix evaluation is retrospective, not a real-time backtest.",
+    "No tourism or future environmental variables used as predictors; no causal tourism claim.",
+    "Last observed year is 2023. Output is a historical 2024 extrapolation, not current air quality or medical guidance. No calibrated intervals."
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "by_destination": {
+    "IND": {
+      "MAE": 578589.4736842103,
+      "RMSE": 710022.7072955804,
+      "MASE": 2.1127419487686345,
+      "WAPE": 0.036743304905390954,
+      "n": 5
+    }
+  },
+  "by_horizon": {
+    "1": {
+      "MAE": 578589.4736842103,
+      "RMSE": 710022.7072955804,
+      "MASE": 2.1127419487686345,
+      "WAPE": 0.036743304905390954,
+      "n": 5
+    },
+    "2": {
+      "MAE": 1080394.7368421033,
+      "RMSE": 1190166.1805798877,
+      "MASE": 3.945103368750508,
+      "WAPE": 0.06602870813397117,
+      "n": 4
+    },
+    "3": {
+      "MAE": 1572175.4385964882,
+      "RMSE": 1719247.848706409,
+      "MASE": 5.740859713184881,
+      "WAPE": 0.09269902350215144,
+      "n": 3
+    }
+  },
+  "predictions": [
+    {
+      "destination": "IND",
+      "origin_year": 2014,
+      "year": 2015,
+      "horizon": 1,
+      "actual": 13284000.0,
+      "prediction": 13685052.631578948
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2014,
+      "year": 2016,
+      "horizon": 2,
+      "actual": 14570000.0,
+      "prediction": 14263105.263157897
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2014,
+      "year": 2017,
+      "horizon": 3,
+      "actual": 15543000.0,
+      "prediction": 14841157.894736845
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2015,
+      "year": 2016,
+      "horizon": 1,
+      "actual": 14570000.0,
+      "prediction": 13862052.631578948
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2015,
+      "year": 2017,
+      "horizon": 2,
+      "actual": 15543000.0,
+      "prediction": 14440105.263157897
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2015,
+      "year": 2018,
+      "horizon": 3,
+      "actual": 17423000.0,
+      "prediction": 15018157.894736845
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2016,
+      "year": 2017,
+      "horizon": 1,
+      "actual": 15543000.0,
+      "prediction": 15148052.631578948
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2016,
+      "year": 2018,
+      "horizon": 2,
+      "actual": 17423000.0,
+      "prediction": 15726105.263157897
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2016,
+      "year": 2019,
+      "horizon": 3,
+      "actual": 17914000.0,
+      "prediction": 16304157.894736845
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2017,
+      "year": 2018,
+      "horizon": 1,
+      "actual": 17423000.0,
+      "prediction": 16121052.631578948
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2017,
+      "year": 2019,
+      "horizon": 2,
+      "actual": 17914000.0,
+      "prediction": 16699105.263157897
+    },
+    {
+      "destination": "IND",
+      "origin_year": 2018,
+      "year": 2019,
+      "horizon": 1,
+      "actual": 17914000.0,
+      "prediction": 18001052.63157895
+    }
+  ]
+}

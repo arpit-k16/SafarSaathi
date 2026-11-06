@@ -1,0 +1,1682 @@
+{
+  "validation_comparison": {
+    "logistic": {
+      "0.3": {
+        "precision": 0.7352824349914554,
+        "recall": 0.8772482807265033,
+        "IoU": 0.6666890018677812,
+        "Dice_F1": 0.8000160811292973,
+        "non_flood_IoU": 0.6599008631740877,
+        "non_flood_precision": 0.8739375007073896,
+        "non_flood_recall": 0.7293240894665256,
+        "confusion_matrix": [
+          [
+            77215,
+            28657
+          ],
+          [
+            11138,
+            79598
+          ]
+        ],
+        "pixel_count": 196608,
+        "reference_positive_prevalence": 0.4615071614583333
+      },
+      "0.5": {
+        "precision": 0.8166637975555173,
+        "recall": 0.7842532181273144,
+        "IoU": 0.6668478413659323,
+        "Dice_F1": 0.8001304316049271,
+        "non_flood_IoU": 0.716607678081755,
+        "non_flood_precision": 0.8211796516035917,
+        "non_flood_recall": 0.8491102463351973,
+        "confusion_matrix": [
+          [
+            89897,
+            15975
+          ],
+          [
+            19576,
+            71160
+          ]
+        ],
+        "pixel_count": 196608,
+        "reference_positive_prevalence": 0.4615071614583333
+      },
+      "0.7": {
+        "precision": 0.8579515276884802,
+        "recall": 0.6765010580144595,
+        "IoU": 0.6083608360836084,
+        "Dice_F1": 0.7564979480164159,
+        "non_flood_IoU": 0.7077759290072102,
+        "non_flood_precision": 0.7652924149621788,
+        "non_flood_recall": 0.90400672510201,
+        "confusion_matrix": [
+          [
+            95709,
+            10163
+          ],
+          [
+            29353,
+            61383
+          ]
+        ],
+        "pixel_count": 196608,
+        "reference_positive_prevalence": 0.4615071614583333
+      }
+    },
+    "gradient_boosting": {
+      "0.3": {
+        "precision": 0.7690812204728376,
+        "recall": 0.8414411038617527,
+        "IoU": 0.6717314798521907,
+        "Dice_F1": 0.803635617260235,
+        "non_flood_IoU": 0.6897446344972102,
+        "non_flood_precision": 0.8521908871423435,
+        "non_flood_recall": 0.783474384162007,
+        "confusion_matrix": [
+          [
+            82948,
+            22924
+          ],
+          [
+            14387,
+            76349
+          ]
+        ],
+        "pixel_count": 196608,
+        "reference_positive_prevalence": 0.4615071614583333
+      },
+      "0.5": {
+        "precision": 0.827078681360897,
+        "recall": 0.7592796684888027,
+        "IoU": 0.6552596537949401,
+        "Dice_F1": 0.7917303515405035,
+        "non_flood_IoU": 0.7161939959597226,
+        "non_flood_precision": 0.8072367840437737,
+        "non_flood_recall": 0.8639489194499018,
+        "confusion_matrix": [
+          [
+            91468,
+            14404
+          ],
+          [
+            21842,
+            68894
+          ]
+        ],
+        "pixel_count": 196608,
+        "reference_positive_prevalence": 0.4615071614583333
+      },
+      "0.7": {
+        "precision": 0.8575563745216814,
+        "recall": 0.6693374184447187,
+        "IoU": 0.6023665000396731,
+        "Dice_F1": 0.7518460976621254,
+        "non_flood_IoU": 0.7049420423183073,
+        "non_flood_precision": 0.7614777361730545,
+        "non_flood_recall": 0.9047151277013753,
+        "confusion_matrix": [
+          [
+            95784,
+            10088
+          ],
+          [
+            30003,
+            60733
+          ]
+        ],
+        "pixel_count": 196608,
+        "reference_positive_prevalence": 0.4615071614583333
+      }
+    }
+  },
+  "selected_method": "gradient_boosting",
+  "threshold": 0.3,
+  "selection": "Maximum reference-positive IoU on validation countries only; test never used for choice.",
+  "validation": {
+    "precision": 0.7690812204728376,
+    "recall": 0.8414411038617527,
+    "IoU": 0.6717314798521907,
+    "Dice_F1": 0.803635617260235,
+    "non_flood_IoU": 0.6897446344972102,
+    "non_flood_precision": 0.8521908871423435,
+    "non_flood_recall": 0.783474384162007,
+    "confusion_matrix": [
+      [
+        82948,
+        22924
+      ],
+      [
+        14387,
+        76349
+      ]
+    ],
+    "pixel_count": 196608,
+    "reference_positive_prevalence": 0.4615071614583333,
+    "scenes": [
+      {
+        "tile": "EMSR507_AOI01_1_2_2_2.tif",
+        "event": "EMSR507",
+        "country": "Timor-Leste",
+        "precision": 0.34576271186440677,
+        "recall": 0.05985915492957746,
+        "IoU": 0.05376910911966262,
+        "Dice_F1": 0.10205102551275638,
+        "non_flood_IoU": 0.8897555582852229,
+        "non_flood_precision": 0.9004288644415439,
+        "non_flood_recall": 0.9868528610354224,
+        "confusion_matrix": [
+          [
+            14487,
+            193
+          ],
+          [
+            1602,
+            102
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.10400390625
+      },
+      {
+        "tile": "EMSR507_AOI02_02_07_1_2.tif",
+        "event": "EMSR507",
+        "country": "Timor-Leste",
+        "precision": 0.19478467009087316,
+        "recall": 0.7743455497382199,
+        "IoU": 0.1843220338983051,
+        "Dice_F1": 0.3112701252236136,
+        "non_flood_IoU": 0.5608856088560885,
+        "non_flood_precision": 0.950972585598908,
+        "non_flood_recall": 0.5775873980931325,
+        "confusion_matrix": [
+          [
+            8360,
+            6114
+          ],
+          [
+            431,
+            1479
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.1165771484375
+      },
+      {
+        "tile": "EMSR507_AOI02_02_08_2_1.tif",
+        "event": "EMSR507",
+        "country": "Timor-Leste",
+        "precision": 0.12684365781710916,
+        "recall": 0.8171021377672208,
+        "IoU": 0.12334169953388312,
+        "Dice_F1": 0.21959782955633578,
+        "non_flood_IoU": 0.847568578553616,
+        "non_flood_precision": 0.9943680514921006,
+        "non_flood_recall": 0.8516569567123974,
+        "confusion_matrix": [
+          [
+            13595,
+            2368
+          ],
+          [
+            77,
+            344
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.02569580078125
+      },
+      {
+        "tile": "EMSR507_AOI02_02_08_2_2.tif",
+        "event": "EMSR507",
+        "country": "Timor-Leste",
+        "precision": 0.505520046484602,
+        "recall": 0.855036855036855,
+        "IoU": 0.4656141289804656,
+        "Dice_F1": 0.6353843344896841,
+        "non_flood_IoU": 0.6904835709857409,
+        "non_flood_precision": 0.9378947368421052,
+        "non_flood_recall": 0.7235666720805587,
+        "confusion_matrix": [
+          [
+            8910,
+            3404
+          ],
+          [
+            590,
+            3480
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.2484130859375
+      },
+      {
+        "tile": "EMSR507_AOI02_04_04_1_2.tif",
+        "event": "EMSR507",
+        "country": "Timor-Leste",
+        "precision": 0.9967890828817981,
+        "recall": 0.4301922743807379,
+        "IoU": 0.42959695554402355,
+        "Dice_F1": 0.6010042954806704,
+        "non_flood_IoU": 0.42235263203994045,
+        "non_flood_precision": 0.4229453556705552,
+        "non_flood_recall": 0.9966928482844151,
+        "confusion_matrix": [
+          [
+            4822,
+            16
+          ],
+          [
+            6579,
+            4967
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.7047119140625
+      },
+      {
+        "tile": "EMSR507_AOI02_06_03_1_1.tif",
+        "event": "EMSR507",
+        "country": "Timor-Leste",
+        "precision": 0.9102564102564102,
+        "recall": 0.17788913247729407,
+        "IoU": 0.17482302246845183,
+        "Dice_F1": 0.29761592873984805,
+        "non_flood_IoU": 0.8304881133029843,
+        "non_flood_precision": 0.8334390862944162,
+        "non_flood_recall": 0.9957546812220454,
+        "confusion_matrix": [
+          [
+            13135,
+            56
+          ],
+          [
+            2625,
+            568
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.19488525390625
+      },
+      {
+        "tile": "EMSR629_AOI01_03_07_2_1.tif",
+        "event": "EMSR629",
+        "country": "Pakistan",
+        "precision": 0.7976162285894703,
+        "recall": 0.9644016033594197,
+        "IoU": 0.774804477840822,
+        "Dice_F1": 0.8731153065192033,
+        "non_flood_IoU": 0.5322503583373148,
+        "non_flood_precision": 0.8995962314939435,
+        "non_flood_recall": 0.5658652218083305,
+        "confusion_matrix": [
+          [
+            3342,
+            2564
+          ],
+          [
+            373,
+            10105
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.6395263671875
+      },
+      {
+        "tile": "EMSR629_AOI01_04_07_2_2.tif",
+        "event": "EMSR629",
+        "country": "Pakistan",
+        "precision": 0.6060213338650184,
+        "recall": 0.967377466581795,
+        "IoU": 0.5938843298163345,
+        "Dice_F1": 0.7452038001838799,
+        "non_flood_IoU": 0.5966035904900534,
+        "non_flood_precision": 0.9677317802612939,
+        "non_flood_recall": 0.6087128712871287,
+        "confusion_matrix": [
+          [
+            6148,
+            3952
+          ],
+          [
+            205,
+            6079
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.383544921875
+      },
+      {
+        "tile": "EMSR629_AOI01_08_10_2_2.tif",
+        "event": "EMSR629",
+        "country": "Pakistan",
+        "precision": 0.9892845257903494,
+        "recall": 0.9559457199819924,
+        "IoU": 0.9461489497135582,
+        "Dice_F1": 0.9723294302348401,
+        "non_flood_IoU": 0.44342105263157894,
+        "non_flood_precision": 0.49595290654893304,
+        "non_flood_recall": 0.807185628742515,
+        "confusion_matrix": [
+          [
+            674,
+            161
+          ],
+          [
+            685,
+            14864
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.94903564453125
+      },
+      {
+        "tile": "EMSR629_AOI02_02_04_1_1.tif",
+        "event": "EMSR629",
+        "country": "Pakistan",
+        "precision": 0.9905962008651495,
+        "recall": 0.9822827303245057,
+        "IoU": 0.9732076866223208,
+        "Dice_F1": 0.986421949620751,
+        "non_flood_IoU": 0.2538593481989708,
+        "non_flood_precision": 0.3418013856812933,
+        "non_flood_recall": 0.4966442953020134,
+        "confusion_matrix": [
+          [
+            148,
+            150
+          ],
+          [
+            285,
+            15801
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.9818115234375
+      },
+      {
+        "tile": "EMSR629_AOI02_05_12_1_2.tif",
+        "event": "EMSR629",
+        "country": "Pakistan",
+        "precision": 0.6176391862955032,
+        "recall": 0.8770429494488787,
+        "IoU": 0.5684197561276019,
+        "Dice_F1": 0.7248311606722161,
+        "non_flood_IoU": 0.7022686719347438,
+        "non_flood_precision": 0.9274012567324955,
+        "non_flood_recall": 0.7431217406941197,
+        "confusion_matrix": [
+          [
+            8265,
+            2857
+          ],
+          [
+            647,
+            4615
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.3211669921875
+      },
+      {
+        "tile": "EMSR629_AOI02_08_13_2_2.tif",
+        "event": "EMSR629",
+        "country": "Pakistan",
+        "precision": 0.927564187840894,
+        "recall": 0.9797653340827654,
+        "IoU": 0.910129225949615,
+        "Dice_F1": 0.9529504219769707,
+        "non_flood_IoU": 0.4354243542435424,
+        "non_flood_precision": 0.7866666666666666,
+        "non_flood_recall": 0.49372384937238495,
+        "confusion_matrix": [
+          [
+            1062,
+            1089
+          ],
+          [
+            288,
+            13945
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.86871337890625
+      }
+    ]
+  },
+  "test": {
+    "precision": 0.33021715249497896,
+    "recall": 0.8372109379395712,
+    "IoU": 0.31029377264551783,
+    "Dice_F1": 0.4736247383959194,
+    "non_flood_IoU": 0.7895416705774178,
+    "non_flood_precision": 0.9772133904065086,
+    "non_flood_recall": 0.8043501513688018,
+    "confusion_matrix": [
+      [
+        496313,
+        120723
+      ],
+      [
+        11573,
+        59519
+      ]
+    ],
+    "pixel_count": 688128,
+    "reference_positive_prevalence": 0.10331217447916667,
+    "scenes": [
+      {
+        "tile": "EMSR260_09RUBIERA_1_1_2_2.tif",
+        "event": "EMSR260",
+        "country": "Italy",
+        "precision": 0.22919902374084758,
+        "recall": 0.6604859335038363,
+        "IoU": 0.20504168320762206,
+        "Dice_F1": 0.34030637456761653,
+        "non_flood_IoU": 0.7391049443033028,
+        "non_flood_precision": 0.9552917403384693,
+        "non_flood_recall": 0.765587044534413,
+        "confusion_matrix": [
+          [
+            11346,
+            3474
+          ],
+          [
+            531,
+            1033
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.095458984375
+      },
+      {
+        "tile": "EMSR260_09RUBIERA_1_2_2_1.tif",
+        "event": "EMSR260",
+        "country": "Italy",
+        "precision": 0.11820652173913043,
+        "recall": 0.7969465648854962,
+        "IoU": 0.11475049461420092,
+        "Dice_F1": 0.20587655294813645,
+        "non_flood_IoU": 0.7461228092296054,
+        "non_flood_precision": 0.9888870320855615,
+        "non_flood_recall": 0.7524318138470342,
+        "confusion_matrix": [
+          [
+            11835,
+            3894
+          ],
+          [
+            133,
+            522
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.03997802734375
+      },
+      {
+        "tile": "EMSR260_09RUBIERA_1_2_2_2.tif",
+        "event": "EMSR260",
+        "country": "Italy",
+        "precision": 0.15928792569659442,
+        "recall": 0.9809342230695901,
+        "IoU": 0.1587962962962963,
+        "Dice_F1": 0.27407111466240514,
+        "non_flood_IoU": 0.6450016281341583,
+        "non_flood_precision": 0.9979846835953244,
+        "non_flood_recall": 0.6458428431692207,
+        "confusion_matrix": [
+          [
+            9904,
+            5431
+          ],
+          [
+            20,
+            1029
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.06402587890625
+      },
+      {
+        "tile": "EMSR260_09RUBIERA_1_3_2_1.tif",
+        "event": "EMSR260",
+        "country": "Italy",
+        "precision": 0.15300829875518673,
+        "recall": 1.0,
+        "IoU": 0.15300829875518673,
+        "Dice_F1": 0.2654071075123707,
+        "non_flood_IoU": 0.6839150912962126,
+        "non_flood_precision": 1.0,
+        "non_flood_recall": 0.6839150912962126,
+        "confusion_matrix": [
+          [
+            10600,
+            4899
+          ],
+          [
+            0,
+            885
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.05401611328125
+      },
+      {
+        "tile": "EMSR260_09RUBIERA_2_1_1_2.tif",
+        "event": "EMSR260",
+        "country": "Italy",
+        "precision": 0.12826899128268993,
+        "recall": 0.6688311688311688,
+        "IoU": 0.12060889929742388,
+        "Dice_F1": 0.21525600835945663,
+        "non_flood_IoU": 0.6643682564004342,
+        "non_flood_precision": 0.9668308092539255,
+        "non_flood_recall": 0.6798641055795113,
+        "confusion_matrix": [
+          [
+            10406,
+            4900
+          ],
+          [
+            357,
+            721
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.0657958984375
+      },
+      {
+        "tile": "EMSR260_09RUBIERA_2_1_2_2.tif",
+        "event": "EMSR260",
+        "country": "Italy",
+        "precision": 0.2561444574485872,
+        "recall": 0.808870116156283,
+        "IoU": 0.2415260917546902,
+        "Dice_F1": 0.3890793650793651,
+        "non_flood_IoU": 0.6760705628871533,
+        "non_flood_precision": 0.9652023454772661,
+        "non_flood_recall": 0.69296066252588,
+        "confusion_matrix": [
+          [
+            10041,
+            4449
+          ],
+          [
+            362,
+            1532
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.1156005859375
+      },
+      {
+        "tile": "EMSR333_06CIANCIANA_2_1_2_2.tif",
+        "event": "EMSR333",
+        "country": "Italy",
+        "precision": 0.022745901639344264,
+        "recall": 0.4826086956521739,
+        "IoU": 0.022204440888177635,
+        "Dice_F1": 0.04344422700587084,
+        "non_flood_IoU": 0.6996251459472747,
+        "non_flood_precision": 0.9896557719054242,
+        "non_flood_recall": 0.7047790021047419,
+        "confusion_matrix": [
+          [
+            11385,
+            4769
+          ],
+          [
+            119,
+            111
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.0140380859375
+      },
+      {
+        "tile": "EMSR333_06CIANCIANA_2_3_2_2.tif",
+        "event": "EMSR333",
+        "country": "Italy",
+        "precision": 0.5753608593487748,
+        "recall": 0.9522222222222222,
+        "IoU": 0.5592169657422512,
+        "Dice_F1": 0.7173048754969659,
+        "non_flood_IoU": 0.9079072937968643,
+        "non_flood_precision": 0.9935844834017158,
+        "non_flood_recall": 0.9132611080636314,
+        "confusion_matrix": [
+          [
+            13319,
+            1265
+          ],
+          [
+            86,
+            1714
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.10986328125
+      },
+      {
+        "tile": "EMSR333_06CIANCIANA_2_5_2_1.tif",
+        "event": "EMSR333",
+        "country": "Italy",
+        "precision": 0.16703848298940324,
+        "recall": 0.7030516431924883,
+        "IoU": 0.15603021620213597,
+        "Dice_F1": 0.2699414150518252,
+        "non_flood_IoU": 0.7947418435223313,
+        "non_flood_precision": 0.9802312861384591,
+        "non_flood_recall": 0.8076873551377801,
+        "confusion_matrix": [
+          [
+            12545,
+            2987
+          ],
+          [
+            253,
+            599
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.052001953125
+      },
+      {
+        "tile": "EMSR333_06CIANCIANA_3_2_2_1.tif",
+        "event": "EMSR333",
+        "country": "Italy",
+        "precision": 0.6049075391180654,
+        "recall": 0.7999059487420644,
+        "IoU": 0.5254054054054054,
+        "Dice_F1": 0.6888731396172927,
+        "non_flood_IoU": 0.7632876290248036,
+        "non_flood_precision": 0.920910780669145,
+        "non_flood_recall": 0.8168329074272525,
+        "confusion_matrix": [
+          [
+            9909,
+            2222
+          ],
+          [
+            851,
+            3402
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.25958251953125
+      },
+      {
+        "tile": "EMSR333_06CIANCIANA_3_2_2_2.tif",
+        "event": "EMSR333",
+        "country": "Italy",
+        "precision": 0.40654038598999287,
+        "recall": 0.9801809564842741,
+        "IoU": 0.4032258064516129,
+        "Dice_F1": 0.5747126436781609,
+        "non_flood_IoU": 0.7613579984407116,
+        "non_flood_precision": 0.9957360029662589,
+        "non_flood_recall": 0.7638483965014577,
+        "confusion_matrix": [
+          [
+            10742,
+            3321
+          ],
+          [
+            46,
+            2275
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.14166259765625
+      },
+      {
+        "tile": "EMSR333_06CIANCIANA_3_3_1_1.tif",
+        "event": "EMSR333",
+        "country": "Italy",
+        "precision": 0.4380807889247108,
+        "recall": 0.8258848766535574,
+        "IoU": 0.4010416666666667,
+        "Dice_F1": 0.5724907063197026,
+        "non_flood_IoU": 0.7548671308796362,
+        "non_flood_precision": 0.956169561695617,
+        "non_flood_recall": 0.7819238978435269,
+        "confusion_matrix": [
+          [
+            10624,
+            2963
+          ],
+          [
+            487,
+            2310
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.17071533203125
+      },
+      {
+        "tile": "EMSR460_AOI01_02_04_1_1.tif",
+        "event": "EMSR460",
+        "country": "Ireland",
+        "precision": 0.08171603677221655,
+        "recall": 0.4584527220630373,
+        "IoU": 0.07452258965999069,
+        "Dice_F1": 0.13870827915041178,
+        "non_flood_IoU": 0.8775271203155819,
+        "non_flood_precision": 0.9868986552058783,
+        "non_flood_recall": 0.8878702837542874,
+        "confusion_matrix": [
+          [
+            14237,
+            1798
+          ],
+          [
+            189,
+            160
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.02130126953125
+      },
+      {
+        "tile": "EMSR460_AOI01_02_06_2_2.tif",
+        "event": "EMSR460",
+        "country": "Ireland",
+        "precision": 0.043478260869565216,
+        "recall": 0.12903225806451613,
+        "IoU": 0.03361344537815126,
+        "Dice_F1": 0.06504065040650407,
+        "non_flood_IoU": 0.894327370742465,
+        "non_flood_precision": 0.9730071980805118,
+        "non_flood_recall": 0.9170802186066964,
+        "confusion_matrix": [
+          [
+            14599,
+            1320
+          ],
+          [
+            405,
+            60
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.02838134765625
+      },
+      {
+        "tile": "EMSR460_AOI01_04_03_1_2.tif",
+        "event": "EMSR460",
+        "country": "Ireland",
+        "precision": 0.04971572127462647,
+        "recall": 0.8506787330316742,
+        "IoU": 0.04928562065801547,
+        "Dice_F1": 0.09394128669581511,
+        "non_flood_IoU": 0.5469140429785108,
+        "non_flood_precision": 0.9925178551184672,
+        "non_flood_recall": 0.5491782712332204,
+        "confusion_matrix": [
+          [
+            8755,
+            7187
+          ],
+          [
+            66,
+            376
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.0269775390625
+      },
+      {
+        "tile": "EMSR460_AOI01_04_06_1_1.tif",
+        "event": "EMSR460",
+        "country": "Ireland",
+        "precision": 0.43086888541434,
+        "recall": 0.8716674197921374,
+        "IoU": 0.40516698172652804,
+        "Dice_F1": 0.5766816143497758,
+        "non_flood_IoU": 0.8040816326530612,
+        "non_flood_precision": 0.976148484084992,
+        "non_flood_recall": 0.8201961752875591,
+        "confusion_matrix": [
+          [
+            11623,
+            2548
+          ],
+          [
+            284,
+            1929
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.13507080078125
+      },
+      {
+        "tile": "EMSR460_AOI01_05_04_2_2.tif",
+        "event": "EMSR460",
+        "country": "Ireland",
+        "precision": 0.2697849025974026,
+        "recall": 0.9929051530993278,
+        "IoU": 0.26926582278481015,
+        "Dice_F1": 0.424285942237115,
+        "non_flood_IoU": 0.4742440801457195,
+        "non_flood_precision": 0.9970894607843137,
+        "non_flood_recall": 0.4749015029913906,
+        "confusion_matrix": [
+          [
+            6509,
+            7197
+          ],
+          [
+            19,
+            2659
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.1634521484375
+      },
+      {
+        "tile": "EMSR460_AOI01_06_07_2_1.tif",
+        "event": "EMSR460",
+        "country": "Ireland",
+        "precision": 0.629959040374488,
+        "recall": 0.9922580645161291,
+        "IoU": 0.6268778385932223,
+        "Dice_F1": 0.7706513958482463,
+        "non_flood_IoU": 0.7087537496591219,
+        "non_flood_precision": 0.9946421737466513,
+        "non_flood_recall": 0.7114700246372844,
+        "confusion_matrix": [
+          [
+            7797,
+            3162
+          ],
+          [
+            42,
+            5383
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.33111572265625
+      },
+      {
+        "tile": "EMSR479_AOI01_06_18_2_1.tif",
+        "event": "EMSR479",
+        "country": "Mexico",
+        "precision": 0.3155234657039711,
+        "recall": 0.7521514629948365,
+        "IoU": 0.2858077174623937,
+        "Dice_F1": 0.44455747711088506,
+        "non_flood_IoU": 0.9315231705022888,
+        "non_flood_precision": 0.9903993599573305,
+        "non_flood_recall": 0.940011390242359,
+        "confusion_matrix": [
+          [
+            14855,
+            948
+          ],
+          [
+            144,
+            437
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.03546142578125
+      },
+      {
+        "tile": "EMSR479_AOI01_08_15_1_1.tif",
+        "event": "EMSR479",
+        "country": "Mexico",
+        "precision": 0.2956989247311828,
+        "recall": 0.9016393442622951,
+        "IoU": 0.2864583333333333,
+        "Dice_F1": 0.44534412955465585,
+        "non_flood_IoU": 0.9574771866658389,
+        "non_flood_precision": 0.9980587550148828,
+        "non_flood_recall": 0.9592636357982461,
+        "confusion_matrix": [
+          [
+            15424,
+            655
+          ],
+          [
+            30,
+            275
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.01861572265625
+      },
+      {
+        "tile": "EMSR479_AOI01_09_08_1_2.tif",
+        "event": "EMSR479",
+        "country": "Mexico",
+        "precision": 0.4775224775224775,
+        "recall": 0.9937629937629938,
+        "IoU": 0.4760956175298805,
+        "Dice_F1": 0.6450742240215924,
+        "non_flood_IoU": 0.9669307179680624,
+        "non_flood_precision": 0.9998049795228499,
+        "non_flood_recall": 0.9671131233100673,
+        "confusion_matrix": [
+          [
+            15380,
+            523
+          ],
+          [
+            3,
+            478
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.02935791015625
+      },
+      {
+        "tile": "EMSR479_AOI01_10_21_2_2.tif",
+        "event": "EMSR479",
+        "country": "Mexico",
+        "precision": 0.6731349719706771,
+        "recall": 0.9774577332498434,
+        "IoU": 0.6628450106157112,
+        "Dice_F1": 0.7972420837589377,
+        "non_flood_IoU": 0.9464345948863253,
+        "non_flood_precision": 0.9974404550302168,
+        "non_flood_recall": 0.9487387570162981,
+        "confusion_matrix": [
+          [
+            14029,
+            758
+          ],
+          [
+            36,
+            1561
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.09747314453125
+      },
+      {
+        "tile": "EMSR479_AOI02_14_05_1_1.tif",
+        "event": "EMSR479",
+        "country": "Mexico",
+        "precision": 0.8887031287317889,
+        "recall": 0.8669617893755824,
+        "IoU": 0.782051282051282,
+        "Dice_F1": 0.8776978417266187,
+        "non_flood_IoU": 0.9181078733317539,
+        "non_flood_precision": 0.9531852094777404,
+        "non_flood_recall": 0.9614621237181608,
+        "confusion_matrix": [
+          [
+            11626,
+            466
+          ],
+          [
+            571,
+            3721
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.261962890625
+      },
+      {
+        "tile": "EMSR479_AOI02_15_03_1_2.tif",
+        "event": "EMSR479",
+        "country": "Mexico",
+        "precision": 0.9203871987356776,
+        "recall": 0.8695408734602463,
+        "IoU": 0.8087137649713592,
+        "Dice_F1": 0.8942418426103647,
+        "non_flood_IoU": 0.9060127931769723,
+        "non_flood_precision": 0.9382617912029677,
+        "non_flood_recall": 0.9634500272084164,
+        "confusion_matrix": [
+          [
+            10623,
+            403
+          ],
+          [
+            699,
+            4659
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.3270263671875
+      },
+      {
+        "tile": "EMSR496_AOI01_1_1_2_2.tif",
+        "event": "EMSR496",
+        "country": "Italy",
+        "precision": 0.1641260162601626,
+        "recall": 1.0,
+        "IoU": 0.1641260162601626,
+        "Dice_F1": 0.281972937581842,
+        "non_flood_IoU": 0.6798572818683101,
+        "non_flood_precision": 1.0,
+        "non_flood_recall": 0.6798572818683101,
+        "confusion_matrix": [
+          [
+            10480,
+            4935
+          ],
+          [
+            0,
+            969
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.05914306640625
+      },
+      {
+        "tile": "EMSR496_AOI01_1_3_2_2.tif",
+        "event": "EMSR496",
+        "country": "Italy",
+        "precision": 0.37574677706739334,
+        "recall": 0.9580438268305719,
+        "IoU": 0.369663848216127,
+        "Dice_F1": 0.5397876985620719,
+        "non_flood_IoU": 0.5223845612938511,
+        "non_flood_precision": 0.9770568464123922,
+        "non_flood_recall": 0.5288720139218478,
+        "confusion_matrix": [
+          [
+            6686,
+            5956
+          ],
+          [
+            157,
+            3585
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.2283935546875
+      },
+      {
+        "tile": "EMSR496_AOI01_3_3_2_1.tif",
+        "event": "EMSR496",
+        "country": "Italy",
+        "precision": 0.010519987977156597,
+        "recall": 0.0779510022271715,
+        "IoU": 0.009355787222667736,
+        "Dice_F1": 0.018538135593220338,
+        "non_flood_IoU": 0.7733194690806777,
+        "non_flood_precision": 0.9682928697250517,
+        "non_flood_recall": 0.7934107310950738,
+        "confusion_matrix": [
+          [
+            12643,
+            3292
+          ],
+          [
+            414,
+            35
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.02740478515625
+      },
+      {
+        "tile": "EMSR496_AOI01_4_2_1_1.tif",
+        "event": "EMSR496",
+        "country": "Italy",
+        "precision": 0.4238377007607777,
+        "recall": 0.933705772811918,
+        "IoU": 0.4114557689151485,
+        "Dice_F1": 0.5830232558139535,
+        "non_flood_IoU": 0.7415867982993443,
+        "non_flood_precision": 0.9829974209571115,
+        "non_flood_recall": 0.7512227169866413,
+        "confusion_matrix": [
+          [
+            10291,
+            3408
+          ],
+          [
+            178,
+            2507
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.16387939453125
+      },
+      {
+        "tile": "EMSR496_AOI01_5_2_1_2.tif",
+        "event": "EMSR496",
+        "country": "Italy",
+        "precision": 0.2782107760081328,
+        "recall": 0.9229904440697021,
+        "IoU": 0.2718993210796489,
+        "Dice_F1": 0.4275484962895456,
+        "non_flood_IoU": 0.7017365350698684,
+        "non_flood_precision": 0.9869299751955734,
+        "non_flood_recall": 0.7083190688120506,
+        "confusion_matrix": [
+          [
+            10345,
+            4260
+          ],
+          [
+            137,
+            1642
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.10858154296875
+      },
+      {
+        "tile": "EMSR496_AOI01_5_3_1_2.tif",
+        "event": "EMSR496",
+        "country": "Italy",
+        "precision": 0.030434782608695653,
+        "recall": 0.11764705882352941,
+        "IoU": 0.024778761061946902,
+        "Dice_F1": 0.04835924006908463,
+        "non_flood_IoU": 0.7971779141104295,
+        "non_flood_precision": 0.9537580739870816,
+        "non_flood_recall": 0.8292278238672622,
+        "confusion_matrix": [
+          [
+            12994,
+            2676
+          ],
+          [
+            630,
+            84
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.0435791015625
+      },
+      {
+        "tile": "EMSR502_AOI01_05_04_2_2.tif",
+        "event": "EMSR502",
+        "country": "Ireland",
+        "precision": 0.14399574920297556,
+        "recall": 0.9093959731543624,
+        "IoU": 0.14195914091147196,
+        "Dice_F1": 0.2486238532110092,
+        "non_flood_IoU": 0.7932079282918824,
+        "non_flood_precision": 0.9957210776545167,
+        "non_flood_recall": 0.7959209526222447,
+        "confusion_matrix": [
+          [
+            12566,
+            3222
+          ],
+          [
+            54,
+            542
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.036376953125
+      },
+      {
+        "tile": "EMSR502_AOI01_05_07_1_2.tif",
+        "event": "EMSR502",
+        "country": "Ireland",
+        "precision": 0.13385315139701104,
+        "recall": 0.6901172529313233,
+        "IoU": 0.12626417407293902,
+        "Dice_F1": 0.22421768707482992,
+        "non_flood_IoU": 0.8215001252191335,
+        "non_flood_precision": 0.9860964978205321,
+        "non_flood_recall": 0.8311268765439919,
+        "confusion_matrix": [
+          [
+            13121,
+            2666
+          ],
+          [
+            185,
+            412
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.03643798828125
+      },
+      {
+        "tile": "EMSR502_AOI01_08_12_1_2.tif",
+        "event": "EMSR502",
+        "country": "Ireland",
+        "precision": 0.007335490830636462,
+        "recall": 0.11295681063122924,
+        "IoU": 0.0069359445124439,
+        "Dice_F1": 0.013776337115072933,
+        "non_flood_IoU": 0.702262996941896,
+        "non_flood_precision": 0.9772746616733339,
+        "non_flood_recall": 0.7139215320524778,
+        "confusion_matrix": [
+          [
+            11482,
+            4601
+          ],
+          [
+            267,
+            34
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.01837158203125
+      },
+      {
+        "tile": "EMSR502_AOI03_02_08_2_2.tif",
+        "event": "EMSR502",
+        "country": "Ireland",
+        "precision": 0.5241734507393254,
+        "recall": 0.9350918790752816,
+        "IoU": 0.505771080474511,
+        "Dice_F1": 0.6717768551048653,
+        "non_flood_IoU": 0.7669513946632398,
+        "non_flood_precision": 0.9788712011577424,
+        "non_flood_recall": 0.7798616448885473,
+        "confusion_matrix": [
+          [
+            10146,
+            2864
+          ],
+          [
+            219,
+            3155
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.2059326171875
+      },
+      {
+        "tile": "EMSR502_AOI03_03_09_1_1.tif",
+        "event": "EMSR502",
+        "country": "Ireland",
+        "precision": 0.6681961195595175,
+        "recall": 0.7868169188020994,
+        "IoU": 0.5657675657675658,
+        "Dice_F1": 0.722671203743088,
+        "non_flood_IoU": 0.6534065739346151,
+        "non_flood_precision": 0.8422795797167656,
+        "non_flood_recall": 0.7444982838683626,
+        "confusion_matrix": [
+          [
+            7375,
+            2531
+          ],
+          [
+            1381,
+            5097
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.3953857421875
+      },
+      {
+        "tile": "EMSR502_AOI03_05_10_1_2.tif",
+        "event": "EMSR502",
+        "country": "Ireland",
+        "precision": 0.22454394693200663,
+        "recall": 0.9455307262569832,
+        "IoU": 0.22167648984937788,
+        "Dice_F1": 0.3629053872956312,
+        "non_flood_IoU": 0.6836992681304058,
+        "non_flood_precision": 0.9924666795441376,
+        "non_flood_recall": 0.6872659176029963,
+        "confusion_matrix": [
+          [
+            10276,
+            4676
+          ],
+          [
+            78,
+            1354
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.08740234375
+      },
+      {
+        "tile": "EMSR569_AOI02_02_02_1_1.tif",
+        "event": "EMSR569",
+        "country": "Spain",
+        "precision": 0.3612648221343874,
+        "recall": 0.6500711237553343,
+        "IoU": 0.30244870946393115,
+        "Dice_F1": 0.4644308943089431,
+        "non_flood_IoU": 0.9338230677465938,
+        "non_flood_precision": 0.9837290826112838,
+        "non_flood_recall": 0.9484726739366112,
+        "confusion_matrix": [
+          [
+            14873,
+            808
+          ],
+          [
+            246,
+            457
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.04290771484375
+      },
+      {
+        "tile": "EMSR569_AOI02_02_03_2_1.tif",
+        "event": "EMSR569",
+        "country": "Spain",
+        "precision": 0.03215077605321508,
+        "recall": 0.09119496855345911,
+        "IoU": 0.02434928631402183,
+        "Dice_F1": 0.047540983606557376,
+        "non_flood_IoU": 0.9289513910119229,
+        "non_flood_precision": 0.9813331610902984,
+        "non_flood_recall": 0.9456616457114403,
+        "confusion_matrix": [
+          [
+            15193,
+            873
+          ],
+          [
+            289,
+            29
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.0194091796875
+      },
+      {
+        "tile": "EMSR569_AOI02_04_04_1_2.tif",
+        "event": "EMSR569",
+        "country": "Spain",
+        "precision": 0.015625,
+        "recall": 0.07017543859649122,
+        "IoU": 0.012944983818770227,
+        "Dice_F1": 0.025559105431309903,
+        "non_flood_IoU": 0.9441118983630589,
+        "non_flood_precision": 0.9898181352459017,
+        "non_flood_recall": 0.9533707518657867,
+        "confusion_matrix": [
+          [
+            15457,
+            756
+          ],
+          [
+            159,
+            12
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.01043701171875
+      },
+      {
+        "tile": "EMSR569_AOI02_07_08_2_1.tif",
+        "event": "EMSR569",
+        "country": "Spain",
+        "precision": 0.05197505197505198,
+        "recall": 0.1404494382022472,
+        "IoU": 0.03943217665615142,
+        "Dice_F1": 0.07587253414264036,
+        "non_flood_IoU": 0.962772785622593,
+        "non_flood_precision": 0.9903791737408036,
+        "non_flood_recall": 0.9718622732321363,
+        "confusion_matrix": [
+          [
+            15750,
+            456
+          ],
+          [
+            153,
+            25
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.0108642578125
+      },
+      {
+        "tile": "EMSR569_AOI02_10_10_2_2.tif",
+        "event": "EMSR569",
+        "country": "Spain",
+        "precision": 0.5767410412440839,
+        "recall": 0.7162048698572628,
+        "IoU": 0.46945514584479914,
+        "Dice_F1": 0.6389513108614232,
+        "non_flood_IoU": 0.9379305904320392,
+        "non_flood_precision": 0.9773230459577323,
+        "non_flood_recall": 0.9587968143223853,
+        "confusion_matrix": [
+          [
+            14567,
+            626
+          ],
+          [
+            338,
+            853
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.07269287109375
+      },
+      {
+        "tile": "EMSR569_AOI02_10_11_2_1.tif",
+        "event": "EMSR569",
+        "country": "Spain",
+        "precision": 0.6078697421981004,
+        "recall": 0.48406266882766075,
+        "IoU": 0.3688760806916426,
+        "Dice_F1": 0.5389473684210526,
+        "non_flood_IoU": 0.9010201446280992,
+        "non_flood_precision": 0.9359490274983233,
+        "non_flood_recall": 0.9602284456065506,
+        "confusion_matrix": [
+          [
+            13955,
+            578
+          ],
+          [
+            955,
+            896
+          ]
+        ],
+        "pixel_count": 16384,
+        "reference_positive_prevalence": 0.11297607421875
+      }
+    ]
+  },
+  "always_negative_baseline": {
+    "reference_positive_IoU": 0.0,
+    "reference_positive_Dice": 0.0
+  },
+  "class_mapping": {
+    "0": "reference-negative",
+    "1": "publisher reference-positive water/flood extent (raw mask >0)"
+  },
+  "raw_class_values_in_training": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "splits": {
+    "train": {
+      "countries": [
+        "France",
+        "Greece",
+        "Slovakia",
+        "Ukraine",
+        "Iran, Islamic Republic of",
+        "Netherlands",
+        "Croatia",
+        "Iraq"
+      ],
+      "events": [
+        "EMSR275",
+        "EMSR292",
+        "EMSR324",
+        "EMSR411",
+        "EMSR419",
+        "EMSR421",
+        "EMSR444",
+        "EMSR471",
+        "EMSR498",
+        "EMSR520",
+        "EMSR551"
+      ],
+      "tiles": [
+        "EMSR275_03NOVSKA_03_01_1_2.tif",
+        "EMSR275_03NOVSKA_03_04_1_2.tif",
+        "EMSR275_03NOVSKA_05_02_1_2.tif",
+        "EMSR275_03NOVSKA_05_12_1_1.tif",
+        "EMSR275_03NOVSKA_06_05_1_2.tif",
+        "EMSR275_03NOVSKA_07_11_1_2.tif",
+        "EMSR292_01CHRISOUPOLI_05_09_2_2.tif",
+        "EMSR292_01CHRISOUPOLI_06_03_1_1.tif",
+        "EMSR292_01CHRISOUPOLI_08_02_1_2.tif",
+        "EMSR292_01CHRISOUPOLI_08_12_1_2.tif",
+        "EMSR292_01CHRISOUPOLI_09_06_2_2.tif",
+        "EMSR292_01CHRISOUPOLI_10_10_2_1.tif",
+        "EMSR324_02PUICHERIC_2_2_1_2.tif",
+        "EMSR324_02PUICHERIC_2_4_1_2.tif",
+        "EMSR324_02PUICHERIC_2_6_1_2.tif",
+        "EMSR324_02PUICHERIC_3_2_2_1.tif",
+        "EMSR324_02PUICHERIC_3_5_2_1.tif",
+        "EMSR324_02PUICHERIC_6_6_1_1.tif",
+        "EMSR411_AOI01_1_2_2_1.tif",
+        "EMSR411_AOI01_2_4_1_1.tif",
+        "EMSR411_AOI01_3_4_1_2.tif",
+        "EMSR411_AOI01_3_5_1_2.tif",
+        "EMSR411_AOI01_3_5_2_2.tif",
+        "EMSR411_AOI01_4_5_1_2.tif",
+        "EMSR419_AOI01_6_2_2_2.tif",
+        "EMSR419_AOI01_7_7_1_1.tif",
+        "EMSR419_AOI03_3_3_2_2.tif",
+        "EMSR419_AOI04_03_04_2_1.tif",
+        "EMSR419_AOI04_03_07_2_2.tif",
+        "EMSR419_AOI04_04_09_1_1.tif",
+        "EMSR421_AOI05_4_3_1_2.tif",
+        "EMSR421_AOI05_4_6_1_2.tif",
+        "EMSR421_AOI05_4_7_1_1.tif",
+        "EMSR421_AOI05_5_6_1_1.tif",
+        "EMSR421_AOI05_7_7_1_2.tif",
+        "EMSR421_AOI05_8_8_1_2.tif",
+        "EMSR444_AOI01_3_6_2_1.tif",
+        "EMSR444_AOI01_5_5_1_1.tif",
+        "EMSR444_AOI01_5_5_1_2.tif",
+        "EMSR444_AOI04_06_05_2_1.tif",
+        "EMSR444_AOI04_06_07_1_2.tif",
+        "EMSR444_AOI04_08_04_1_2.tif",
+        "EMSR471_AOI04_08_15_2_2.tif",
+        "EMSR471_AOI04_11_17_1_1.tif",
+        "EMSR471_AOI04_16_06_1_2.tif",
+        "EMSR471_AOI04_17_05_2_1.tif",
+        "EMSR471_AOI04_18_07_1_2.tif",
+        "EMSR471_AOI04_22_01_1_2.tif",
+        "EMSR498_AOI01_04_08_2_1.tif",
+        "EMSR498_AOI01_05_03_2_1.tif",
+        "EMSR498_AOI01_05_03_2_2.tif",
+        "EMSR498_AOI01_05_08_2_1.tif",
+        "EMSR498_AOI01_07_01_2_2.tif",
+        "EMSR498_AOI01_08_06_1_2.tif",
+        "EMSR520_AOI01_03_09_1_2.tif",
+        "EMSR520_AOI01_05_09_2_1.tif",
+        "EMSR520_AOI01_08_07_1_1.tif",
+        "EMSR520_AOI01_13_03_1_1.tif",
+        "EMSR520_AOI01_13_03_1_2.tif",
+        "EMSR520_AOI01_14_08_1_1.tif",
+        "EMSR551_AOI01_1_1_2_2.tif",
+        "EMSR551_AOI01_1_2_2_1.tif",
+        "EMSR551_AOI01_2_1_1_2.tif",
+        "EMSR551_AOI01_2_2_1_1.tif",
+        "EMSR551_AOI01_2_2_2_1.tif",
+        "EMSR551_AOI01_2_2_2_2.tif"
+      ]
+    },
+    "validation": {
+      "countries": [
+        "Timor-Leste",
+        "Pakistan"
+      ],
+      "events": [
+        "EMSR507",
+        "EMSR629"
+      ],
+      "tiles": [
+        "EMSR507_AOI01_1_2_2_2.tif",
+        "EMSR507_AOI02_02_07_1_2.tif",
+        "EMSR507_AOI02_02_08_2_1.tif",
+        "EMSR507_AOI02_02_08_2_2.tif",
+        "EMSR507_AOI02_04_04_1_2.tif",
+        "EMSR507_AOI02_06_03_1_1.tif",
+        "EMSR629_AOI01_03_07_2_1.tif",
+        "EMSR629_AOI01_04_07_2_2.tif",
+        "EMSR629_AOI01_08_10_2_2.tif",
+        "EMSR629_AOI02_02_04_1_1.tif",
+        "EMSR629_AOI02_05_12_1_2.tif",
+        "EMSR629_AOI02_08_13_2_2.tif"
+      ]
+    },
+    "test": {
+      "countries": [
+        "Italy",
+        "Ireland",
+        "Spain",
+        "Mexico"
+      ],
+      "events": [
+        "EMSR260",
+        "EMSR333",
+        "EMSR460",
+        "EMSR479",
+        "EMSR496",
+        "EMSR502",
+        "EMSR569"
+      ],
+      "tiles": [
+        "EMSR260_09RUBIERA_1_1_2_2.tif",
+        "EMSR260_09RUBIERA_1_2_2_1.tif",
+        "EMSR260_09RUBIERA_1_2_2_2.tif",
+        "EMSR260_09RUBIERA_1_3_2_1.tif",
+        "EMSR260_09RUBIERA_2_1_1_2.tif",
+        "EMSR260_09RUBIERA_2_1_2_2.tif",
+        "EMSR333_06CIANCIANA_2_1_2_2.tif",
+        "EMSR333_06CIANCIANA_2_3_2_2.tif",
+        "EMSR333_06CIANCIANA_2_5_2_1.tif",
+        "EMSR333_06CIANCIANA_3_2_2_1.tif",
+        "EMSR333_06CIANCIANA_3_2_2_2.tif",
+        "EMSR333_06CIANCIANA_3_3_1_1.tif",
+        "EMSR460_AOI01_02_04_1_1.tif",
+        "EMSR460_AOI01_02_06_2_2.tif",
+        "EMSR460_AOI01_04_03_1_2.tif",
+        "EMSR460_AOI01_04_06_1_1.tif",
+        "EMSR460_AOI01_05_04_2_2.tif",
+        "EMSR460_AOI01_06_07_2_1.tif",
+        "EMSR479_AOI01_06_18_2_1.tif",
+        "EMSR479_AOI01_08_15_1_1.tif",
+        "EMSR479_AOI01_09_08_1_2.tif",
+        "EMSR479_AOI01_10_21_2_2.tif",
+        "EMSR479_AOI02_14_05_1_1.tif",
+        "EMSR479_AOI02_15_03_1_2.tif",
+        "EMSR496_AOI01_1_1_2_2.tif",
+        "EMSR496_AOI01_1_3_2_2.tif",
+        "EMSR496_AOI01_3_3_2_1.tif",
+        "EMSR496_AOI01_4_2_1_1.tif",
+        "EMSR496_AOI01_5_2_1_2.tif",
+        "EMSR496_AOI01_5_3_1_2.tif",
+        "EMSR502_AOI01_05_04_2_2.tif",
+        "EMSR502_AOI01_05_07_1_2.tif",
+        "EMSR502_AOI01_08_12_1_2.tif",
+        "EMSR502_AOI03_02_08_2_2.tif",
+        "EMSR502_AOI03_03_09_1_1.tif",
+        "EMSR502_AOI03_05_10_1_2.tif",
+        "EMSR569_AOI02_02_02_1_1.tif",
+        "EMSR569_AOI02_02_03_2_1.tif",
+        "EMSR569_AOI02_04_04_1_2.tif",
+        "EMSR569_AOI02_07_08_2_1.tif",
+        "EMSR569_AOI02_10_10_2_2.tif",
+        "EMSR569_AOI02_10_11_2_1.tif"
+      ]
+    }
+  },
+  "inventory": {
+    "total_s1_tiles": 21602,
+    "eligible_within_24_hours": 3575,
+    "excluded_time_mismatch": 18027
+  },
+  "sampled_training_pixels": 33792,
+  "training_reference_positive_fraction": 0.14503432765151514
+}

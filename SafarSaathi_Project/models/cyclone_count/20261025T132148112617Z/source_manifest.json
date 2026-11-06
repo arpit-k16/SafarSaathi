@@ -1,0 +1,35 @@
+{
+  "source": {
+    "source": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.NI.list.v04r01.csv",
+    "downloaded_at": "2026-10-25T13:14:18.184194+00:00",
+    "original_filename": "ibtracs.NI.list.v04r01.csv",
+    "bytes": 27886424,
+    "sha256": "b30984b56c428391eff17a44d1a9662e444fc4ba419417e9613c18db07424155",
+    "license_access_terms": "NOAA IBTrACS metadata: redistribution/use without restriction; cite Gahtan et al. 2024, DOI 10.25921/82ty-9e16 and Knapp et al. 2010. NOAA ERDDAP official license metadata verified.",
+    "http_last_modified": "Thu, 22 Oct 2026 09:00:46 GMT",
+    "transformation_history": [
+      "Unmodified public download; stored separately from original raw collection."
+    ]
+  },
+  "raw_rows": 62864,
+  "eligible_events": 388,
+  "calendar_rows": 540,
+  "zero_count_months": 304,
+  "count_distribution": {
+    "0": 304,
+    "1": 134,
+    "2": 66,
+    "3": 26,
+    "4": 7,
+    "5": 2,
+    "6": 1
+  },
+  "coverage": [
+    "1980-01",
+    "2024-12"
+  ],
+  "target": "Count of distinct MAIN SIDs with a North Indian basin tropical (NATURE=TS) record, assigned to their first such month. Includes tropical depressions; no wind threshold or landfall definition.",
+  "zeros": "Explicit zero eligible archived storm IDs in an included calendar month. Not verified absence of all cyclones/disasters.",
+  "excluded": "Pre-1980, 2025/2026 incomplete/provisional years, non-main tracks, non-NI positions, non-TS positions. First qualifying month determined before date filtering to avoid counting cross-year storms twice.",
+  "geography": "NI basin, not Indian political territory or district landfalls."
+}

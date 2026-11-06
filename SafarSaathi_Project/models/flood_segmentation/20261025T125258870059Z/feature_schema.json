@@ -1,0 +1,18 @@
+{
+  "image_shape": [
+    128,
+    128,
+    2
+  ],
+  "input": "Delivered STURM preprocessed float32 Sentinel-1 bands; finite values within [-10,10]",
+  "features": [
+    "two bands",
+    "3x3 local band means",
+    "3x3 local band standard deviations",
+    "band difference"
+  ],
+  "output_shape": [
+    128,
+    128
+  ]
+}

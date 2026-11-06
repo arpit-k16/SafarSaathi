@@ -88,6 +88,12 @@ python -m safarsaathi_ml.cli serve --port 8000
 ```
 
 The frontend's `dev` script launches only Vite; run the backend separately.
+
+## Deploy the backend on Render
+
+Use the ASGI adapter, rather than `main:app`: `uvicorn safarsaathi_ml.asgi:app --host 0.0.0.0 --port $PORT`.
+The Render root directory is `SafarSaathi_Project`; set the Vercel API URL and the explicit
+`SAFARSAATHI_CORS_ORIGINS` allowlist as described in [Render deployment](docs/RENDER_DEPLOYMENT.md).
 In a second terminal from the project root:
 
 ```powershell

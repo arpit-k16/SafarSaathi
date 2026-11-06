@@ -1,0 +1,60 @@
+{
+  "model_id": "nlp-20261024T182952Z",
+  "task": "review classification",
+  "trained_at": "2026-10-24T18:29:52+00:00",
+  "random_seed": 20261024,
+  "text_column": "review",
+  "label_column": "label",
+  "train_rows": 10025,
+  "test_rows": 2507,
+  "metrics": {
+    "accuracy": 0.8500199441563622,
+    "macro_f1": 0.8495165408050799,
+    "classification_report": {
+      "NEGATIVE": {
+        "precision": 0.8511593118922962,
+        "recall": 0.8653992395437262,
+        "f1-score": 0.8582202111613876,
+        "support": 1315.0
+      },
+      "POSITIVE": {
+        "precision": 0.8487179487179487,
+        "recall": 0.8330536912751678,
+        "f1-score": 0.8408128704487722,
+        "support": 1192.0
+      },
+      "accuracy": 0.8500199441563622,
+      "macro avg": {
+        "precision": 0.8499386303051224,
+        "recall": 0.849226465409447,
+        "f1-score": 0.8495165408050799,
+        "support": 2507.0
+      },
+      "weighted avg": {
+        "precision": 0.8499985201476523,
+        "recall": 0.8500199441563622,
+        "f1-score": 0.8499435657168573,
+        "support": 2507.0
+      }
+    }
+  },
+  "software_versions": {
+    "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "artifact": "models/nlp/nlp-20261024T182952Z/pipeline.joblib",
+  "persistence_test_passed": true,
+  "limitations": "This classifies the labels supplied by the source dataset; it is not destination-specific sentiment unless source provenance establishes that scope.",
+  "dataset_provenance": {
+    "logical_name": "labelled_hotel_reviews",
+    "source_description": "Repository-provided hotel review dataset",
+    "repository_relative_path": "SafarSaathi_Datasets\\raw\\reviews\\Aditya1010__17k-hotel-reviews-dataset__balanced_dataset.csv",
+    "external_to_project": true,
+    "format": ".csv",
+    "bytes": 9237352,
+    "sha256": "3c11a24a5263ed25fe837da36092c393615abbccfe1509329c1fa1d525981511",
+    "label_definition": "label"
+  }
+}

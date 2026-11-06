@@ -1,0 +1,7 @@
+{
+  "geography": "NI",
+  "horizon_max": 12,
+  "features": "known month sine/cosine harmonics",
+  "frequency": "monthly",
+  "units": "eligible archived tropical storm IDs/month"
+}

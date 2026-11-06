@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: safarsaathi-api
+    env: python
+    rootDir: SafarSaathi_Project
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn safarsaathi_ml.asgi:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: SAFARSAATHI_CORS_ORIGINS
+        sync: false

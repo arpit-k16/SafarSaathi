@@ -1,0 +1,7 @@
+{
+  "geography": "IND",
+  "horizon_max": 1,
+  "features": "past exposure only: up to three lags, past mean, past difference depending on selected method",
+  "frequency": "annual",
+  "units": "micrograms/m\u00b3"
+}

@@ -1,0 +1,3833 @@
+{
+  "model_id": "tourism_monthly_fta_forecaster",
+  "model_version": "20261025T120954676478Z",
+  "task": "monthly foreign tourist arrivals forecasting",
+  "task_type": "time_series_regression",
+  "artifact": "models/tourism_monthly_fta/20261025T120954676478Z/pipeline.joblib",
+  "artifact_sha256": "81d3fa1b452e0f0640a037ed5616c4ad572d9b8fed4716a87f8b7e17a2b390f3",
+  "persistence_test_passed": true,
+  "trained_at": "2026-10-25T12:09:54+00:00",
+  "training_completed": true,
+  "quality_status": "TRAINED_BUT_EXPERIMENTAL",
+  "target_definition": "Foreign Tourist Arrivals (FTAs), excluding non-resident Indian arrivals",
+  "dataset_provenance": {
+    "target": "Foreign Tourist Arrivals (FTAs), excluding non-resident Indian arrivals",
+    "units": "arrivals per calendar month; repeated arrivals count separately",
+    "geography": "India national total",
+    "frequency": "monthly",
+    "first_observed": "2019-01",
+    "last_observed": "2024-12",
+    "rows": 72,
+    "missing_periods": [],
+    "duplicate_keys_after_reconciliation": 0,
+    "conflicting_values": 0,
+    "imputation": "none",
+    "sources": [
+      {
+        "path": "SafarSaathi_Datasets/raw/tourism_india/INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+        "sha256": "d5d5272150fb460d75c7c190164430b813ef609d38c16d2ba2058b4ea1d2d154",
+        "bytes": 7592562,
+        "pdf_pages": [
+          36
+        ],
+        "table": "2.3.1",
+        "years": [
+          2019,
+          2020,
+          2021
+        ],
+        "monthly_sum_matches_printed_total": true
+      },
+      {
+        "path": "SafarSaathi_Datasets/raw/tourism_india/India Tourism Statistics 2023-English (1).pdf",
+        "sha256": "94b60dcccac5bfd1154a52ee312a56bf04fe90e52bd33c821e417f091e00d3b2",
+        "bytes": 9456505,
+        "pdf_pages": [
+          31
+        ],
+        "table": "2.3.1",
+        "years": [
+          2020,
+          2021,
+          2022
+        ],
+        "monthly_sum_matches_printed_total": true
+      },
+      {
+        "path": "SafarSaathi_Datasets/raw/tourism_india/India Tourism Data Compendium 2024.pdf",
+        "sha256": "4bfd2cb05314ef54efc70746de9ec84f93d93f1a2a1d329ad0048238b2a7a358",
+        "bytes": 12824795,
+        "pdf_pages": [
+          52,
+          53
+        ],
+        "table": "2.3.1",
+        "years": [
+          2021,
+          2022,
+          2023
+        ],
+        "monthly_sum_matches_printed_total": true
+      },
+      {
+        "path": "SafarSaathi_Datasets/raw/tourism_india/India Tourism Data Compendium 2025_1.pdf",
+        "sha256": "b7ac3e64394bf1b1a3b7afc7fbb39b4b8f83b31a229b85769aeb2b17e9012aa9",
+        "bytes": 16196421,
+        "pdf_pages": [
+          48
+        ],
+        "table": "2.2.1",
+        "years": [
+          2019,
+          2023,
+          2024
+        ],
+        "monthly_sum_matches_printed_total": true
+      }
+    ],
+    "observation_provenance": {
+      "2019-01": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-02": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-03": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-04": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-05": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-06": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-07": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-08": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-09": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-10": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-11": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2019-12": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2020-01": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-02": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-03": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-04": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-05": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-06": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-07": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-08": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-09": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-10": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-11": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2020-12": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-01": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-02": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-03": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-04": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-05": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-06": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-07": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-08": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-09": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-10": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-11": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2021-12": [
+        {
+          "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "pages": [
+            36
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-01": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-02": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-03": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-04": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-05": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-06": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-07": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-08": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-09": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-10": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-11": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2022-12": [
+        {
+          "pdf": "India Tourism Statistics 2023-English (1).pdf",
+          "pages": [
+            31
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        }
+      ],
+      "2023-01": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-02": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-03": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-04": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-05": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-06": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-07": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-08": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-09": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-10": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-11": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2023-12": [
+        {
+          "pdf": "India Tourism Data Compendium 2024.pdf",
+          "pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1"
+        },
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-01": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-02": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-03": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-04": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-05": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-06": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-07": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-08": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-09": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-10": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-11": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ],
+      "2024-12": [
+        {
+          "pdf": "India Tourism Data Compendium 2025_1.pdf",
+          "pages": [
+            48
+          ],
+          "table": "2.2.1"
+        }
+      ]
+    },
+    "derived_csv_sha256": "5b2562f66bd2264fdfff9376731923139751a56b8fbd41ae7b996be6d4395a56",
+    "target_separation": "Do not splice into World Bank ITA totals: ministry ITA includes FTA+NRI from 2014; pre-2014 World Bank series has a definition discontinuity.",
+    "publication": "Official 2022/2023 tourism statistics and 2024/2025 compendiums, Bureau of Immigration via Ministry of Tourism.",
+    "license": "Project-local source documentation identifies Government of India public-use/GODL where applicable; retain attribution and check publication restrictions.",
+    "attribution": "Source: Ministry of Tourism, Government of India \u2014 Research & Analytics Division; underlying data: Bureau of Immigration.",
+    "limitations": [
+      "Revised publication vintages, not real-time vintage backtests.",
+      "National counts, not destination stress or occupancy labels.",
+      "COVID disruptions dominate 2020\u20132022; only six annual cycles available.",
+      "No observations after December 2024 were inferred or filled."
+    ]
+  },
+  "derived_source": "data/processed/tourism_monthly_fta/20261025/monthly_fta.csv",
+  "latest_observed_date": "2024-12",
+  "units": "foreign tourist arrivals/month",
+  "method": "persistence",
+  "metrics": {
+    "validation": {
+      "persistence": {
+        "1": {
+          "MAE": 97353.33333333333,
+          "RMSE": 109283.04355815377,
+          "MASE": 0.20789295285349643,
+          "WAPE": 0.18147510503743164,
+          "n": 12,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11"
+          ],
+          "targets": [
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "3": {
+          "MAE": 167124.2,
+          "RMSE": 212117.88006672138,
+          "MASE": 0.35688499039182,
+          "WAPE": 0.28008105924021376,
+          "n": 10,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09"
+          ],
+          "targets": [
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "6": {
+          "MAE": 314622.0,
+          "RMSE": 328750.23242403514,
+          "MASE": 0.6718588298227017,
+          "WAPE": 0.46343190445157695,
+          "n": 7,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06"
+          ],
+          "targets": [
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        }
+      },
+      "drift": {
+        "1": {
+          "MAE": 107851.12823374961,
+          "RMSE": 117203.65002042081,
+          "MASE": 0.23031044494722291,
+          "WAPE": 0.2010439104083944,
+          "n": 12,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11"
+          ],
+          "targets": [
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "3": {
+          "MAE": 219833.67104108454,
+          "RMSE": 255972.2693195333,
+          "MASE": 0.46944330969001474,
+          "WAPE": 0.3684161087493712,
+          "n": 10,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09"
+          ],
+          "targets": [
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "6": {
+          "MAE": 433624.1521914234,
+          "RMSE": 443591.84382450604,
+          "MASE": 0.9259817033589224,
+          "WAPE": 0.6387196911413435,
+          "n": 7,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06"
+          ],
+          "targets": [
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        }
+      },
+      "historical_mean": {
+        "1": {
+          "MAE": 186773.563901325,
+          "RMSE": 238155.8108688827,
+          "MASE": 0.3988451795632849,
+          "WAPE": 0.34816221455052115,
+          "n": 12,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11"
+          ],
+          "targets": [
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "3": {
+          "MAE": 193576.21504406742,
+          "RMSE": 253497.1541010936,
+          "MASE": 0.4133718853767849,
+          "WAPE": 0.32441161335853097,
+          "n": 10,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09"
+          ],
+          "targets": [
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "6": {
+          "MAE": 264536.5686344092,
+          "RMSE": 306826.8254499037,
+          "MASE": 0.5649040100438845,
+          "WAPE": 0.38965706720868076,
+          "n": 7,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06"
+          ],
+          "targets": [
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        }
+      },
+      "seasonal_naive": {
+        "1": {
+          "MAE": 409196.0833333333,
+          "RMSE": 441575.03267215716,
+          "MASE": 0.8738168396245847,
+          "WAPE": 0.762777191712206,
+          "n": 12,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11"
+          ],
+          "targets": [
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "3": {
+          "MAE": 464485.4,
+          "RMSE": 480036.85630876303,
+          "MASE": 0.9918842843594204,
+          "WAPE": 0.7784244462119453,
+          "n": 10,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09"
+          ],
+          "targets": [
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "6": {
+          "MAE": 523197.4285714286,
+          "RMSE": 529451.6638175225,
+          "MASE": 1.1172607513976982,
+          "WAPE": 0.7706593331903842,
+          "n": 7,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06"
+          ],
+          "targets": [
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        }
+      },
+      "ridge": {
+        "1": {
+          "MAE": 173442.4532258519,
+          "RMSE": 198971.07149633236,
+          "MASE": 0.3703772897823405,
+          "WAPE": 0.3233118614371495,
+          "n": 12,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11"
+          ],
+          "targets": [
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "3": {
+          "MAE": 359182.65177516465,
+          "RMSE": 379579.95144670416,
+          "MASE": 0.7670157716697406,
+          "WAPE": 0.601949074819188,
+          "n": 10,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09"
+          ],
+          "targets": [
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        },
+        "6": {
+          "MAE": 540030.1375263309,
+          "RMSE": 546515.7184990966,
+          "MASE": 1.1532061212103202,
+          "WAPE": 0.7954535763394631,
+          "n": 7,
+          "origins": [
+            "2021-12",
+            "2022-01",
+            "2022-02",
+            "2022-03",
+            "2022-04",
+            "2022-05",
+            "2022-06"
+          ],
+          "targets": [
+            "2022-06",
+            "2022-07",
+            "2022-08",
+            "2022-09",
+            "2022-10",
+            "2022-11",
+            "2022-12"
+          ]
+        }
+      }
+    },
+    "test": {
+      "persistence": {
+        "1": {
+          "MAE": 100187.41666666667,
+          "RMSE": 115805.48593546853,
+          "MASE": 0.21394498962127925,
+          "WAPE": 0.12348077945220605,
+          "n": 24,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11"
+          ],
+          "targets": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "RMSE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "MASE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "WAPE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            }
+          }
+        },
+        "3": {
+          "MAE": 185913.86363636365,
+          "RMSE": 225569.99173356773,
+          "MASE": 0.3970093346000745,
+          "WAPE": 0.23123335120210553,
+          "n": 22,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09"
+          ],
+          "targets": [
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "RMSE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "MASE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "WAPE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            }
+          }
+        },
+        "6": {
+          "MAE": 266021.7368421053,
+          "RMSE": 282151.12376087805,
+          "MASE": 0.5680755090938955,
+          "WAPE": 0.3235899777762939,
+          "n": 19,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06"
+          ],
+          "targets": [
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "RMSE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "MASE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            },
+            "WAPE": {
+              "absolute": 0.0,
+              "relative": 0.0
+            }
+          }
+        }
+      },
+      "drift": {
+        "1": {
+          "MAE": 101834.32757091608,
+          "RMSE": 116836.84419906014,
+          "MASE": 0.2174618817424636,
+          "WAPE": 0.1255105936635222,
+          "n": 24,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11"
+          ],
+          "targets": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 1646.9109042494092,
+              "relative": 0.01643830092684037
+            },
+            "RMSE": {
+              "absolute": 1031.35826359161,
+              "relative": 0.008905953420603272
+            },
+            "MASE": {
+              "absolute": 0.003516892121184334,
+              "relative": 0.0164383009268404
+            },
+            "WAPE": {
+              "absolute": 0.002029814211316164,
+              "relative": 0.01643830092684032
+            }
+          }
+        },
+        "3": {
+          "MAE": 193882.4168907838,
+          "RMSE": 231612.17889821297,
+          "MASE": 0.41402576340954933,
+          "WAPE": 0.2411443671812905,
+          "n": 22,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09"
+          ],
+          "targets": [
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 7968.5532544201415,
+              "relative": 0.04286153328514625
+            },
+            "RMSE": {
+              "absolute": 6042.187164645235,
+              "relative": 0.02678630751461822
+            },
+            "MASE": {
+              "absolute": 0.01701642880947485,
+              "relative": 0.042861533285146226
+            },
+            "WAPE": {
+              "absolute": 0.009911015979184978,
+              "relative": 0.04286153328514634
+            }
+          }
+        },
+        "6": {
+          "MAE": 277996.419028465,
+          "RMSE": 299600.9519268408,
+          "MASE": 0.5936468167622289,
+          "WAPE": 0.3381560323722844,
+          "n": 19,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06"
+          ],
+          "targets": [
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 11974.682186359714,
+              "relative": 0.045013923781225346
+            },
+            "RMSE": {
+              "absolute": 17449.82816596277,
+              "relative": 0.061845680192120826
+            },
+            "MASE": {
+              "absolute": 0.025571307668333376,
+              "relative": 0.04501392378122531
+            },
+            "WAPE": {
+              "absolute": 0.01456605459599053,
+              "relative": 0.04501392378122545
+            }
+          }
+        }
+      },
+      "historical_mean": {
+        "1": {
+          "MAE": 297871.4055604048,
+          "RMSE": 332329.11060605774,
+          "MASE": 0.6360888112638563,
+          "WAPE": 0.36712587826770965,
+          "n": 24,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11"
+          ],
+          "targets": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 197683.98889373813,
+              "relative": 1.9731418921744643
+            },
+            "RMSE": {
+              "absolute": 216523.62467058923,
+              "relative": 1.869718199630412
+            },
+            "MASE": {
+              "absolute": 0.422143821642577,
+              "relative": 1.9731418921744641
+            },
+            "WAPE": {
+              "absolute": 0.2436450988155036,
+              "relative": 1.9731418921744648
+            }
+          }
+        },
+        "3": {
+          "MAE": 294856.3983468548,
+          "RMSE": 330577.1509115848,
+          "MASE": 0.6296504210101463,
+          "WAPE": 0.3667323769166748,
+          "n": 22,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09"
+          ],
+          "targets": [
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 108942.53471049113,
+              "relative": 0.5859839206159266
+            },
+            "RMSE": {
+              "absolute": 105007.15917801706,
+              "relative": 0.46551918706476875
+            },
+            "MASE": {
+              "absolute": 0.23264108641007186,
+              "relative": 0.5859839206159265
+            },
+            "WAPE": {
+              "absolute": 0.1354990257145693,
+              "relative": 0.5859839206159266
+            }
+          }
+        },
+        "6": {
+          "MAE": 319751.0948925171,
+          "RMSE": 353748.9468547296,
+          "MASE": 0.6828117437719365,
+          "WAPE": 0.3889465985692284,
+          "n": 19,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06"
+          ],
+          "targets": [
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 53729.3580504118,
+              "relative": 0.2019735630938398
+            },
+            "RMSE": {
+              "absolute": 71597.82309385156,
+              "relative": 0.25375700135268797
+            },
+            "MASE": {
+              "absolute": 0.11473623467804106,
+              "relative": 0.2019735630938398
+            },
+            "WAPE": {
+              "absolute": 0.06535662079293453,
+              "relative": 0.20197356309383985
+            }
+          }
+        }
+      },
+      "seasonal_naive": {
+        "1": {
+          "MAE": 150104.45833333334,
+          "RMSE": 234548.81055629978,
+          "MASE": 0.32054022200292365,
+          "WAPE": 0.1850034278847512,
+          "n": 24,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11"
+          ],
+          "targets": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 49917.04166666667,
+              "relative": 0.49823663816730146
+            },
+            "RMSE": {
+              "absolute": 118743.32462083125,
+              "relative": 1.0253687350096679
+            },
+            "MASE": {
+              "absolute": 0.1065952323816444,
+              "relative": 0.4982366381673015
+            },
+            "WAPE": {
+              "absolute": 0.06152264843254514,
+              "relative": 0.49823663816730146
+            }
+          }
+        },
+        "3": {
+          "MAE": 104024.72727272728,
+          "RMSE": 144033.76655934792,
+          "MASE": 0.22213936577251508,
+          "WAPE": 0.12938242379925977,
+          "n": 22,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09"
+          ],
+          "targets": [
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": -81889.13636363637,
+              "relative": -0.44046815424053903
+            },
+            "RMSE": {
+              "absolute": -81536.22517421981,
+              "relative": -0.36146751856304726
+            },
+            "MASE": {
+              "absolute": -0.1748699688275594,
+              "relative": -0.4404681542405391
+            },
+            "WAPE": {
+              "absolute": -0.10185092740284576,
+              "relative": -0.4404681542405391
+            }
+          }
+        },
+        "6": {
+          "MAE": 75518.94736842105,
+          "RMSE": 92598.84160580435,
+          "MASE": 0.1612667633172174,
+          "WAPE": 0.09186157037663782,
+          "n": 19,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06"
+          ],
+          "targets": [
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": -190502.7894736842,
+              "relative": -0.7161173809896421
+            },
+            "RMSE": {
+              "absolute": -189552.2821550737,
+              "relative": -0.671811189792455
+            },
+            "MASE": {
+              "absolute": -0.4068087457766781,
+              "relative": -0.7161173809896422
+            },
+            "WAPE": {
+              "absolute": -0.23172840739965606,
+              "relative": -0.7161173809896421
+            }
+          }
+        }
+      },
+      "ridge": {
+        "1": {
+          "MAE": 123704.70927418295,
+          "RMSE": 148963.33396809982,
+          "MASE": 0.26416493829582827,
+          "WAPE": 0.15246579292394158,
+          "n": 24,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11"
+          ],
+          "targets": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 23517.292607516283,
+              "relative": 0.23473299731602637
+            },
+            "RMSE": {
+              "absolute": 33157.848032631286,
+              "relative": 0.2863236379933518
+            },
+            "MASE": {
+              "absolute": 0.050219948674549014,
+              "relative": 0.2347329973160263
+            },
+            "WAPE": {
+              "absolute": 0.02898501347173553,
+              "relative": 0.2347329973160264
+            }
+          }
+        },
+        "3": {
+          "MAE": 235810.9955432551,
+          "RMSE": 272726.25644287345,
+          "MASE": 0.5035620507307744,
+          "WAPE": 0.29329370969571106,
+          "n": 22,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09"
+          ],
+          "targets": [
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 49897.131906891445,
+              "relative": 0.2683884403827314
+            },
+            "RMSE": {
+              "absolute": 47156.26470930572,
+              "relative": 0.20905380341993537
+            },
+            "MASE": {
+              "absolute": 0.10655271613069994,
+              "relative": 0.26838844038273135
+            },
+            "WAPE": {
+              "absolute": 0.06206035849360553,
+              "relative": 0.2683884403827316
+            }
+          }
+        },
+        "6": {
+          "MAE": 401846.62156177324,
+          "RMSE": 425439.58429955173,
+          "MASE": 0.8581224483052649,
+          "WAPE": 0.48880794811828926,
+          "n": 19,
+          "origins": [
+            "2022-12",
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06"
+          ],
+          "targets": [
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ],
+          "differences_vs_persistence": {
+            "MAE": {
+              "absolute": 135824.88471966796,
+              "relative": 0.5105781442224232
+            },
+            "RMSE": {
+              "absolute": 143288.46053867368,
+              "relative": 0.5078429553238643
+            },
+            "MASE": {
+              "absolute": 0.29004693921136937,
+              "relative": 0.5105781442224231
+            },
+            "WAPE": {
+              "absolute": 0.16521797034199537,
+              "relative": 0.5105781442224234
+            }
+          }
+        }
+      }
+    },
+    "test_year_folds": {
+      "2023": {
+        "persistence": {
+          "1": {
+            "MAE": 92326.41666666667,
+            "RMSE": 112026.06661807183,
+            "MASE": 0.1971582351627981,
+            "WAPE": 0.1163664928460755,
+            "n": 12,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11"
+            ],
+            "targets": [
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "3": {
+            "MAE": 183858.3,
+            "RMSE": 223448.79497705956,
+            "MASE": 0.3926197859373828,
+            "WAPE": 0.2376507336917042,
+            "n": 10,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09"
+            ],
+            "targets": [
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "6": {
+            "MAE": 255407.85714285713,
+            "RMSE": 276331.42607409466,
+            "MASE": 0.5454101239821875,
+            "WAPE": 0.3154248745387552,
+            "n": 7,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06"
+            ],
+            "targets": [
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          }
+        },
+        "drift": {
+          "1": {
+            "MAE": 94128.26300397456,
+            "RMSE": 113181.23676488768,
+            "MASE": 0.20100598379990547,
+            "WAPE": 0.11863750634892886,
+            "n": 12,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11"
+            ],
+            "targets": [
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "3": {
+            "MAE": 193351.00055498187,
+            "RMSE": 230034.86094676054,
+            "MASE": 0.41289095161151695,
+            "WAPE": 0.249920765839326,
+            "n": 10,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09"
+            ],
+            "targets": [
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "6": {
+            "MAE": 264058.69494785595,
+            "RMSE": 295815.8098435663,
+            "MASE": 0.5638835357736467,
+            "WAPE": 0.32610852953598823,
+            "n": 7,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06"
+            ],
+            "targets": [
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          }
+        },
+        "historical_mean": {
+          "1": {
+            "MAE": 311006.89086422767,
+            "RMSE": 341676.12653394236,
+            "MASE": 0.6641389532926392,
+            "WAPE": 0.39198728216101747,
+            "n": 12,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11"
+            ],
+            "targets": [
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "3": {
+            "MAE": 295901.4470323975,
+            "RMSE": 328645.1442656231,
+            "MASE": 0.6318820678338792,
+            "WAPE": 0.38247496026932815,
+            "n": 10,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09"
+            ],
+            "targets": [
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "6": {
+            "MAE": 338528.9938743588,
+            "RMSE": 369147.7216641339,
+            "MASE": 0.722910965175618,
+            "WAPE": 0.41807823226372076,
+            "n": 7,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06"
+            ],
+            "targets": [
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          }
+        },
+        "seasonal_naive": {
+          "1": {
+            "MAE": 256955.08333333334,
+            "RMSE": 326561.1486675709,
+            "MASE": 0.5487141446094939,
+            "WAPE": 0.3238613925029157,
+            "n": 12,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11"
+            ],
+            "targets": [
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "3": {
+            "MAE": 176949.8,
+            "RMSE": 203910.93816468012,
+            "MASE": 0.37786704542390903,
+            "WAPE": 0.2287209758634792,
+            "n": 10,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09"
+            ],
+            "targets": [
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "6": {
+            "MAE": 130830.57142857143,
+            "RMSE": 132183.36879177674,
+            "MASE": 0.2793818443244128,
+            "WAPE": 0.16157379432383248,
+            "n": 7,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06"
+            ],
+            "targets": [
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          }
+        },
+        "ridge": {
+          "1": {
+            "MAE": 135741.08583699027,
+            "RMSE": 165780.92124861164,
+            "MASE": 0.2898679910791464,
+            "WAPE": 0.17108553179310707,
+            "n": 12,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11"
+            ],
+            "targets": [
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "3": {
+            "MAE": 276598.73239350604,
+            "RMSE": 305052.04992422764,
+            "MASE": 0.5906621300364997,
+            "WAPE": 0.3575247442813953,
+            "n": 10,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09"
+            ],
+            "targets": [
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          },
+          "6": {
+            "MAE": 470812.02619218186,
+            "RMSE": 484062.5607686651,
+            "MASE": 1.0053944637817271,
+            "WAPE": 0.5814457940107237,
+            "n": 7,
+            "origins": [
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06"
+            ],
+            "targets": [
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12"
+            ]
+          }
+        }
+      },
+      "2024": {
+        "persistence": {
+          "1": {
+            "MAE": 108048.41666666667,
+            "RMSE": 119465.39893870248,
+            "MASE": 0.2307317440797604,
+            "WAPE": 0.13028710006167776,
+            "n": 12,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11"
+            ],
+            "targets": [
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "3": {
+            "MAE": 201847.6,
+            "RMSE": 243062.24875780276,
+            "MASE": 0.4310349954501617,
+            "WAPE": 0.25428619372693634,
+            "n": 10,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09"
+            ],
+            "targets": [
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "6": {
+            "MAE": 284460.4285714286,
+            "RMSE": 297928.04645776947,
+            "MASE": 0.6074503711465322,
+            "WAPE": 0.34630459077851194,
+            "n": 7,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06"
+            ],
+            "targets": [
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          }
+        },
+        "drift": {
+          "1": {
+            "MAE": 109540.39213785758,
+            "RMSE": 120381.49346623565,
+            "MASE": 0.23391777968502162,
+            "WAPE": 0.13208615610989646,
+            "n": 12,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11"
+            ],
+            "targets": [
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "3": {
+            "MAE": 207578.26478986032,
+            "RMSE": 248117.44562012804,
+            "MASE": 0.4432725304598613,
+            "WAPE": 0.2615056451196631,
+            "n": 10,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09"
+            ],
+            "targets": [
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "6": {
+            "MAE": 295991.56953411974,
+            "RMSE": 311204.5024306054,
+            "MASE": 0.632074519723918,
+            "WAPE": 0.3603427017113702,
+            "n": 7,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06"
+            ],
+            "targets": [
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          }
+        },
+        "historical_mean": {
+          "1": {
+            "MAE": 284735.9202565821,
+            "RMSE": 322711.4811548982,
+            "MASE": 0.6080386692350738,
+            "WAPE": 0.3433406844643555,
+            "n": 12,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11"
+            ],
+            "targets": [
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "3": {
+            "MAE": 252528.40732600717,
+            "RMSE": 286467.4713381695,
+            "MASE": 0.5392612094610096,
+            "WAPE": 0.31813352007581835,
+            "n": 10,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09"
+            ],
+            "targets": [
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "6": {
+            "MAE": 284889.58751244197,
+            "RMSE": 314368.53094861965,
+            "MASE": 0.6083668176249005,
+            "WAPE": 0.3468270525922446,
+            "n": 7,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06"
+            ],
+            "targets": [
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          }
+        },
+        "seasonal_naive": {
+          "1": {
+            "MAE": 43253.833333333336,
+            "RMSE": 58173.06290429159,
+            "MASE": 0.09236629939635342,
+            "WAPE": 0.05215640067116023,
+            "n": 12,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11"
+            ],
+            "targets": [
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "3": {
+            "MAE": 28957.2,
+            "RMSE": 36204.50627477193,
+            "MASE": 0.06183658646547902,
+            "WAPE": 0.03648007788544249,
+            "n": 10,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09"
+            ],
+            "targets": [
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "6": {
+            "MAE": 24297.85714285714,
+            "RMSE": 29764.978483829906,
+            "MASE": 0.05188680342505984,
+            "WAPE": 0.02958042184253758,
+            "n": 7,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06"
+            ],
+            "targets": [
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          }
+        },
+        "ridge": {
+          "1": {
+            "MAE": 111668.3327113756,
+            "RMSE": 129987.82975242304,
+            "MASE": 0.23846188551251005,
+            "WAPE": 0.1346520725294082,
+            "n": 12,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11"
+            ],
+            "targets": [
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "3": {
+            "MAE": 165038.12167383017,
+            "RMSE": 201976.98250953484,
+            "MASE": 0.35243027920462083,
+            "WAPE": 0.20791387056512572,
+            "n": 10,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09"
+            ],
+            "targets": [
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          },
+          "6": {
+            "MAE": 300389.47613085964,
+            "RMSE": 318775.36296901194,
+            "MASE": 0.6414660193004106,
+            "WAPE": 0.3656967513129783,
+            "n": 7,
+            "origins": [
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06"
+            ],
+            "targets": [
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          }
+        }
+      }
+    },
+    "selected_method": "persistence",
+    "selection": "Lowest mean validation MAE across horizons 1,3,6 on 2022 only; no test-set selection.",
+    "MASE_denominator": 468285.875,
+    "MASE_definition": "Mean absolute seasonal (lag-12) differences in initial 2019\u20132021 block, identical across all methods/horizons.",
+    "legacy_comparison": "Old ITA artifact remains unchanged; its target differs, so direct FTA-vs-ITA error rankings are invalid."
+  },
+  "split": {
+    "initial_train": "2019-01 through 2021-12",
+    "validation": "2022-01 through 2022-12",
+    "test": "2023-01 through 2024-12",
+    "policy": "Expanding-prefix refit before each origin. Final inference estimator fit through 2024-12."
+  },
+  "feature_schema": {
+    "destination": "IND only",
+    "horizon": "integer 1..6 months",
+    "derived_features": [
+      "lag1",
+      "lag2",
+      "lag12",
+      "past3mean",
+      "calendar_sin",
+      "calendar_cos"
+    ]
+  },
+  "configuration": {
+    "seed": 20261025,
+    "ridge_alpha": 10,
+    "CPU": true,
+    "expected_memory": "<50 MB incremental",
+    "no_downloads_or_weights": true
+  },
+  "limitations": [
+    "Experimental India national Foreign Tourist Arrivals (FTA), excluding NRI arrivals; not the legacy World Bank ITA target.",
+    "Latest observed month is December 2024. Forecasts are historical extrapolations, not current 2026 demand.",
+    "Only 72 monthly observations and six annual cycles; COVID/recovery changes limit generalization.",
+    "No calibrated intervals, destination-level accuracy or future weather features.",
+    "Revised source vintages are used; publication-time vintages are unavailable."
+  ]
+}

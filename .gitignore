@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .pytest_tmp*/
+.venv*/
 
 # Local archives and superseded work kept outside version control
 trash/
@@ -14,6 +15,9 @@ SafarSaathi_Project/data/
 SafarSaathi_Project/outputs/
 SafarSaathi_Project/logs/*.log
 SafarSaathi_Project/models/*/*/
+!SafarSaathi_Project/models/
+!SafarSaathi_Project/models/**/
+!SafarSaathi_Project/models/**
 SafarSaathi_Project/release/
 SafarSaathi_Project/integration_docs/phase2_frontend_backup*/
 SafarSaathi_Project/integration_docs/phase2_runtime/

@@ -1,0 +1,7 @@
+{
+  "seed": 20261025,
+  "ridge_alpha": 10.0,
+  "max_horizon": 3,
+  "normalization": "StandardScaler fit on training features only",
+  "compute": "CPU; <100 rows, <10 MB incremental expected memory; expected <10 seconds, no downloads"
+}

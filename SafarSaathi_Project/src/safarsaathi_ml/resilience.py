@@ -449,7 +449,15 @@ def interventions(project: Path, payload: object) -> dict:
     total_visits = sum(base_visits.values())
     baseline = _index_with(f, year, w, s, {})
 
+    cache = {}
+
     def evaluate(mask):
+        key = tuple(bool(m) for m in mask)
+        if key not in cache:
+            cache[key] = _evaluate(key)
+        return cache[key]
+
+    def _evaluate(mask):
         cost = sum(it["cost"] for it, m in zip(items, mask) if m)
         delta = {k: 0.0 for k in base_visits}; lost = 0.0
         for it, m in zip(items, mask):

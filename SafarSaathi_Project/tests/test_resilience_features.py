@@ -127,3 +127,11 @@ def test_scoped_forecast_status_follows_release():
     spec = SPECS[kind]
     res = predict_scoped(P, kind, {'geography': spec['geography'], 'horizon': 1})
     assert res['quality_status'] == 'FINAL_V1'
+
+
+def test_map_config_from_environment(monkeypatch):
+    from fastapi.testclient import TestClient
+    from safarsaathi_ml.asgi import app
+    monkeypatch.setenv('SAFARSAATHI_CARTO_KEY', 'test-key')
+    body = TestClient(app).get('/map-config.json').json()
+    assert body == {'carto_key': 'test-key', 'carto_style': 'dark_all'}

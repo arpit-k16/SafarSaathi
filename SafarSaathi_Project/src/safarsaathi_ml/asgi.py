@@ -127,6 +127,11 @@ def post_route(route: str, payload: object):
 @app.api_route("/{path:path}", methods=["GET", "POST"])
 async def api(request: Request, path: str):
     route = "/" + path
+    if route == "/map-config.json" and os.getenv("SAFARSAATHI_CARTO_KEY"):
+        # hosted deployments supply the map key as an environment variable instead of a committed file
+        return JSONResponse({"carto_key": os.environ["SAFARSAATHI_CARTO_KEY"].strip(),
+                             "carto_style": os.getenv("SAFARSAATHI_CARTO_STYLE", "dark_all")},
+                            headers={"Cache-Control": "no-cache"})
     if route == "/api" or route.startswith("/api/"):
         route = route[4:] or "/"  # same handlers under /api for reverse proxies and same-origin hosting
     elif request.method == "GET" and not is_api_route(route):

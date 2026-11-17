@@ -1,5 +1,5 @@
 # Runtime dependencies. Versions pinned to what is available on PyPI as of Nov 2026.
-# numpy 2.2.x and scikit-learn 1.7.x are the latest stable releases.
+# scikit-learn is pinned to the version the saved models were trained with.
 fastapi>=0.115.6,<1
 starlette>=0.41,<1
 uvicorn[standard]>=0.30,<1
@@ -7,7 +7,7 @@ pydantic>=2.7,<3
 numpy>=2.2,<3
 pandas==2.3.3
 scipy>=1.13,<2
-scikit-learn>=1.7,<2
+scikit-learn==1.9.1  # the saved models were trained with 1.9.1; unpickling needs the same version
 joblib==1.6.0
 tifffile>=2024.8,<2027
 pillow>=10,<13

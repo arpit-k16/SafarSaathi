@@ -11,6 +11,9 @@ services:
     envVars:
       - key: SAFARSAATHI_DATA_MODE
         value: auto
+      # CARTO basemap key for the maps (free at https://carto.com/basemaps/apikey); restrict it to your Render domain.
+      - key: SAFARSAATHI_CARTO_KEY
+        sync: false
       # Only needed if the web console is ALSO hosted elsewhere (e.g. Vercel):
       - key: SAFARSAATHI_CORS_ORIGINS
         sync: false

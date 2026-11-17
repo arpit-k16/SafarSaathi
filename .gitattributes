@@ -7,3 +7,10 @@
 *.pdf binary
 *.tif binary
 *.zip binary
+# Checksum-verified data and artifacts: store byte-for-byte, never convert line endings
+SafarSaathi_Project/data/** -text
+SafarSaathi_Project/outputs/** -text
+SafarSaathi_Project/deploy_snapshot/** -text
+SafarSaathi_Project/models/** -text
+SafarSaathi_Project/research/** -text
+SafarSaathi_Datasets/** -text

@@ -1,0 +1,70 @@
+{
+  "built_utc": "2026-11-16T18:14:42+00:00",
+  "source": "Uttarakhand Tourism Development Board, Tourist Statistics of Major Tourist Destinations",
+  "files": {
+    "UKD_stats_2000_2020.pdf": {
+      "sha256": "41db4b005129b39fa1c293a8becccab1bb0f54c2127b5df9b961b3b52809e0e5",
+      "years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    "UKD_stats_2021_2023.pdf": {
+      "sha256": "5aa99ad0a949ca589316f465d97cd7459d010e28ad19f43a8016fffd5b770b4d",
+      "years": [
+        2021,
+        2022,
+        2023
+      ]
+    },
+    "UKD_stats_2024.pdf": {
+      "sha256": "cc18c076cde68cc5d7212d3a36378617938064fa90201e83c2ebeec8fd2bdc51",
+      "years": [
+        2024
+      ]
+    }
+  },
+  "years": [
+    2000,
+    2024
+  ],
+  "rows": 700,
+  "destinations": 28,
+  "sum_check_failures": [],
+  "cross_checks": [
+    {
+      "file": "UKD_stats_2000_2002.pdf",
+      "skipped": "UKD_stats_2000_2002.pdf [2003, 2004, 2005]: expected 252 values, found 261"
+    },
+    {
+      "file": "UKD_stats_2021.pdf",
+      "year": 2021,
+      "rows_differing": 0
+    }
+  ],
+  "csv_sha256": "2a5ea316c051aa79b5c5c54f915a50e6f1ae6f9cefbd7bd201344c9090d1df85",
+  "limitations": [
+    "Annual counts reported by UTDB; not daily or seasonal footfall.",
+    "Kausani and Bageshwar are reported together; mapped to the Kausani climate point.",
+    "Haridwar and Rishikesh totals include large religious gatherings (e.g. Kanwar, Kumbh)."
+  ]
+}

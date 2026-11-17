@@ -1,0 +1,1573 @@
+[
+  {
+    "model_id": "nlp-20261024T182952Z",
+    "recorded_version": null,
+    "artifact": "models/nlp/nlp-20261024T182952Z/pipeline.joblib",
+    "sha256": "e52b83b7e1ab82a4c36559285f287bd7f98203a74931cee2689c7be70c536150",
+    "task": "review classification",
+    "training_timestamp": "2026-10-24T18:29:52+00:00",
+    "feature_schema": null,
+    "dataset_provenance": {
+      "logical_name": "labelled_hotel_reviews",
+      "source_description": "Repository-provided hotel review dataset",
+      "repository_relative_path": "SafarSaathi_Datasets\\raw\\reviews\\Aditya1010__17k-hotel-reviews-dataset__balanced_dataset.csv",
+      "external_to_project": true,
+      "format": ".csv",
+      "bytes": 9237352,
+      "sha256": "3c11a24a5263ed25fe837da36092c393615abbccfe1509329c1fa1d525981511",
+      "label_definition": "label"
+    },
+    "split": null,
+    "configuration": null
+  },
+  {
+    "model_id": "tourism_demand_forecaster",
+    "recorded_version": "20261025T111230951433Z",
+    "artifact": "models/tourism_demand/20261025T111230951433Z/pipeline.joblib",
+    "sha256": "3b2f5aaab559fda07638f088e689bbd55d206f29995d9d6e52f40f6fb8cd7e7c",
+    "task": "annual tourism demand forecasting",
+    "training_timestamp": "2026-10-25T11:12:30+00:00",
+    "feature_schema": {
+      "input": {
+        "destination": "IND only",
+        "horizon": "integer 1..3 years after latest observed year"
+      },
+      "features": [
+        "lag_1",
+        "lag_2",
+        "lag_3",
+        "past_3_mean",
+        "lag_1_minus_lag_2"
+      ],
+      "output": "annual predicted international tourist arrivals; non-negative counts",
+      "external_features": "none; all features derived strictly from prior observations"
+    },
+    "dataset_provenance": {
+      "path": "worldbank_un_tourism/API_ST.INT.ARVL_India_1995-2025.json",
+      "format": "World Bank JSON",
+      "sha256": "6cd0c77c9560fcbf4c1514d89c53dcc0e9d077904d6156f38a87730ee95ac579",
+      "rows": 31,
+      "observed_rows": 25,
+      "duplicate_keys": 0,
+      "columns": {
+        "destination": "ISO3 string",
+        "year": "int",
+        "arrivals": "float/count"
+      },
+      "missing_rates": {
+        "destination": 0.0,
+        "year": 0.0,
+        "arrivals": 0.1935483870967742
+      },
+      "missing_target_years": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020
+      ],
+      "observed_years": [
+        1995,
+        2019
+      ],
+      "geography": "India national total; not Uttarakhand or individual destinations",
+      "units": "international tourist arrivals per calendar year; annual dates have no time zone",
+      "imputation": "none; trailing null targets excluded, internal gaps rejected",
+      "source_updated": "2026-07-13"
+    },
+    "split": {
+      "train_years": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
+      "validation_years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014
+      ],
+      "test_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "strategy": "Fixed chronological blocks; select using validation one-year MAE only; freeze fit through validation for rolling-origin test; final refit all observed years.",
+      "test_history": "Past actual observations permitted at successive origins; multi-step forecasts recursive, never use future actuals."
+    },
+    "configuration": {
+      "seed": 20261025,
+      "ridge_alpha": 10.0,
+      "max_horizon": 3,
+      "normalization": "StandardScaler fit on training features only",
+      "compute": "CPU; <100 rows, <10 MB incremental expected memory; expected <10 seconds, no downloads"
+    }
+  },
+  {
+    "model_id": "tourism_monthly_fta_forecaster",
+    "recorded_version": "20261025T120954676478Z",
+    "artifact": "models/tourism_monthly_fta/20261025T120954676478Z/pipeline.joblib",
+    "sha256": "81d3fa1b452e0f0640a037ed5616c4ad572d9b8fed4716a87f8b7e17a2b390f3",
+    "task": "monthly foreign tourist arrivals forecasting",
+    "training_timestamp": "2026-10-25T12:09:54+00:00",
+    "feature_schema": {
+      "destination": "IND only",
+      "horizon": "integer 1..6 months",
+      "derived_features": [
+        "lag1",
+        "lag2",
+        "lag12",
+        "past3mean",
+        "calendar_sin",
+        "calendar_cos"
+      ]
+    },
+    "dataset_provenance": {
+      "target": "Foreign Tourist Arrivals (FTAs), excluding non-resident Indian arrivals",
+      "units": "arrivals per calendar month; repeated arrivals count separately",
+      "geography": "India national total",
+      "frequency": "monthly",
+      "first_observed": "2019-01",
+      "last_observed": "2024-12",
+      "rows": 72,
+      "missing_periods": [],
+      "duplicate_keys_after_reconciliation": 0,
+      "conflicting_values": 0,
+      "imputation": "none",
+      "sources": [
+        {
+          "path": "SafarSaathi_Datasets/raw/tourism_india/INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+          "sha256": "d5d5272150fb460d75c7c190164430b813ef609d38c16d2ba2058b4ea1d2d154",
+          "bytes": 7592562,
+          "pdf_pages": [
+            36
+          ],
+          "table": "2.3.1",
+          "years": [
+            2019,
+            2020,
+            2021
+          ],
+          "monthly_sum_matches_printed_total": true
+        },
+        {
+          "path": "SafarSaathi_Datasets/raw/tourism_india/India Tourism Statistics 2023-English (1).pdf",
+          "sha256": "94b60dcccac5bfd1154a52ee312a56bf04fe90e52bd33c821e417f091e00d3b2",
+          "bytes": 9456505,
+          "pdf_pages": [
+            31
+          ],
+          "table": "2.3.1",
+          "years": [
+            2020,
+            2021,
+            2022
+          ],
+          "monthly_sum_matches_printed_total": true
+        },
+        {
+          "path": "SafarSaathi_Datasets/raw/tourism_india/India Tourism Data Compendium 2024.pdf",
+          "sha256": "4bfd2cb05314ef54efc70746de9ec84f93d93f1a2a1d329ad0048238b2a7a358",
+          "bytes": 12824795,
+          "pdf_pages": [
+            52,
+            53
+          ],
+          "table": "2.3.1",
+          "years": [
+            2021,
+            2022,
+            2023
+          ],
+          "monthly_sum_matches_printed_total": true
+        },
+        {
+          "path": "SafarSaathi_Datasets/raw/tourism_india/India Tourism Data Compendium 2025_1.pdf",
+          "sha256": "b7ac3e64394bf1b1a3b7afc7fbb39b4b8f83b31a229b85769aeb2b17e9012aa9",
+          "bytes": 16196421,
+          "pdf_pages": [
+            48
+          ],
+          "table": "2.2.1",
+          "years": [
+            2019,
+            2023,
+            2024
+          ],
+          "monthly_sum_matches_printed_total": true
+        }
+      ],
+      "observation_provenance": {
+        "2019-01": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-02": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-03": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-04": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-05": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-06": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-07": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-08": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-09": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-10": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-11": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2019-12": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2020-01": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-02": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-03": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-04": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-05": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-06": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-07": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-08": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-09": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-10": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-11": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2020-12": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-01": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-02": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-03": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-04": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-05": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-06": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-07": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-08": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-09": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-10": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-11": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2021-12": [
+          {
+            "pdf": "INDIA TOURISM STATISTICS 2022 (master-tourism.digifootprint.gov.in).pdf",
+            "pages": [
+              36
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-01": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-02": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-03": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-04": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-05": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-06": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-07": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-08": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-09": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-10": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-11": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2022-12": [
+          {
+            "pdf": "India Tourism Statistics 2023-English (1).pdf",
+            "pages": [
+              31
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          }
+        ],
+        "2023-01": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-02": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-03": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-04": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-05": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-06": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-07": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-08": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-09": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-10": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-11": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2023-12": [
+          {
+            "pdf": "India Tourism Data Compendium 2024.pdf",
+            "pages": [
+              52,
+              53
+            ],
+            "table": "2.3.1"
+          },
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-01": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-02": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-03": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-04": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-05": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-06": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-07": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-08": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-09": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-10": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-11": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ],
+        "2024-12": [
+          {
+            "pdf": "India Tourism Data Compendium 2025_1.pdf",
+            "pages": [
+              48
+            ],
+            "table": "2.2.1"
+          }
+        ]
+      },
+      "derived_csv_sha256": "5b2562f66bd2264fdfff9376731923139751a56b8fbd41ae7b996be6d4395a56",
+      "target_separation": "Do not splice into World Bank ITA totals: ministry ITA includes FTA+NRI from 2014; pre-2014 World Bank series has a definition discontinuity.",
+      "publication": "Official 2022/2023 tourism statistics and 2024/2025 compendiums, Bureau of Immigration via Ministry of Tourism.",
+      "license": "Project-local source documentation identifies Government of India public-use/GODL where applicable; retain attribution and check publication restrictions.",
+      "attribution": "Source: Ministry of Tourism, Government of India \u2014 Research & Analytics Division; underlying data: Bureau of Immigration.",
+      "limitations": [
+        "Revised publication vintages, not real-time vintage backtests.",
+        "National counts, not destination stress or occupancy labels.",
+        "COVID disruptions dominate 2020\u20132022; only six annual cycles available.",
+        "No observations after December 2024 were inferred or filled."
+      ]
+    },
+    "split": {
+      "initial_train": "2019-01 through 2021-12",
+      "validation": "2022-01 through 2022-12",
+      "test": "2023-01 through 2024-12",
+      "policy": "Expanding-prefix refit before each origin. Final inference estimator fit through 2024-12."
+    },
+    "configuration": {
+      "seed": 20261025,
+      "ridge_alpha": 10,
+      "CPU": true,
+      "expected_memory": "<50 MB incremental",
+      "no_downloads_or_weights": true
+    }
+  },
+  {
+    "model_id": "flood_segmentation_model",
+    "recorded_version": "20261025T125258870059Z",
+    "artifact": "models/flood_segmentation/20261025T125258870059Z/pipeline.joblib",
+    "sha256": "d791b2416f0459fbade39bdc20179573530058d2074f8bb9efe41c7b998decb4",
+    "task": "reference water/flood extent pixel segmentation",
+    "training_timestamp": "2026-10-25T12:52:59+00:00",
+    "feature_schema": {
+      "image_shape": [
+        128,
+        128,
+        2
+      ],
+      "input": "Delivered STURM preprocessed float32 Sentinel-1 bands; finite values within [-10,10]",
+      "features": [
+        "two bands",
+        "3x3 local band means",
+        "3x3 local band standard deviations",
+        "band difference"
+      ],
+      "output_shape": [
+        128,
+        128
+      ]
+    },
+    "dataset_provenance": {
+      "doi": "10.5281/zenodo.12748983",
+      "sha256": "45ff5f805918ade7db5e5d858462f7570c2d6af33537c2dd56900668b6a47263",
+      "publisher_md5": "0e4172e74a4cf2e4c608c14d1588d1d9",
+      "bytes": 3985215183,
+      "license": "CC BY 4.0 (Zenodo dataset record)",
+      "reference_mapping_source": "https://github.com/STURM-WEO/STURM-Flood/blob/main/utils/utility.py",
+      "scope": "Selected Sentinel-1 labelled benchmark subset; not full dataset or local Uttarakhand scenes."
+    },
+    "split": null,
+    "configuration": {
+      "seed": 20261025,
+      "max_tiles_per_event": 6,
+      "pixels_per_training_tile": 512,
+      "country_split": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "maximum_reference_time_offset_hours": 24,
+      "augmentation": "none",
+      "compute": "CPU; bounded tiles, no full archive extraction or pretrained weights"
+    }
+  },
+  {
+    "model_id": "north_indian_cyclone_count_forecaster",
+    "recorded_version": "20261025T132148112617Z",
+    "artifact": "models/cyclone_count/20261025T132148112617Z/pipeline.joblib",
+    "sha256": "7d4a8b81ebc5e901300a12fc0cbbae29a3f88689c8e87f951c04e6c42981d3bb",
+    "task": "Distinct MAIN IBTrACS SIDs with NI tropical (TS) positions; includes depressions, counted in first qualifying month.",
+    "training_timestamp": "2026-10-25T13:21:48+00:00",
+    "feature_schema": {
+      "geography": "NI",
+      "horizon_max": 12,
+      "features": "known month sine/cosine harmonics",
+      "frequency": "monthly",
+      "units": "eligible archived tropical storm IDs/month"
+    },
+    "dataset_provenance": {
+      "source": {
+        "source": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.NI.list.v04r01.csv",
+        "downloaded_at": "2026-10-25T13:14:18.184194+00:00",
+        "original_filename": "ibtracs.NI.list.v04r01.csv",
+        "bytes": 27886424,
+        "sha256": "b30984b56c428391eff17a44d1a9662e444fc4ba419417e9613c18db07424155",
+        "license_access_terms": "NOAA IBTrACS metadata: redistribution/use without restriction; cite Gahtan et al. 2024, DOI 10.25921/82ty-9e16 and Knapp et al. 2010. NOAA ERDDAP official license metadata verified.",
+        "http_last_modified": "Thu, 22 Oct 2026 09:00:46 GMT",
+        "transformation_history": [
+          "Unmodified public download; stored separately from original raw collection."
+        ]
+      },
+      "raw_rows": 62864,
+      "eligible_events": 388,
+      "calendar_rows": 540,
+      "zero_count_months": 304,
+      "count_distribution": {
+        "0": 304,
+        "1": 134,
+        "2": 66,
+        "3": 26,
+        "4": 7,
+        "5": 2,
+        "6": 1
+      },
+      "coverage": [
+        "1980-01",
+        "2024-12"
+      ],
+      "target": "Count of distinct MAIN SIDs with a North Indian basin tropical (NATURE=TS) record, assigned to their first such month. Includes tropical depressions; no wind threshold or landfall definition.",
+      "zeros": "Explicit zero eligible archived storm IDs in an included calendar month. Not verified absence of all cyclones/disasters.",
+      "excluded": "Pre-1980, 2025/2026 incomplete/provisional years, non-main tracks, non-NI positions, non-TS positions. First qualifying month determined before date filtering to avoid counting cross-year storms twice.",
+      "geography": "NI basin, not Indian political territory or district landfalls."
+    },
+    "split": null,
+    "configuration": null
+  },
+  {
+    "model_id": "india_pm25_exposure_forecaster",
+    "recorded_version": "20261025T132148214483Z",
+    "artifact": "models/pm25/20261025T132148214483Z/pipeline.joblib",
+    "sha256": "012204a357ae9ade97269aaf952f0ca2cac26ff3178c2702495246ab48883366",
+    "task": "India national population-weighted modeled annual PM2.5 exposure (World Bank EN.ATM.PM25.MC.M3 / GBD2023).",
+    "training_timestamp": "2026-10-25T13:21:48+00:00",
+    "feature_schema": {
+      "geography": "IND",
+      "horizon_max": 1,
+      "features": "past exposure only: up to three lags, past mean, past difference depending on selected method",
+      "frequency": "annual",
+      "units": "micrograms/m\u00b3"
+    },
+    "dataset_provenance": {
+      "source": {
+        "source": "https://api.worldbank.org/v2/country/IND/indicator/EN.ATM.PM25.MC.M3?format=json&date=1990%3A2023&per_page=100",
+        "downloaded_at": "2026-10-25T13:17:29.853991+00:00",
+        "original_filename": "PM25_India_1990_2023.json",
+        "bytes": 8966,
+        "sha256": "cd2c7a0e3f4e8df96c02393c12119466c8fb645ae8033e33d29e39acdd086ac9",
+        "license_access_terms": "World Bank WDI indicator page: CC BY 4.0; underlying GBD/IHME population-weighted modeled exposure; no underlying restricted raw GBD download.",
+        "http_last_modified": "Sun, 25 Oct 2026 13:17:30 GMT",
+        "transformation_history": [
+          "Unmodified public download; stored separately from original raw collection."
+        ]
+      },
+      "rows": 34,
+      "coverage": [
+        "1990",
+        "2023"
+      ],
+      "missing_targets": 0,
+      "target": "National population-weighted modeled annual PM2.5 exposure",
+      "units": "micrograms/m\u00b3",
+      "measurement": "GBD/IHME modeled exposure republished by World Bank; not a raw sensor measurement or tourism-attribution label."
+    },
+    "split": null,
+    "configuration": null
+  }
+]

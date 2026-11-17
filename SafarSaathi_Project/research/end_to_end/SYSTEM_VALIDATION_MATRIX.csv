@@ -1,0 +1,12 @@
+connection,status,evidence_or_blocker
+Sources → ingestion,VERIFIED LIMITED,Existing catalog/file adapters and source hashes; no live ingestion claimed
+Ingestion → validation,VERIFIED LIMITED,"Six source-aligned audits, missing/duplicate/type/temporal checks"
+Validation → preprocessing,VERIFIED LIMITED,Recovered train-only TF-IDF; chronological forecasts; geographic flood holdout
+Preprocessing → inference,VERIFIED LIMITED,Six stored metric sets reproduced; malformed flood output fails unavailable
+Inference → geospatial hazard analysis,UNSUPPORTED,No matching local hazard reference or event-period registered raster pipeline
+Geospatial → digital twin,EXPLORATORY,Static source points and schematic SVG; no operational registered twin
+Digital twin → what-if,EXPERIMENTAL,Explicit user capacity inputs; not inferred road/hazard physics
+What-if → optimization,EXPERIMENTAL,Separate explicit hypothetical multi-destination inputs; no automatic empirical hazard join
+Optimization → report,VERIFIED LIMITED,HTTP report recomputes submitted parameters and returns actual allocations
+Frontend → API,SEE RUNTIME EVIDENCE,"Node integration, build/lint and browser evidence logged separately; do not infer visual validation from unit tests"
+Nepal 2026 event → segmentation metrics,NOT EVALUATED,No aligned event images/reference mask; cannot score historical accuracy

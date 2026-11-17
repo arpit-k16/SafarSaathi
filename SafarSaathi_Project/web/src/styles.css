@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/hanken-grotesk";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-display: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk Variable", "Hanken Grotesk", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --color-ink: #0b0d12;        /* page */
+  --color-slate: #12151c;      /* panels */
+  --color-ridge: #1a1e27;      /* raised / inputs */
+  --color-line: #272c37;       /* borders */
+  --color-gold: #e8bd4f;       /* brand accent, actions */
+  --color-gold-dim: #a8862f;
+  --color-snow: #ebe7dc;       /* primary text */
+  --color-mist: #a39f92;       /* secondary text */
+  --color-glacier: #6fb8c9;    /* water, rainfall, flood */
+  --color-ember: #e5765f;      /* hazard, error */
+  --color-moss: #8fb878;       /* positive, served */
+}
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-snow);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "tnum" 1;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.015em; margin: 0; }
+:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; border-radius: 4px; }
+::selection { background: var(--color-gold); color: var(--color-ink); }
+
+/* Signature: faint Garhwal-style contour lines behind the shell header */
+.contours {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='220' viewBox='0 0 640 220'%3E%3Cg fill='none' stroke='%23e8bd4f' stroke-opacity='0.11' stroke-width='1'%3E%3Cpath d='M0 170 C80 150 120 90 200 96 S320 170 400 150 520 60 640 72'/%3E%3Cpath d='M0 188 C90 170 130 118 210 122 S330 186 410 170 530 92 640 102'/%3E%3Cpath d='M0 206 C100 192 140 146 220 148 S340 202 420 190 540 124 640 132'/%3E%3Cpath d='M0 150 C70 132 110 62 190 70 S310 150 390 128 510 30 640 44'/%3E%3Cpath d='M260 120 C280 100 320 100 330 118 S300 146 260 120Z'/%3E%3Cpath d='M470 92 C490 70 540 66 548 86 S510 120 470 92Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom right;
+}
+
+.num { font-variant-numeric: tabular-nums; }
+.scroll-thin { scrollbar-width: thin; scrollbar-color: var(--color-line) transparent; }
+
+/* Leaflet dark treatment */
+.leaflet-container { background: #0e1117; font-family: var(--font-sans); border-radius: 10px; }
+.leaflet-control-attribution { background: rgba(11,13,18,.8) !important; color: var(--color-mist) !important; font-size: 10px; }
+.leaflet-control-attribution a { color: var(--color-glacier) !important; }
+.leaflet-bar a { background: var(--color-ridge) !important; color: var(--color-snow) !important; border-color: var(--color-line) !important; }
+.leaflet-tooltip { background: var(--color-ridge); color: var(--color-snow); border: 1px solid var(--color-line); box-shadow: none; }
+.leaflet-tooltip-top:before { border-top-color: var(--color-line); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+@media print {
+  body { background: #fff; color: #111; }
+  .no-print { display: none !important; }
+  .print-plain { background: #fff !important; color: #111 !important; border-color: #ccc !important; }
+}
+
+/* Landing: the gold ridge draws itself once on load */
+.ridge-draw { stroke-dasharray: 2600; stroke-dashoffset: 2600; animation: ridge 2.4s cubic-bezier(.6,.1,.2,1) .2s forwards; }
+.peak-label { opacity: 0; animation: fadein .6s ease 2.2s forwards; }
+@keyframes ridge { to { stroke-dashoffset: 0; } }
+@keyframes fadein { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .ridge-draw { stroke-dashoffset: 0; } .peak-label { opacity: 1; } }

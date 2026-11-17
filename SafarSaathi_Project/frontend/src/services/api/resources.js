@@ -22,6 +22,10 @@ export const api = {
   simulate: input => post('/scenarios/simulate', input),
   report: scenario => post('/reports/generate', scenario ? { scenario: scenario.parameters } : {}),
   optimizationAvailability: () => post('/optimization/solve', {}),
+  research: () => request('/research/status'),
+  optimizationMetadata: () => request('/optimization/metadata'),
+  optimize: input => post('/optimization/allocate', input),
+  optimizationReport: result => post('/reports/generate', { optimization: Object.fromEntries(['problem', 'algorithm', 'seed', 'population', 'iterations'].map(key => [key, result[key]])) }),
 };
 
 export async function overviewData() {
@@ -33,6 +37,8 @@ export async function overviewData() {
 }
 
 export const pageLoaders = {
+  'intervention-optimizer': api.optimizationMetadata,
+  'optimization-explanation': api.optimizationMetadata,
   'tourism-intelligence': api.history,
   'crowd-destination-stress': api.indicatorMetadata,
   'risk-resilience': api.capabilities,

@@ -1,12 +1,18 @@
+# Render Blueprint — one Docker web service serving the web console and the API.
 services:
   - type: web
-    name: safarsaathi-api
-    env: python
+    name: safarsaathi
+    runtime: docker
     rootDir: SafarSaathi_Project
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn safarsaathi_ml.asgi:app --host 0.0.0.0 --port $PORT
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    plan: free
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.12.8
+      - key: SAFARSAATHI_DATA_MODE
+        value: auto
+      # Only needed if the web console is ALSO hosted elsewhere (e.g. Vercel):
       - key: SAFARSAATHI_CORS_ORIGINS
+        sync: false
+      - key: SAFARSAATHI_CORS_ORIGIN_REGEX
         sync: false

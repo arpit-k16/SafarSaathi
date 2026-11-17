@@ -1,0 +1,65 @@
+{
+  "cyclone": {
+    "source": {
+      "source": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.NI.list.v04r01.csv",
+      "downloaded_at": "2026-10-25T13:14:18.184194+00:00",
+      "original_filename": "ibtracs.NI.list.v04r01.csv",
+      "bytes": 27886424,
+      "sha256": "b30984b56c428391eff17a44d1a9662e444fc4ba419417e9613c18db07424155",
+      "license_access_terms": "NOAA IBTrACS metadata: redistribution/use without restriction; cite Gahtan et al. 2024, DOI 10.25921/82ty-9e16 and Knapp et al. 2010. NOAA ERDDAP official license metadata verified.",
+      "http_last_modified": "Thu, 22 Oct 2026 09:00:46 GMT",
+      "transformation_history": [
+        "Unmodified public download; stored separately from original raw collection."
+      ]
+    },
+    "raw_rows": 62864,
+    "eligible_events": 388,
+    "calendar_rows": 540,
+    "zero_count_months": 304,
+    "count_distribution": {
+      "0": 304,
+      "1": 134,
+      "2": 66,
+      "3": 26,
+      "4": 7,
+      "5": 2,
+      "6": 1
+    },
+    "coverage": [
+      "1980-01",
+      "2024-12"
+    ],
+    "target": "Count of distinct MAIN SIDs with a North Indian basin tropical (NATURE=TS) record, assigned to their first such month. Includes tropical depressions; no wind threshold or landfall definition.",
+    "zeros": "Explicit zero eligible archived storm IDs in an included calendar month. Not verified absence of all cyclones/disasters.",
+    "excluded": "Pre-1980, 2025/2026 incomplete/provisional years, non-main tracks, non-NI positions, non-TS positions. First qualifying month determined before date filtering to avoid counting cross-year storms twice.",
+    "geography": "NI basin, not Indian political territory or district landfalls."
+  },
+  "pm25": {
+    "source": {
+      "source": "https://api.worldbank.org/v2/country/IND/indicator/EN.ATM.PM25.MC.M3?format=json&date=1990%3A2023&per_page=100",
+      "downloaded_at": "2026-10-25T13:17:29.853991+00:00",
+      "original_filename": "PM25_India_1990_2023.json",
+      "bytes": 8966,
+      "sha256": "cd2c7a0e3f4e8df96c02393c12119466c8fb645ae8033e33d29e39acdd086ac9",
+      "license_access_terms": "World Bank WDI indicator page: CC BY 4.0; underlying GBD/IHME population-weighted modeled exposure; no underlying restricted raw GBD download.",
+      "http_last_modified": "Sun, 25 Oct 2026 13:17:30 GMT",
+      "transformation_history": [
+        "Unmodified public download; stored separately from original raw collection."
+      ]
+    },
+    "rows": 34,
+    "coverage": [
+      "1990",
+      "2023"
+    ],
+    "missing_targets": 0,
+    "target": "National population-weighted modeled annual PM2.5 exposure",
+    "units": "micrograms/m\u00b3",
+    "measurement": "GBD/IHME modeled exposure republished by World Bank; not a raw sensor measurement or tourism-attribution label."
+  },
+  "files": {
+    "cyclone_monthly.csv": "829209d438d9dd6ce168c1005de3d9310ecc01c454ede400cc3d2d4ce749e3b7",
+    "cyclone_events.csv": "3198ce9328b7736efd7c6da1884ba7b5275424f3059b9721fa8df9092bd4e0a1",
+    "pm25_annual.csv": "278b3c0660cad419ca31dfe19950cbf13c48d44fef790536c2c4a194897fca77"
+  }
+}

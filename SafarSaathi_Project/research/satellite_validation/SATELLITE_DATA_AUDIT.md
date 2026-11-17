@@ -1,0 +1,5 @@
+# Satellite audit: source integrity and geometry, not operational detection
+
+Actual collection: six Sentinel-1 GRD/IW/DV scenes and six Sentinel-2 L2A scene wrappers. Examined 12 TIFF and 416 JP2 files, 10,940,158,403 bytes in total; 78 quality-layer headers were not recognized by Pillow and are flagged, not counted as readable. SHA-256 policy: All existing local TIFF/JP2 payloads SHA-256 compared with original collection manifest. Verified checksums: 428; manifest mismatches: 0. Every source path, hash/header result and available native dimensions is in RASTER_INTEGRITY.csv / satellite_audit.json; per-scene sensor/date/coverage in SCENE_INVENTORY.csv. Original raw files were never written.
+
+Header readability and checksum integrity do not certify complete pixel decode, calibration, alignment, cloud-free ground observations or flood accuracy. No Rasuwagadhi event-period images or matching ground truth were introduced. Existing STURM inference is a different delivered preprocessing/labeling domain.

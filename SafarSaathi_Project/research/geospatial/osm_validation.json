@@ -1,0 +1,1709 @@
+{
+  "counts": {
+    "road_ways_intersecting_pilot": 42541,
+    "oneway_tagged_road_ways": 2266,
+    "restricted_access_tagged_road_ways": 1330,
+    "river_ways_intersecting_pilot": 1476,
+    "hospital_ways_intersecting_pilot": 31,
+    "too_short_road": 1
+  },
+  "source": "SafarSaathi_Datasets/raw/osm_india/northern-zone-latest.osm.pbf",
+  "source_bytes": 223511106,
+  "publisher_md5_expected": "3fc07da5e0b0618f97f14ad64a1e78be",
+  "publisher_md5_actual": "3fc07da5e0b0618f97f14ad64a1e78be",
+  "bbox": [
+    77.24,
+    28.61,
+    81.45,
+    31.63
+  ],
+  "metric_crs": "+proj=aeqd +lat_0=30.1 +lon_0=79.3 +datum=WGS84 +units=m +no_defs +type=crs",
+  "network_nodes": 659069,
+  "undirected_components": 147,
+  "largest_component_nodes": 546319,
+  "largest_component_fraction": 0.828925347725352,
+  "road_line_geometries": 42541,
+  "river_stream_line_geometries": 1476,
+  "hospital_features": 209,
+  "hospital_locations": [
+    {
+      "osm_id": 627273741,
+      "name": "Aurvedic Hospital, Maholi",
+      "longitude": 77.3876512,
+      "latitude": 31.3548222,
+      "kind": "node"
+    },
+    {
+      "osm_id": 1305481210,
+      "name": "Ram Lal Kundan Lal Orthopaedic Hospital",
+      "longitude": 77.2866841,
+      "latitude": 28.6179569,
+      "kind": "node"
+    },
+    {
+      "osm_id": 1305488151,
+      "name": "Dr. Shyama Prasad Mukherjee Chest Hospital",
+      "longitude": 77.2898985,
+      "latitude": 28.6140205,
+      "kind": "node"
+    },
+    {
+      "osm_id": 1491367890,
+      "name": "PHC, Chhaila",
+      "longitude": 77.4276785,
+      "latitude": 31.0994452,
+      "kind": "node"
+    },
+    {
+      "osm_id": 3046913153,
+      "name": "Katgaon PHC",
+      "longitude": 78.0363182,
+      "latitude": 31.5912224,
+      "kind": "node"
+    },
+    {
+      "osm_id": 3067834623,
+      "name": "Somdatt Medical",
+      "longitude": 77.276622,
+      "latitude": 28.6293605,
+      "kind": "node"
+    },
+    {
+      "osm_id": 4739903522,
+      "name": "Sharp Sight Center",
+      "longitude": 77.2934473,
+      "latitude": 28.6403964,
+      "kind": "node"
+    },
+    {
+      "osm_id": 4780416526,
+      "name": null,
+      "longitude": 78.2714302,
+      "latitude": 31.5394348,
+      "kind": "node"
+    },
+    {
+      "osm_id": 5369815822,
+      "name": "Mangalam Hospital",
+      "longitude": 77.2966806,
+      "latitude": 28.6228832,
+      "kind": "node"
+    },
+    {
+      "osm_id": 5534273697,
+      "name": "Tirath Ram Hospital",
+      "longitude": 77.3178057,
+      "latitude": 28.666922,
+      "kind": "node"
+    },
+    {
+      "osm_id": 5907443727,
+      "name": "Ribba Government Hospital",
+      "longitude": 78.3800225,
+      "latitude": 31.5802355,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6434164380,
+      "name": "Rajgrah Civil Hospital",
+      "longitude": 77.2997658,
+      "latitude": 30.8523806,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6699299230,
+      "name": "Civil Hospital, Chopal",
+      "longitude": 77.5881925,
+      "latitude": 30.947502,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6700526289,
+      "name": "Government Hospital",
+      "longitude": 77.5353117,
+      "latitude": 31.1177072,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6986025831,
+      "name": "Akal Hospital",
+      "longitude": 77.299458,
+      "latitude": 30.7557392,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6988114971,
+      "name": "Civil Hospital, Kotgarh",
+      "longitude": 77.4769378,
+      "latitude": 31.3105261,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6988160679,
+      "name": "District Ayurvedic Hospital, Nahan",
+      "longitude": 77.2930858,
+      "latitude": 30.562821,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6988234533,
+      "name": "Civil Hospital, Jubbal",
+      "longitude": 77.6625869,
+      "latitude": 31.1080566,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6988304581,
+      "name": "Vohra Hospital, Sirmaur",
+      "longitude": 77.6236372,
+      "latitude": 30.4392079,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6988583114,
+      "name": "Civil Hospital, Paonta Sahib",
+      "longitude": 77.6204829,
+      "latitude": 30.4370722,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6990600592,
+      "name": "Reckong Peo Regional Hospital",
+      "longitude": 78.2670414,
+      "latitude": 31.539412,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6990644037,
+      "name": "Refferal Hospital, Dadahu",
+      "longitude": 77.4382228,
+      "latitude": 30.6010704,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6990762315,
+      "name": "Puran Hospital, Sirmaur",
+      "longitude": 77.6433554,
+      "latitude": 30.4472678,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6991491865,
+      "name": "R.R Free Seva Hospital Eye Hospital",
+      "longitude": 77.2696701,
+      "latitude": 30.1333286,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6993262678,
+      "name": "Mittal Maternity and Super-specialty Hospital , Yamunanagar",
+      "longitude": 77.2975463,
+      "latitude": 30.1369113,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6993508901,
+      "name": "Himachal Institute of Dental Sciences Hospital",
+      "longitude": 77.644785,
+      "latitude": 30.4474875,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6993542858,
+      "name": "Ayurvedic Hospital, Rohru",
+      "longitude": 77.753385,
+      "latitude": 31.2012576,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6993542869,
+      "name": "Civil Hospital, Theog",
+      "longitude": 77.3524162,
+      "latitude": 31.1262178,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6993964395,
+      "name": "Civil Hospital, Nerwa",
+      "longitude": 77.6424073,
+      "latitude": 30.9190526,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6993970715,
+      "name": "Vignesh Hospital",
+      "longitude": 77.2901199,
+      "latitude": 30.168995,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994025825,
+      "name": "Sihint Ear Nose Throat Hospital",
+      "longitude": 77.2751525,
+      "latitude": 30.1376235,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994040162,
+      "name": "Aggarwal Hospital",
+      "longitude": 77.3055285,
+      "latitude": 30.1476913,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994048914,
+      "name": "Gaba Hospital",
+      "longitude": 77.2901447,
+      "latitude": 30.1469787,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994056929,
+      "name": "Chadha Hospital",
+      "longitude": 77.2817212,
+      "latitude": 30.135262,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994059256,
+      "name": "Shri Suresh Chandra Memorial Eye and General Hospit",
+      "longitude": 77.2437868,
+      "latitude": 30.1145218,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994067545,
+      "name": "Garg Ent Hospital",
+      "longitude": 77.3086064,
+      "latitude": 30.1549473,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994067550,
+      "name": "City Hospital",
+      "longitude": 77.2921564,
+      "latitude": 30.1527098,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994067555,
+      "name": "Smt. Shanti Devi Kalra Eye and Maternity Hospital",
+      "longitude": 77.2914268,
+      "latitude": 30.1354534,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104887,
+      "name": "Deswal Hospital Childrens and Maternity Centre",
+      "longitude": 77.3076283,
+      "latitude": 30.1515967,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104907,
+      "name": "Christian Hospital",
+      "longitude": 77.2917263,
+      "latitude": 30.1685892,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104912,
+      "name": "Bansal Eye Hospital",
+      "longitude": 77.308719,
+      "latitude": 30.1548997,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104919,
+      "name": "Goel Hospital, Yamunanagar",
+      "longitude": 77.2981334,
+      "latitude": 30.1718658,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104926,
+      "name": "Rameshwar Dass Memorial Hospital",
+      "longitude": 77.2963931,
+      "latitude": 30.1632483,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104933,
+      "name": "S.K. Hospital - Jagadhri",
+      "longitude": 77.3079382,
+      "latitude": 30.1520601,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104940,
+      "name": "Mahendra Hospital",
+      "longitude": 77.3033304,
+      "latitude": 30.1541982,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104947,
+      "name": "Jindal Hospital, Yamunanagar",
+      "longitude": 77.2939702,
+      "latitude": 30.1551981,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994104952,
+      "name": "Sh O P Memorial Jain Hospital",
+      "longitude": 77.2924635,
+      "latitude": 30.1526767,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994130149,
+      "name": "General Hospital, Yamunanagar",
+      "longitude": 77.2913611,
+      "latitude": 30.1189858,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994204643,
+      "name": "Rajan Hospital, Yamunanagar",
+      "longitude": 77.2659969,
+      "latitude": 30.135729,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994204650,
+      "name": "Aarogyam Hospital, Yamunanagar",
+      "longitude": 77.2928395,
+      "latitude": 30.1598152,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994204655,
+      "name": "Mukand Lal Civil Hospital, Jagadhri",
+      "longitude": 77.2913849,
+      "latitude": 30.1700732,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994225387,
+      "name": "Sabbarwal Hospital",
+      "longitude": 77.2901269,
+      "latitude": 30.1741657,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994225392,
+      "name": "S.P. Hospital",
+      "longitude": 77.2968985,
+      "latitude": 30.1680651,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994356428,
+      "name": "Jp Hospital, Yamunanagar",
+      "longitude": 77.2899167,
+      "latitude": 30.1268169,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6994578564,
+      "name": "Bharti Psychiatric Hospital",
+      "longitude": 77.2924431,
+      "latitude": 30.1387742,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997058106,
+      "name": "N.K. Urology Centre And Stone Clinic",
+      "longitude": 77.2816958,
+      "latitude": 30.13979,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997270804,
+      "name": "Arvinde Eye Hospital",
+      "longitude": 77.2865532,
+      "latitude": 30.1418463,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997296421,
+      "name": "Aashirwad Hospital, Yamunanagar",
+      "longitude": 77.2869515,
+      "latitude": 30.1437494,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997296426,
+      "name": "Aastha Hospital, Yamunanagar",
+      "longitude": 77.3060489,
+      "latitude": 30.1499052,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997339421,
+      "name": "Kapil Hospital, Yamunanagar",
+      "longitude": 77.3052952,
+      "latitude": 30.1475556,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997374774,
+      "name": "Gulati Hospital, Yamunanagar",
+      "longitude": 77.2778589,
+      "latitude": 30.1372709,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997403611,
+      "name": "Goyal Eye Care Centre",
+      "longitude": 77.3077682,
+      "latitude": 30.1518418,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997504614,
+      "name": "Paras Hospital, Yamunanagar",
+      "longitude": 77.3056251,
+      "latitude": 30.1490644,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997504619,
+      "name": "Rana Hospital, Yamunanagar",
+      "longitude": 77.2867718,
+      "latitude": 30.1413997,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997554302,
+      "name": "Mago Maternity and Children Hospital",
+      "longitude": 77.2913356,
+      "latitude": 30.1324088,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997554307,
+      "name": null,
+      "longitude": 77.3100588,
+      "latitude": 30.1651479,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997560309,
+      "name": "Life Line Care Multi Speciality Hospital",
+      "longitude": 77.2846006,
+      "latitude": 30.1421501,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997565561,
+      "name": "Dr. Puran Chand Memorial Dental and Eye Hospital",
+      "longitude": 77.2755267,
+      "latitude": 30.1370517,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997565566,
+      "name": "Kohli Hospital",
+      "longitude": 77.3088732,
+      "latitude": 30.1548429,
+      "kind": "node"
+    },
+    {
+      "osm_id": 6997568107,
+      "name": "Dr R K Gupta Hospital",
+      "longitude": 77.2961274,
+      "latitude": 30.1371549,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7001231611,
+      "name": "Santosh Hospital, Yamunanagar",
+      "longitude": 77.2675753,
+      "latitude": 30.1290602,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7003137343,
+      "name": "Gautam Hospital, Yamunanagar",
+      "longitude": 77.2972707,
+      "latitude": 30.1318126,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7003189239,
+      "name": "Madan Memorial Children Hospital",
+      "longitude": 77.2806376,
+      "latitude": 30.1358118,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7007592320,
+      "name": "Masih Hospital",
+      "longitude": 77.277553,
+      "latitude": 30.1377613,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7007875938,
+      "name": "Ravi Hospital, Yamunanagar",
+      "longitude": 77.288636,
+      "latitude": 30.1388981,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7008911276,
+      "name": "Rishi Ram Memorial Hospital",
+      "longitude": 77.2778114,
+      "latitude": 30.1359222,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7009224949,
+      "name": "Sawhney Hospital",
+      "longitude": 77.282479,
+      "latitude": 30.1335663,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7009224974,
+      "name": "Sachdeva Maternity and General Hospital",
+      "longitude": 77.3081973,
+      "latitude": 30.1550215,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7010378672,
+      "name": "Dayasheel Hospital",
+      "longitude": 77.2978701,
+      "latitude": 30.1412298,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7010670228,
+      "name": "Primary Health Centre, Rampur",
+      "longitude": 77.6295642,
+      "latitude": 31.4481448,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7010747059,
+      "name": "Vishal Hospital",
+      "longitude": 77.3075064,
+      "latitude": 30.1524787,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7011009447,
+      "name": "Kapoor General and Maternity Hospital",
+      "longitude": 77.3181,
+      "latitude": 30.1652685,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7012998941,
+      "name": "District Ayurvedic Hospital, Reckong Peo",
+      "longitude": 78.2678354,
+      "latitude": 31.5391491,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7022320908,
+      "name": "Gopal Hospital",
+      "longitude": 77.2893602,
+      "latitude": 28.7258364,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138493229,
+      "name": "Chacha Nehru Bal Chikitsalaya",
+      "longitude": 77.268342,
+      "latitude": 28.653163,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534309,
+      "name": "Navjeevan Nursing Home",
+      "longitude": 77.2780809,
+      "latitude": 28.653289,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534363,
+      "name": "Raj Rani Hospital",
+      "longitude": 77.3233982,
+      "latitude": 28.6138358,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534366,
+      "name": "Malhotra Nursing Home",
+      "longitude": 77.3039095,
+      "latitude": 28.6197989,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534372,
+      "name": "Navjoyti Eye Centre",
+      "longitude": 77.2424612,
+      "latitude": 28.6435226,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534373,
+      "name": "Mahesh Hospital",
+      "longitude": 77.3023362,
+      "latitude": 28.6264544,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534382,
+      "name": "Jag Pravesh Chandra Hospital",
+      "longitude": 77.262937,
+      "latitude": 28.6764665,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534401,
+      "name": "Mohan Nursing Home & Hospital",
+      "longitude": 77.267766,
+      "latitude": 28.702744,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534434,
+      "name": "Sankhwar Hospital",
+      "longitude": 77.3237989,
+      "latitude": 28.6151295,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138534435,
+      "name": "Neera Eye Centre",
+      "longitude": 77.2427645,
+      "latitude": 28.6424432,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632133,
+      "name": "Gupta Nursing Home",
+      "longitude": 77.2876085,
+      "latitude": 28.6759254,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632136,
+      "name": "Kamaal Nursing Home",
+      "longitude": 77.2718597,
+      "latitude": 28.6798998,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632142,
+      "name": "jp memorial",
+      "longitude": 77.3296536,
+      "latitude": 28.6845119,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632145,
+      "name": "Sai Charitable Dispensary & Nursing Home",
+      "longitude": 77.3003113,
+      "latitude": 28.6893425,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632162,
+      "name": "Government Hospital",
+      "longitude": 77.277492,
+      "latitude": 28.668361,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632165,
+      "name": "Chandiwala Hospital Shahdara",
+      "longitude": 77.2904545,
+      "latitude": 28.6750114,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632180,
+      "name": "st. stephen hospital",
+      "longitude": 77.3171197,
+      "latitude": 28.6939954,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632194,
+      "name": "IG ESI Hospital",
+      "longitude": 77.3111297,
+      "latitude": 28.6665856,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632200,
+      "name": "Red Cross Hospital Society Mat. Welfare and Child Care Hospital",
+      "longitude": 77.3225828,
+      "latitude": 28.678117,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632224,
+      "name": "Tondan hospital",
+      "longitude": 77.3207024,
+      "latitude": 28.6664871,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632230,
+      "name": "shanti nursing home LLP",
+      "longitude": 77.2825741,
+      "latitude": 28.6779567,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632254,
+      "name": "Sona Maternity and Nursing Home",
+      "longitude": 77.2906128,
+      "latitude": 28.6656992,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632256,
+      "name": "DGD Vivek Vihar",
+      "longitude": 77.3190619,
+      "latitude": 28.6696193,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632265,
+      "name": "Kalyan Nursing Home",
+      "longitude": 77.3283939,
+      "latitude": 28.6814958,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7138632267,
+      "name": "best care hospital",
+      "longitude": 77.3278636,
+      "latitude": 28.68452,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506353,
+      "name": "Nahan CH",
+      "longitude": 77.294705,
+      "latitude": 30.56404,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506386,
+      "name": "Civil Hospital, Dadahu",
+      "longitude": 77.4381021,
+      "latitude": 30.6009069,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506389,
+      "name": "Government Ayurvedic Health Centre, Bhagani",
+      "longitude": 77.7368617,
+      "latitude": 30.4869114,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506397,
+      "name": "Hospital, Haripurdhar",
+      "longitude": 77.5320649,
+      "latitude": 30.7710671,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506420,
+      "name": "Rajpura Government Hospital",
+      "longitude": 77.728889,
+      "latitude": 30.54224,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506428,
+      "name": "Government Hospital, Anni",
+      "longitude": 77.416981,
+      "latitude": 31.433162,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506441,
+      "name": "Government Hospital, Arsu",
+      "longitude": 77.5818422,
+      "latitude": 31.4810835,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506444,
+      "name": "Kumarsain CH",
+      "longitude": 77.4490709,
+      "latitude": 31.3177297,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7165506463,
+      "name": "Hospital, Jangi",
+      "longitude": 78.4283865,
+      "latitude": 31.6114363,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7168696130,
+      "name": "Civil Hospital Bilaspur",
+      "longitude": 77.302514,
+      "latitude": 30.301289,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7168696168,
+      "name": "Civil Hospital, KOT MUSTRAKA",
+      "longitude": 77.4112752,
+      "latitude": 30.3271866,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7168696251,
+      "name": "Civil Hospital ,Chhachhrauli",
+      "longitude": 77.3591068,
+      "latitude": 30.2407884,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7168696260,
+      "name": "Government hospital, kharwan",
+      "longitude": 77.358187,
+      "latitude": 30.198414,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955441,
+      "name": "Dehli Hospital",
+      "longitude": 77.2450734,
+      "latitude": 28.6418873,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955444,
+      "name": "Luv Kush Hospital",
+      "longitude": 77.2687617,
+      "latitude": 28.724975,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955451,
+      "name": "Lal Hospital",
+      "longitude": 77.2832977,
+      "latitude": 28.7025443,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955456,
+      "name": "Vasist Hospital",
+      "longitude": 77.280317,
+      "latitude": 28.701646,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955464,
+      "name": "Dr Chaudhry's Moral Hospital",
+      "longitude": 77.2724415,
+      "latitude": 28.7023722,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955467,
+      "name": "Taravati Hospital",
+      "longitude": 77.300537,
+      "latitude": 28.628851,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955468,
+      "name": "Panchsheel Hospital",
+      "longitude": 77.279607,
+      "latitude": 28.7017,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955475,
+      "name": "Neha Hospital",
+      "longitude": 77.2658014,
+      "latitude": 28.7196717,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955478,
+      "name": "Triveni Hospital",
+      "longitude": 77.2666955,
+      "latitude": 28.7207367,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955481,
+      "name": "Virmani Hospital",
+      "longitude": 77.3012574,
+      "latitude": 28.619588,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955485,
+      "name": "Vinod Karhana Hospital",
+      "longitude": 77.2626857,
+      "latitude": 28.712504,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955492,
+      "name": "Muskan Hospital",
+      "longitude": 77.2548371,
+      "latitude": 28.6919851,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955494,
+      "name": "Asian Samra Multi Speciality Hospital",
+      "longitude": 77.278726,
+      "latitude": 28.701808,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955501,
+      "name": "Silver Line Nursing Home",
+      "longitude": 77.2959726,
+      "latitude": 28.6228036,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955506,
+      "name": "Kavita Poly Clinic & Hospital",
+      "longitude": 77.2704213,
+      "latitude": 28.7261791,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955507,
+      "name": "Sanjeevan Hospital",
+      "longitude": 77.2429413,
+      "latitude": 28.6412816,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955512,
+      "name": "Mavi Hospital",
+      "longitude": 77.263533,
+      "latitude": 28.7134013,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955515,
+      "name": "Aarogya Hospital",
+      "longitude": 77.2863392,
+      "latitude": 28.6413801,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955517,
+      "name": "Apex Citi Hospital",
+      "longitude": 77.3019477,
+      "latitude": 28.6265513,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7544955521,
+      "name": "White House Hospital",
+      "longitude": 77.2784256,
+      "latitude": 28.7018331,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7611240814,
+      "name": "Basati Hospital",
+      "longitude": 77.3013764,
+      "latitude": 30.2929906,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7611240826,
+      "name": "Goel Hospital and Maternity Clinic",
+      "longitude": 77.3644286,
+      "latitude": 30.2014469,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7611240831,
+      "name": "Sardari Lal Hospital",
+      "longitude": 77.3029301,
+      "latitude": 30.3025715,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7611240874,
+      "name": "Chhabra Hospital",
+      "longitude": 77.3602181,
+      "latitude": 30.1975989,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7637726863,
+      "name": "Priyanshi Hospital",
+      "longitude": 77.6279584,
+      "latitude": 30.4399658,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7637726876,
+      "name": "Shri Siddhivinayak Hospital",
+      "longitude": 77.609994,
+      "latitude": 30.442295,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7637726881,
+      "name": "Sushil Clinic",
+      "longitude": 78.2705176,
+      "latitude": 31.5407106,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7637726887,
+      "name": "Haqqan Hospital",
+      "longitude": 77.5387221,
+      "latitude": 30.4768118,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218092,
+      "name": "Sanjeevani Hospital",
+      "longitude": 77.7418866,
+      "latitude": 31.211406,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218100,
+      "name": "Shrikhand Hospital",
+      "longitude": 77.6673483,
+      "latitude": 31.458806,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218111,
+      "name": "Civil Hospital",
+      "longitude": 77.832593,
+      "latitude": 31.21398,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218117,
+      "name": "Tanishtha Hospital",
+      "longitude": 77.5371387,
+      "latitude": 31.117087,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218120,
+      "name": "Government Hospital",
+      "longitude": 77.9359,
+      "latitude": 31.247359,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218122,
+      "name": "Dr. B K Arora Hospital",
+      "longitude": 77.6516529,
+      "latitude": 31.4532692,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218123,
+      "name": "Civil Hospital",
+      "longitude": 77.8946303,
+      "latitude": 31.2368059,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218130,
+      "name": "Newlife Hospital",
+      "longitude": 77.7390033,
+      "latitude": 31.1959541,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218136,
+      "name": "Leelawati Nursing Home",
+      "longitude": 77.6702069,
+      "latitude": 31.460377,
+      "kind": "node"
+    },
+    {
+      "osm_id": 7642218142,
+      "name": "Chuni Hospital",
+      "longitude": 77.5458333,
+      "latitude": 31.1405556,
+      "kind": "node"
+    },
+    {
+      "osm_id": 9196101613,
+      "name": "Delhi City, Medical",
+      "longitude": 77.2811441,
+      "latitude": 28.6559519,
+      "kind": "node"
+    },
+    {
+      "osm_id": 10049931203,
+      "name": "HOD Karkardooma - House Of Diagnostics",
+      "longitude": 77.3020999,
+      "latitude": 28.6470935,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11238406906,
+      "name": "Patel Hospital",
+      "longitude": 77.2783314,
+      "latitude": 28.6308656,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11672476252,
+      "name": "New OPD Civil Hospital Nahan",
+      "longitude": 77.2953012,
+      "latitude": 30.5642551,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11690527372,
+      "name": "KK SURGICAL CENTRE",
+      "longitude": 77.292098,
+      "latitude": 28.6925868,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11690556040,
+      "name": "TYGAI DIAGNOSTIC CENTER",
+      "longitude": 77.2913592,
+      "latitude": 28.6913354,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11690583075,
+      "name": "INDIAN BAGHEERA VETERINARY HOSPITAL",
+      "longitude": 77.2921256,
+      "latitude": 28.6944964,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11690592604,
+      "name": "BHARAT VIKAS PARISHAD(FREE EYE CAMP)",
+      "longitude": 77.2917846,
+      "latitude": 28.6885897,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11690597440,
+      "name": "MIND BRAIN & MENTAL HOSPITAL",
+      "longitude": 77.2916753,
+      "latitude": 28.6904216,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11693517909,
+      "name": "MAHALAKSHMI HOSPITAL",
+      "longitude": 77.2986283,
+      "latitude": 28.6892732,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11696904640,
+      "name": "DUKH NIWARAN MEDICAL CENTER",
+      "longitude": 77.2902512,
+      "latitude": 28.6865598,
+      "kind": "node"
+    },
+    {
+      "osm_id": 11982201439,
+      "name": "IndraGandhi ESI HOSPITAL",
+      "longitude": 77.3110943,
+      "latitude": 28.6665679,
+      "kind": "node"
+    },
+    {
+      "osm_id": 12747456495,
+      "name": "Aashirwad Hospital ( Dr Ratika Jindal)",
+      "longitude": 77.6222635,
+      "latitude": 30.4396086,
+      "kind": "node"
+    },
+    {
+      "osm_id": 13077719600,
+      "name": "Dr. Shroff Charity Eye Hospital",
+      "longitude": 77.242051,
+      "latitude": 28.6459381,
+      "kind": "node"
+    },
+    {
+      "osm_id": 13536544392,
+      "name": "Malik Radix",
+      "longitude": 77.2881381,
+      "latitude": 28.6353257,
+      "kind": "node"
+    },
+    {
+      "osm_id": 13664118559,
+      "name": "Shanti Nursing Home",
+      "longitude": 77.2856275,
+      "latitude": 28.6190345,
+      "kind": "node"
+    },
+    {
+      "osm_id": 13665255268,
+      "name": "Shanti Medical Centre",
+      "longitude": 77.2855408,
+      "latitude": 28.619157,
+      "kind": "node"
+    },
+    {
+      "osm_id": 13945738977,
+      "name": "Infirmary",
+      "longitude": 77.299997,
+      "latitude": 28.6414623,
+      "kind": "node"
+    },
+    {
+      "osm_id": 265825061,
+      "name": null,
+      "longitude": 77.2421334295142,
+      "latitude": 28.645838014958244,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 276694706,
+      "name": null,
+      "longitude": 77.28995099151304,
+      "latitude": 28.614019566979533,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 286838807,
+      "name": "Lal Bahadur Shastri Hospital",
+      "longitude": 77.31365385000001,
+      "latitude": 28.6186316,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 286838808,
+      "name": "Lal Bahadur Shastri Hospital",
+      "longitude": 77.31147620116336,
+      "latitude": 28.617847900452766,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 298449094,
+      "name": "Mukuand Lal Civil Hospital",
+      "longitude": 77.30085818180596,
+      "latitude": 30.13876966076375,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 298449126,
+      "name": "Waryam Singh Hospital",
+      "longitude": 77.30077036061462,
+      "latitude": 30.140405017209567,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 345715171,
+      "name": "Government Dispensary",
+      "longitude": 77.3377451,
+      "latitude": 28.6098281,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 352213720,
+      "name": "The Leprosy Mission Community Hospital",
+      "longitude": 77.3177566582903,
+      "latitude": 28.691457584866956,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 352280534,
+      "name": null,
+      "longitude": 77.3115608186455,
+      "latitude": 28.666816369489194,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 352464765,
+      "name": "Pushpanjali Medical Centre",
+      "longitude": 77.30900065264635,
+      "latitude": 28.654007464209776,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 352548697,
+      "name": "Shanti Mukund Hospital",
+      "longitude": 77.3017216,
+      "latitude": 28.6457448,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 352936603,
+      "name": "sai nursing home",
+      "longitude": 77.3232881126571,
+      "latitude": 28.61322783848055,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 386327383,
+      "name": "Government Maternity Hospital, Laxmi Nagar",
+      "longitude": 77.27811018692498,
+      "latitude": 28.635086962130114,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 426529419,
+      "name": "Chaudhary Eye Centre",
+      "longitude": 77.24367443750421,
+      "latitude": 28.642035937477992,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 714996255,
+      "name": "Civil Hospital, Sarahan",
+      "longitude": 77.7937875349366,
+      "latitude": 31.509420115237756,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 746565766,
+      "name": "Civil Hospital, Nirmand",
+      "longitude": 77.5775522261669,
+      "latitude": 31.42323018410755,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 764098975,
+      "name": "Walia Nursing Home",
+      "longitude": 77.28072688802304,
+      "latitude": 28.633039272070423,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 764108581,
+      "name": "Garg Hospital",
+      "longitude": 77.29494311779811,
+      "latitude": 28.653155712485166,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 764108591,
+      "name": "Parivar Seva Clinic",
+      "longitude": 77.29461428247042,
+      "latitude": 28.652167187408686,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 764108592,
+      "name": "Surya hospital",
+      "longitude": 77.2858058395737,
+      "latitude": 28.66301315598131,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 764108599,
+      "name": "Shri Ram Singh Hospital",
+      "longitude": 77.28759080000002,
+      "latitude": 28.660544300000005,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 767656280,
+      "name": "Max Superspeciality Hospital",
+      "longitude": 77.30918743671585,
+      "latitude": 28.633297146527475,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 806826371,
+      "name": "Galaxy Hospital",
+      "longitude": 77.29498090000001,
+      "latitude": 28.652983850000005,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 806826401,
+      "name": "Gopal Nursing Home",
+      "longitude": 77.29150085,
+      "latitude": 28.69087555,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 806826410,
+      "name": "Makkar Multispeciality Hospital",
+      "longitude": 77.28240921276374,
+      "latitude": 28.641072000870118,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 816782228,
+      "name": "Rajiv Gandhi Super Speciality Hospital",
+      "longitude": 77.31657098204093,
+      "latitude": 28.68969548229478,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 816798914,
+      "name": "Delhi State Cancer Institute",
+      "longitude": 77.30884498617303,
+      "latitude": 28.686580537467666,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 1153422950,
+      "name": "DGD Surajmal Vihar",
+      "longitude": 77.30601651713573,
+      "latitude": 28.65888825455965,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 1193556052,
+      "name": "Kailash Deepak Hospital",
+      "longitude": 77.30135438721011,
+      "latitude": 28.6449561122248,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 1195536864,
+      "name": "Metro Hospital and Cancer Institute",
+      "longitude": 77.29489966624982,
+      "latitude": 28.638408184884508,
+      "kind": "way_centroid_proxy"
+    },
+    {
+      "osm_id": 1389870753,
+      "name": "Swami Dayanand Hospital",
+      "longitude": 77.30350655300015,
+      "latitude": 28.67932035416726,
+      "kind": "way_centroid_proxy"
+    }
+  ],
+  "associations": [
+    {
+      "destination": "Almora",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 174889.5511529141,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 174089.1321703111
+    },
+    {
+      "destination": "Auli",
+      "nearest_road_way_id": 202070090,
+      "nearest_road_projected_m": 80729.75323991918,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 79019.49365095541
+    },
+    {
+      "destination": "Badrinath",
+      "nearest_road_way_id": 202070090,
+      "nearest_road_projected_m": 58771.342180016865,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 58343.31598890665
+    },
+    {
+      "destination": "Bageshwar",
+      "nearest_road_way_id": 202070090,
+      "nearest_road_projected_m": 148809.79617665723,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 146560.92377725654
+    },
+    {
+      "destination": "Champawat",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 219972.7401474469,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 218118.45112199002
+    },
+    {
+      "destination": "Corbett National Park",
+      "nearest_road_way_id": 164467421,
+      "nearest_road_projected_m": 142601.92377598828,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 120583.30097689654
+    },
+    {
+      "destination": "Dehradun",
+      "nearest_road_way_id": 1094072637,
+      "nearest_road_projected_m": 28659.45068132757,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 6018.635715250585
+    },
+    {
+      "destination": "Gangotri",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 5584.47369004258,
+      "nearest_river_or_stream_way_id": 202070083,
+      "nearest_river_or_stream_projected_m": 5805.942166256934
+    },
+    {
+      "destination": "Gopeshwar",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 79801.02554712206,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 78651.58158946599
+    },
+    {
+      "destination": "Haridwar",
+      "nearest_road_way_id": 164467421,
+      "nearest_road_projected_m": 53199.59282227663,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 47673.005589741835
+    },
+    {
+      "destination": "Hemkund Sahib",
+      "nearest_road_way_id": 202070090,
+      "nearest_road_projected_m": 78924.91692937983,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 77326.37294858006
+    },
+    {
+      "destination": "Joshimath",
+      "nearest_road_way_id": 202070090,
+      "nearest_road_projected_m": 78884.80411809395,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 77271.84630844058
+    },
+    {
+      "destination": "Kathgodam",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 205792.38215573877,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 192546.9750181655
+    },
+    {
+      "destination": "Kausani",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 148286.27099280275,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 147211.98846673814
+    },
+    {
+      "destination": "Kedarnath",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 36907.508358670166,
+      "nearest_river_or_stream_way_id": 202070083,
+      "nearest_river_or_stream_projected_m": 37120.73090691376
+    },
+    {
+      "destination": "Kotdwar",
+      "nearest_road_way_id": 164467421,
+      "nearest_road_projected_m": 105928.04199020755,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 84445.87571277638
+    },
+    {
+      "destination": "Mussoorie",
+      "nearest_road_way_id": 310181244,
+      "nearest_road_projected_m": 24167.1116469051,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 14446.180769631923
+    },
+    {
+      "destination": "Nainital",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 190310.35409252724,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 177704.50447821766
+    },
+    {
+      "destination": "Pauri",
+      "nearest_road_way_id": 310181244,
+      "nearest_road_projected_m": 99184.54020597592,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 79040.70516000004
+    },
+    {
+      "destination": "Pithoragarh",
+      "nearest_road_way_id": 202070090,
+      "nearest_road_projected_m": 203250.91622621726,
+      "nearest_river_or_stream_way_id": 355617982,
+      "nearest_river_or_stream_projected_m": 200836.6895888009
+    },
+    {
+      "destination": "Ranikhet",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 163349.35812536092,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 159087.6900346462
+    },
+    {
+      "destination": "Rishikesh",
+      "nearest_road_way_id": 1094072637,
+      "nearest_road_projected_m": 62481.69462345533,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 39695.78288386375
+    },
+    {
+      "destination": "Rudraprayag",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 83930.65399190376,
+      "nearest_river_or_stream_way_id": 202070083,
+      "nearest_river_or_stream_projected_m": 83032.46736902934
+    },
+    {
+      "destination": "Srinagar (Pauri Garhwal)",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 91617.5212378508,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 78366.77641992654
+    },
+    {
+      "destination": "Tehri",
+      "nearest_road_way_id": 310181244,
+      "nearest_road_projected_m": 54511.45580212354,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 38789.433100656344
+    },
+    {
+      "destination": "Udham Singh Nagar",
+      "nearest_road_way_id": 1075276019,
+      "nearest_road_projected_m": 206385.7800577911,
+      "nearest_river_or_stream_way_id": 226817545,
+      "nearest_river_or_stream_projected_m": 201021.6670357796
+    },
+    {
+      "destination": "Uttarkashi",
+      "nearest_road_way_id": 202057043,
+      "nearest_road_projected_m": 57511.53855667764,
+      "nearest_river_or_stream_way_id": 297429249,
+      "nearest_river_or_stream_projected_m": 44901.33656094684
+    },
+    {
+      "destination": "Valley of Flowers",
+      "nearest_road_way_id": 202070090,
+      "nearest_road_projected_m": 67474.31267739001,
+      "nearest_river_or_stream_way_id": 202057044,
+      "nearest_river_or_stream_projected_m": 67651.42041286296
+    },
+    {
+      "destination": "Yamunotri",
+      "nearest_road_way_id": 1124646008,
+      "nearest_road_projected_m": 33577.29563935005,
+      "nearest_river_or_stream_way_id": 297429227,
+      "nearest_river_or_stream_projected_m": 17353.704298238754
+    }
+  ],
+  "metric_distance_check_samples": 101,
+  "max_projected_chord_vs_geodesic_relative_error": 0.0002651608228864106,
+  "runtime_seconds": 292.92196030000923,
+  "limitations": [
+    "Static OSM snapshot, selected drivable highway tags; not live accessibility or a routing engine.",
+    "Connectivity graph is undirected, shared-node based and restricted to endpoint-inside-pilot edges; cut boundaries cause components.",
+    "Oneway, turn restrictions, bridges/layers, missing OSM features and temporary closures are not routing-validated.",
+    "Nearest distances are projected horizontal proximity to clipped OSM road/river lines, not travel or flood exposure.",
+    "Hospital tags/way-centroid proxies are not independent evidence that facilities exist or are operational.",
+    "No measured hazard polygons or validated tourism-cluster assignments exist."
+  ]
+}

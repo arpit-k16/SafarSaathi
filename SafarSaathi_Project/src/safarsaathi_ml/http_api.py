@@ -51,6 +51,7 @@ def predict_capability(task: str, payload: object):
         try: load_flood(settings().project_root)
         except Exception: return HTTPStatus.SERVICE_UNAVAILABLE,{'status':'not_trained','model_id':IDS[task],'detail':'No validated flood-scene segmentation artifact is available.'}
         try:return HTTPStatus.OK,segment(settings().project_root,payload)
+        except ArtifactUnavailable:return HTTPStatus.SERVICE_UNAVAILABLE,{'status':'unavailable','detail':'Saved segmentation model produced invalid output.'}
         except ValueError:return HTTPStatus.UNPROCESSABLE_ENTITY,{'detail':'Expected supported 128x128x2 STURM-preprocessed image and bounded metadata.'}
         except Exception:return HTTPStatus.SERVICE_UNAVAILABLE,{'status':'unavailable','detail':'Saved segmentation artifact is unavailable.'}
     if task != 'tourism_demand':
@@ -70,7 +71,16 @@ def health() -> dict[str, object]:
 def models() -> list[dict[str, object]]:
     return [{"model_id": item.get("model_id"), "task": item.get("task"), "trained_at": item.get("trained_at"), "metrics": item.get("metrics"), "limitations": item.get("limitations"),
              'model_version': item.get('model_version', item['model_id']),
-             'quality_status': item.get('quality_status', 'TRAINED_BUT_EXPERIMENTAL' if item['model_id'] == 'tourism_demand_forecaster' else 'TRAINED_AND_EVALUATED')} for item in list_models()]
+             'quality_status': _release_status(item)} for item in list_models()]
+
+
+def _release_status(item):
+    from .release_gate import status_for
+    default = item.get('quality_status', 'TRAINED_BUT_EXPERIMENTAL' if item['model_id'] == 'tourism_demand_forecaster' else 'TRAINED_AND_EVALUATED')
+    try:
+        return status_for(settings().project_root, item['model_id'], default)
+    except Exception:
+        return default
 
 def system_summary() -> dict[str, object]:
     project = settings().project_root

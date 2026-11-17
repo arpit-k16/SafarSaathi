@@ -1,9 +1,21 @@
 __pycache__/
 .pytest_cache/
 *.py[cod]
-.venv/
+.venv*/
 data/interim/
-data/processed/
-outputs/
+data/external/
+data/raw_v2/
+outputs/*
+!outputs/indicators/
+!outputs/reports/
+outputs/reports/*
+!outputs/reports/ml_data_readiness.json
+!outputs/metrics/
+outputs/metrics/*
+!outputs/metrics/*_evaluation_audit.json
+web/node_modules/
+web/dist/
 # Persisted inference artifacts are intentionally versioned: Render must serve
 # genuine saved models rather than silently falling back to demonstrations.
+# deploy_snapshot/ and data/processed/ are small, checksum-verified and versioned
+# so hosted adapters can answer without the raw collection.

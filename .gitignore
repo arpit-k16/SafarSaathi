@@ -11,8 +11,12 @@ trash files/
 
 # Reproducible local data, generated outputs, logs, and model artifacts
 SafarSaathi_Datasets/raw/
-SafarSaathi_Project/data/
-SafarSaathi_Project/outputs/
+# data/ and outputs/ rules live in SafarSaathi_Project/.gitignore: raw and interim data stay out,
+# the small processed files and audit outputs the app reads at runtime are versioned.
+SafarSaathi_Project/research/regression_tmp*/
+SafarSaathi_Project/research/_baseline/
+SafarSaathi_Project/*.log
+Claude outputs/
 SafarSaathi_Project/logs/*.log
 SafarSaathi_Project/models/*/*/
 !SafarSaathi_Project/models/
@@ -26,3 +30,6 @@ SafarSaathi_Project/integration_docs/phase2_runtime/
 node_modules/
 dist/
 build/
+
+# Local map key (copy web/public/map-config.example.json to map-config.json and add your CARTO key)
+SafarSaathi_Project/web/public/map-config.json

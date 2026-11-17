@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { isPageVisible } from '../services/pageVisibility.js';
 
 const SECTORS = [
   'Garhwal Arc // Rishikesh Core',
@@ -126,7 +127,7 @@ export default function Header({
           </button>
 
           {/* Disaster Mode Quick Escalate (if not on disaster mode already) */}
-          {activeTab !== 'disaster-mode' && (
+          {isPageVisible('disaster-mode') && activeTab !== 'disaster-mode' && (
             <button
               type="button"
               onClick={onEmergencyEscalate}

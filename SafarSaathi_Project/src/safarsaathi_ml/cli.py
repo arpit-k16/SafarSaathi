@@ -9,12 +9,13 @@ from .pipeline import run
 
 def main() -> None:
     parser = argparse.ArgumentParser(prog="safarsaathi-ml")
-    parser.add_argument("command", choices=("run", "serve", "data-readiness", "train", "evaluate", "predict", "models", "validate-artifacts"))
+    parser.add_argument("command", choices=("run", "serve", "data-readiness", "train", "evaluate", "predict", "models", "validate-artifacts", "build-snapshot"))
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--model", choices=("tourism_demand", "tourism_monthly_fta", "disaster_risk", "flood_segmentation", "destination_stress", "cyclone_count", "pm25"), default="tourism_demand")
     parser.add_argument("--destination", default="IND")
     parser.add_argument("--horizon", type=int, default=1)
     parser.add_argument('--input-json', type=str)
+    parser.add_argument('--sections', type=str, help='Comma-separated snapshot sections (default: all).')
     args = parser.parse_args()
     if args.command == "run":
         print(json.dumps(run(), indent=2, default=str))
@@ -33,6 +34,9 @@ def main() -> None:
             if args.command == 'data-readiness':
                 result = data_readiness(project, raw)
                 result = {k: v['readiness'] for k, v in result['models'].items()}
+            elif args.command == 'build-snapshot':
+                from .snapshot import build_snapshot
+                result = build_snapshot(project, [x.strip() for x in args.sections.split(',')] if args.sections else None)
             elif args.command == 'models':
                 result = [{'model_id': m['model_id'], 'task': m['task']} for m in list_models()]
             elif args.command == 'validate-artifacts':

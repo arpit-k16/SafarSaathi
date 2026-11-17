@@ -1,0 +1,27 @@
+{
+  "generated_utc": "2026-11-17T09:35:51.250691+00:00",
+  "sections": {
+    "dataset_files": {
+      "file": "dataset_files.json",
+      "sha256": "813c38606b15d8e20def38a79efcca21f4473570cbc4f1fdf83e08a63518c60e",
+      "bytes": 980564
+    },
+    "destinations": {
+      "file": "destinations.json",
+      "sha256": "2ef16802ebd5bd866aff79de83c834280b56134b0b1e46e40011c42615f9703c",
+      "bytes": 27729
+    },
+    "climate": {
+      "file": "climate.json",
+      "sha256": "56e4c7ede110237f376591c60d2dd16ef9dc16cf7dc1cabd203918e738a6fbf6",
+      "bytes": 95469
+    },
+    "tourism_history": {
+      "file": "tourism_history.json",
+      "sha256": "acdba173929da2f311515e8536161b1cbab8a1a0a6a990257fb2a90df6d98f2a",
+      "bytes": 20646
+    }
+  },
+  "omitted": {},
+  "note": "Outputs of the SafarSaathi read-only adapters captured on the machine holding the local datasets."
+}

@@ -1,0 +1,21 @@
+# Executed geographic checks
+
+`python scripts/phase3_geospatial_satellite.py` produced the following actual result. Full source checks are in CSV/JSON; no live route or hazard validation is implied.
+
+```json
+{
+  "checks_passed": [
+    "finite/ranged coordinate acceptance and invalid rejection",
+    "ellipsoidal zero and known one-degree longitude distance",
+    "native lon-lat pilot geometry validity/containment",
+    "shared-node component union/find"
+  ],
+  "status": "PASS",
+  "coordinate_rows": 29,
+  "all_native_points_valid": true,
+  "all_query_points_valid": true,
+  "source_md5_match": true,
+  "satellite_checksum_mismatches": 0,
+  "runtime_seconds": 310.29969189999974
+}
+```

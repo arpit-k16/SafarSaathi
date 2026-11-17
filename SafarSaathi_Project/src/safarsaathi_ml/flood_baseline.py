@@ -18,7 +18,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-from .artifacts import load_artifact
+from .artifacts import load_artifact, ArtifactUnavailable
 from .pipeline import sha256,utc_now
 from .registry import load_registry,register_model
 
@@ -187,8 +187,25 @@ def segment(project,payload):
         raise ValueError('Unsupported geospatial metadata schema.')
     if len(json.dumps(metadata))>10000:raise ValueError('Geospatial metadata exceeds limit.')
     x=image_features(payload['image']);entry,bundle=load_flood(project)
-    probability=bundle['model'].predict_proba(x)[:,1].reshape(128,128)
-    return {'status':'ok','model_id':MODEL_ID,'model_version':entry['model_version'],'quality_status':'TRAINED_BUT_EXPERIMENTAL',
+    try:
+        classes = np.asarray(bundle['model'].classes_)
+        probabilities = np.asarray(bundle['model'].predict_proba(x), dtype=float)
+        if (classes.shape != (2,) or set(classes.tolist()) != {0, 1}
+                or probabilities.shape != (128*128, 2) or not np.isfinite(probabilities).all()
+                or (probabilities < 0).any() or (probabilities > 1).any()
+                or not np.allclose(probabilities.sum(axis=1), 1, atol=1e-6, rtol=0)):
+            raise ArtifactUnavailable('Saved segmentation model produced invalid probabilities.')
+        threshold = bundle['threshold']
+        if type(threshold) not in (int, float) or not 0 <= threshold <= 1:
+            raise ArtifactUnavailable('Saved segmentation threshold is invalid.')
+        positive = int(np.flatnonzero(classes == 1)[0])
+        probability = probabilities[:, positive].reshape(128, 128)
+    except ArtifactUnavailable:
+        raise
+    except Exception as exc:
+        raise ArtifactUnavailable('Saved segmentation model produced an invalid response.') from exc
+    from .release_gate import status_for
+    return {'status':'ok','model_id':MODEL_ID,'model_version':entry['model_version'],'quality_status':status_for(project,MODEL_ID,'TRAINED_BUT_EXPERIMENTAL'),
             'mask':(probability>=bundle['threshold']).astype(int).tolist(),'confidence_map':probability.tolist(),
             'threshold':bundle['threshold'],'dimensions':[128,128],'input_metadata':metadata,'class_mapping':entry['target_definition'],
             'limitations':LIMITATIONS}

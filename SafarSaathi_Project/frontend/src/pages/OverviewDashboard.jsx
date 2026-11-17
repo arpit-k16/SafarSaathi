@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { isPageVisible } from '../services/pageVisibility.js';
 import { useApiQuery } from '../hooks/useApi.js';
 import { overviewData } from '../services/api/resources.js';
 import { number } from '../services/api/adapters.js';
@@ -587,7 +588,7 @@ export default function OverviewDashboard({ onNavigate, showToast }) {
                   <span className="text-[9px] text-slate-400">Model +30% Pax / Rain</span>
                 </button>
 
-                <button
+                {isPageVisible('disaster-mode') && (<button
                   type="button"
                   onClick={() => onNavigate('disaster-mode')}
                   className="p-2.5 rounded bg-red-950/40 hover:bg-red-900/50 border border-red-500/40 text-red-200 hover:text-white transition-all flex flex-col gap-1 text-left shadow-[0_0_12px_rgba(239,68,68,0.2)]"
@@ -595,7 +596,7 @@ export default function OverviewDashboard({ onNavigate, showToast }) {
                   <span className="material-symbols-outlined text-[18px] text-red-400">crisis_alert</span>
                   <span className="font-bold">Disaster Deck</span>
                   <span className="text-[9px] text-red-300">Escalate Protocol D-4</span>
-                </button>
+                </button>)}
               </div>
             </div>
 

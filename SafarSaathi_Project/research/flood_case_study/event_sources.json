@@ -1,0 +1,140 @@
+{
+  "reviewed_utc": "2026-10-30T03:56:34.772871+00:00",
+  "event_date_under_review": "2026-08-26",
+  "event_date_status": "VERIFIED_BY_DIRECTLY_OPENED_PRIMARY_PAGES",
+  "quantitative_event_model_validation": "NOT_EVALUATED_MISSING_ALIGNED_NEPAL_INPUTS_AND_REFERENCE",
+  "source_review_method": "Web search discovery followed by direct primary-page opens. Search snippets alone do not establish measurements. No full-page copyrighted text retained.",
+  "sources": [
+    {
+      "id": "MOHA_2026",
+      "authority": "Government of Nepal, Ministry of Home Affairs",
+      "title": "Official Disaster Relief Appeal",
+      "url": "https://www.moha.gov.np/en/post/ha-ra-tha-ka-apa-l-11",
+      "publication_display": "2083-05-11; attachment filename dated 2026-08-27",
+      "event_date_stated": "2026-08-26",
+      "direct_page_opened": true,
+      "supports": [
+        "Calendar date and Rasuwa/Bhote Koshi event identity"
+      ],
+      "does_not_establish": [
+        "Observed hydrograph",
+        "Model skill",
+        "Nepal asset exposure"
+      ],
+      "attachment_status": "PDF timed out; not used",
+      "attachment_url": "https://www.moha.gov.np/assets/2/PMO_Notice_Final_27_08_2026.pdf/file"
+    },
+    {
+      "id": "ICIMOD_RECORD_2026",
+      "authority": "International Centre for Integrated Mountain Development",
+      "title": "Understanding the Gyirong–Rasuwa disaster of 26 August 2026: A preliminary synthesis",
+      "url": "https://lib.icimod.org/records/qdvc1-tc123",
+      "publication_date": "2026-10-13",
+      "repository_created": "2026-10-14",
+      "doi": "10.53055/ICIMOD.1150",
+      "event_date_stated": "2026-08-26",
+      "direct_page_opened": true,
+      "supports": [
+        "Named Gyirong–Rasuwagadhi corridor",
+        "Preliminary cascading-cryosphere interpretation and unresolved mechanism"
+      ],
+      "full_pdf_status": "17.5 MB report link found; signed redirect inaccessible; full PDF not read"
+    },
+    {
+      "id": "ICIMOD_ADVISORY_2026",
+      "authority": "International Centre for Integrated Mountain Development",
+      "title": "Major flash flood sweeps through Nepal’s Rasuwa district, raising fears of further downstream flooding",
+      "url": "https://www.icimod.org/press-release/major-flash-flood-sweeps-through-nepals-rasuwa-district-raising-fears-of-further-downstream-flooding/",
+      "publication_date": "2026-08-26",
+      "update_noted": "2026-08-27",
+      "event_date_stated": "2026-08-26",
+      "direct_page_opened": true,
+      "supports": [
+        "Contemporaneous named-river event account",
+        "Early trigger/blockage interpretation was uncertain"
+      ],
+      "excluded": [
+        "Reported water-stage changes were not imported as local observations",
+        "Seismic occurrence was not interpreted as demonstrated earthquake causation"
+      ]
+    },
+    {
+      "id": "CEMS_EMSR927",
+      "authority": "European Union, Copernicus Emergency Management Service",
+      "title": "Flood in Nepal",
+      "url": "https://mapping.emergency.copernicus.eu/news/flood-in-nepal-emsr927/",
+      "publication_date": "2026-08-26",
+      "activation": "EMSR927",
+      "event_date_stated": "2026-08-26",
+      "direct_page_opened": true,
+      "supports": [
+        "Emergency mapping activation and event date"
+      ],
+      "limitations": [
+        "Initial reported GLOF description is preliminary, not a validated physical mechanism"
+      ],
+      "activation_url": "https://mapping.emergency.copernicus.eu/activations/EMSR927/",
+      "activation_status": "Timed out; original vectors not loaded"
+    },
+    {
+      "id": "UN_NEPAL_REPORT_INDEX",
+      "authority": "United Nations Nepal, OCHA and Resident Coordinator Office",
+      "title": "Nepal: Rasuwa Floods 2026 - Situation Reports",
+      "url": "https://nepal.un.org/en/323255-nepal-rasuwa-floods-2026-situation-reports",
+      "publication_date": "2026-09-24",
+      "direct_page_opened": true,
+      "supports": [
+        "Linked first flash update dated 2026-08-26",
+        "Report series includes 2026-10-12 situation report"
+      ],
+      "limitations": [
+        "Index opened; full situation PDFs not used for numerical outcomes"
+      ]
+    },
+    {
+      "id": "UNESCO_SYNTHESIS",
+      "authority": "UNESCO Intergovernmental Hydrological Programme",
+      "title": "Rasuwa Flash Flood in Nepal",
+      "url": "https://ihp-wins.unesco.org/rapid-response/rasuwa-flash-flood-in-nepal",
+      "publication_date": "2026-08-29",
+      "updated_date": "2026-09-18",
+      "event_date_stated": "2026-08-26",
+      "direct_page_opened": true,
+      "quantitative_values_used": false,
+      "exclusion_reason": "Conflicting aggregate mapped extents appear within the same page; original versioned products are required."
+    },
+    {
+      "id": "UNOSAT_CANDIDATE",
+      "authority": "UNITAR/UNOSAT",
+      "url": "https://unosat.org/products/4257",
+      "direct_page_opened": true,
+      "content_status": "JavaScript shell only; product details/vector labels not verified",
+      "use": "Remote candidate reference only; no local ingestion or accuracy claim"
+    },
+    {
+      "id": "NDRRMA_RDNA_CANDIDATE",
+      "authority": "Nepal NDRRMA",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/Rapid_Damage_and_Needs_Assessment_RDNA_Rasuwa-Bhotekoshi_Flood_2026.pdf",
+      "direct_page_opened": false,
+      "status": "Fetch timed out; no claims based on unread PDF"
+    },
+    {
+      "id": "NDRRMA_2025_DISTINCT_EVENT",
+      "authority": "Nepal NDRRMA",
+      "url": "https://ndrrma.gov.np/mediafiles/publications/Rasuwagadhi_Flood_Sitrep1_08072025_.pdf",
+      "direct_page_opened": false,
+      "status": "Search discovery only; detailed contents not independently used",
+      "event_date_from_search": "2025-07-08",
+      "use": "Avoid conflating distinct calendar events, not quantitative support for 2026"
+    }
+  ],
+  "excluded_material": [
+    "Social media posts and non-primary news were not used as measurement/validation evidence.",
+    "No signed storage URL credentials or personal-contact information retained."
+  ],
+  "evidence_gaps": [
+    "No locally loaded event-bracketing Nepal imagery and compatible independent reference masks.",
+    "No case-specific validated Nepal infrastructure and dated closure/tourist presence layers.",
+    "No case-level model skill, warning lead time, casualty, rainfall, water-stage or tourist count calculation executed."
+  ]
+}

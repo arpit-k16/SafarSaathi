@@ -40,8 +40,34 @@ def dataset_roots(project):
     }
 
 
+def _use_live(project, probe):
+    """auto: live when the probed local source exists; otherwise the build snapshot."""
+    from .snapshot import data_mode
+    mode = data_mode()
+    return mode == 'live' or (mode == 'auto' and probe.exists())
+
+
+def _from_snapshot(project, name):
+    from .snapshot import SnapshotUnavailable, load_section
+    try:
+        return load_section(project, name)
+    except SnapshotUnavailable as exc:
+        raise DataUnavailable(f'{exc} Run "python -m safarsaathi_ml.cli build-snapshot" on the machine holding the datasets.') from exc
+
+
+def dataset_origin(project):
+    """Return (origin, generated_utc) describing where inventory rows come from."""
+    from .snapshot import LIVE, SNAPSHOT
+    if _use_live(project, project.parent / 'SafarSaathi_Datasets/raw'):
+        return LIVE, None
+    return SNAPSHOT, _from_snapshot(project, 'dataset_files')[1]
+
+
 def dataset_files(project):
     """Join actual file stats with declared provenance; existence is not validation."""
+    if not _use_live(project, project.parent / 'SafarSaathi_Datasets/raw'):
+        rows, _ = _from_snapshot(project, 'dataset_files')
+        return [{**row, 'availability': 'SNAPSHOT_RECORD'} for row in rows]
     try:
         return _dataset_files(project)
     except (OSError, ValueError, KeyError, csv.Error) as exc:
@@ -89,6 +115,8 @@ def dataset_inventory(project, offset=0, limit=100, category=None):
     if type(offset) is not int or offset < 0 or type(limit) is not int or not 1 <= limit <= 200:
         raise ValueError('offset must be non-negative; limit must be 1..200.')
     rows = dataset_files(project)
+    origin, generated = dataset_origin(project)
+    categories = sorted({r['category'] for r in rows})
     if category is not None:
         rows = [r for r in rows if r['category'] == category]
     groups = {}
@@ -99,12 +127,24 @@ def dataset_inventory(project, offset=0, limit=100, category=None):
         group['size_bytes'] += row['size_bytes']
     return {'status': 'LOCAL_INVENTORY', 'generated_utc': timestamp(), 'total': len(rows),
             'offset': offset, 'limit': limit, 'groups': groups, 'files': rows[offset:offset + limit],
+            'categories': categories, 'data_origin': origin, 'snapshot_generated_utc': generated,
             'limitations': ['File presence is not an ingestion, integrity, inference or live-connection test.',
+                            *(['Rows come from a checksum-verified build snapshot of the local collection; files are not present on this server.'] if generated else []),
                             'Coverage and license are null when no per-file source manifest is available.',
                             'Original raw files are never modified; interim test fixtures are excluded.']}
 
 
 def tourism_history(project):
+    """Live source readers when the files exist, otherwise the verified build snapshot."""
+    from .snapshot import LIVE, SNAPSHOT
+    try:
+        return {**_live_tourism_history(project), 'data_origin': LIVE, 'snapshot_generated_utc': None}
+    except DataUnavailable:
+        payload, generated = _from_snapshot(project, 'tourism_history')
+        return {**payload, 'data_origin': SNAPSHOT, 'snapshot_generated_utc': generated}
+
+
+def _live_tourism_history(project):
     # These are the exact source readers used in training, not invented UI values.
     from .readiness import load_arrivals
     import pandas as pd
@@ -134,6 +174,41 @@ def tourism_history(project):
 
 
 def destinations(project):
+    from .snapshot import LIVE, SNAPSHOT
+    root = project / 'data/raw_v2/weather_power'
+    if _use_live(project, root):
+        return {**_live_destinations(project), 'data_origin': LIVE, 'snapshot_generated_utc': None}
+    payload, generated = _from_snapshot(project, 'destinations')
+    return {**payload, 'data_origin': SNAPSHOT, 'snapshot_generated_utc': generated}
+
+
+def destination_climate(project, destination_id):
+    """Monthly NASA POWER climatology for one source point (historical, not a forecast)."""
+    from .snapshot import CLIMATE_LIMITATIONS, LIVE, SNAPSHOT, climate_from_power
+    import re as _re
+    root = project / 'data/raw_v2/weather_power'
+    known = {r['id']: r for r in destinations(project)['destinations']}
+    if destination_id not in known:
+        return None
+    if _use_live(project, root):
+        file = root / known[destination_id]['source_file']
+        try:
+            data = json.loads(file.read_text(encoding='utf-8'))
+            summary = {'id': destination_id, 'name': known[destination_id]['name'], **climate_from_power(data)}
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            raise DataUnavailable('Climate source file is missing or invalid.') from exc
+        origin, generated = LIVE, None
+    else:
+        payload, generated = _from_snapshot(project, 'climate')
+        summary, origin = payload.get(destination_id), SNAPSHOT
+        if summary is None:
+            raise DataUnavailable('Climate summary is absent from the deployment snapshot.')
+    return {'status': 'HISTORICAL_CLIMATOLOGY', 'destination': known[destination_id], **summary,
+            'source': 'NASA POWER archived daily reanalysis', 'is_forecast': False, 'live': False,
+            'data_origin': origin, 'snapshot_generated_utc': generated, 'limitations': CLIMATE_LIMITATIONS}
+
+
+def _live_destinations(project):
     root = project / 'data/raw_v2/weather_power'
     records = []
     try:
@@ -169,6 +244,7 @@ def destinations(project):
 def map_layers(project):
     data = destinations(project)
     return {'type': 'FeatureCollection', 'status': data['status'], 'live': False,
+            'data_origin': data.get('data_origin'), 'snapshot_generated_utc': data.get('snapshot_generated_utc'),
             'coordinate_metadata': 'Source-native geographic longitude/latitude; no EPSG code supplied in source JSON.',
             'features': [{'type': 'Feature', 'id': r['id'], 'geometry': r['geometry'],
                           'properties': {k: v for k, v in r.items() if k != 'geometry'}} for r in data['destinations']],
@@ -193,7 +269,9 @@ def satellite_metadata(project):
         scene['size_bytes'] += row['size_bytes']
     if not scenes:
         raise DataUnavailable('Local Sentinel scene metadata is unavailable.')
+    origin, generated = dataset_origin(project)
     return {'status': 'RAW_IMAGERY_METADATA_ONLY', 'scenes': list(scenes.values()),
+            'data_origin': origin, 'snapshot_generated_utc': generated,
             'flood_analysis_available_for_these_scenes': False,
             'limitations': ['Acquisition times are parsed from product identifiers; files are inventoried, not image-validated.',
                             'No raw-scene preprocessing into the STURM benchmark input is implemented.',
@@ -210,15 +288,18 @@ def capacity_scenario(payload):
               'demand_change_percent': (-100, 1000), 'available_capacity_percent': (0, 100)}
     for key, (low, high) in bounds.items():
         value = payload[key]
-        if type(value) not in (float, int) or not math.isfinite(value) or not low <= value <= high:
+        if type(value) not in (float, int) or not low <= value <= high or not math.isfinite(value):
             raise ValueError(f'{key} must be a finite number in [{low:g}, {high:g}].')
     demand = payload['baseline_visitors'] * (1 + payload['demand_change_percent'] / 100)
     capacity = payload['capacity'] * payload['available_capacity_percent'] / 100
 
     def outcomes(demand, capacity):
+        ratio = demand / capacity if capacity else None
+        if ratio is not None and not math.isfinite(ratio):
+            raise ValueError('Demand/capacity ratio exceeds the supported finite numerical range.')
         return {'visitors': demand, 'available_capacity': capacity,
                 'served_visitors': min(demand, capacity), 'unserved_visitors': max(0, demand - capacity),
-                'utilization_ratio': demand / capacity if capacity else None}
+                'utilization_ratio': ratio}
 
     baseline = outcomes(payload['baseline_visitors'], payload['capacity'])
     scenario = outcomes(demand, capacity)
@@ -235,13 +316,19 @@ def capacity_scenario(payload):
 
 def report(project, payload):
     """Recompute evidence server-side; never accept purported results from clients."""
-    if not isinstance(payload, dict) or set(payload) - {'scenario'}:
-        raise ValueError('Expected an object with optional scenario parameters only.')
+    if not isinstance(payload, dict) or set(payload) - {'scenario', 'optimization'}:
+        raise ValueError('Expected an object with optional scenario and optimization parameters only.')
     scenario = capacity_scenario(payload['scenario']) if 'scenario' in payload else None
+    from .optimization import optimize
+    optimization = optimize(payload['optimization']) if 'optimization' in payload else None
     from .http_api import models
+    try:
+        inventory, inventory_note = dataset_inventory(project, limit=1)['groups'], None
+    except DataUnavailable as exc:
+        inventory, inventory_note = None, f'Dataset inventory omitted: {exc}'
     return {'report_type': 'safarsaathi_evidence_json', 'generated_utc': timestamp(),
-            'models': models(), 'dataset_inventory': dataset_inventory(project, limit=1)['groups'],
-            'scenario': scenario,
+            'models': models(), 'dataset_inventory': inventory, 'dataset_inventory_note': inventory_note,
+            'scenario': scenario, 'optimization': optimization,
             'sources': ['Local model registry and pinned artifacts', 'Local dataset file stats and collection manifest'],
             'limitations': ['Registry metrics are recorded evaluations, not a new evaluation run.',
                             'No live telemetry is included. PDF export is not implemented.',

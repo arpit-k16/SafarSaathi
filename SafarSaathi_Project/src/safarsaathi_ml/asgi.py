@@ -4,12 +4,14 @@ from __future__ import annotations
 import logging
 import os
 from http import HTTPStatus
+from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.responses import FileResponse, JSONResponse
 
-from . import integration_api
+from . import integration_api, resilience_api
 from .artifacts import ArtifactUnavailable
 from .config import settings
 from .http_api import (GET_ROUTES, POST_ROUTES, SCOPED_ROUTES, classify,
@@ -19,6 +21,8 @@ from .integration_services import DataUnavailable, public_metadata
 from .registry import RegistryError
 
 logger = logging.getLogger(__name__)
+GET_ROUTES.update(resilience_api.GET_ROUTES)
+POST_ROUTES.update(resilience_api.POST_ROUTES)
 MAX_REQUEST_BYTES = 1_000_000
 
 
@@ -30,14 +34,40 @@ def allowed_origins() -> list[str]:
     return list(dict.fromkeys(origins + local))
 
 
-app = FastAPI(title="SafarSaathi API", version="2026-11-render")
+def static_root() -> Path | None:
+    """Built web console to serve from the same origin (single-service deployment)."""
+    configured = os.getenv("SAFARSAATHI_STATIC_DIR")
+    root = Path(configured) if configured else settings().project_root / "web" / "dist"
+    return root.resolve() if (root / "index.html").is_file() else None
+
+
+app = FastAPI(title="SafarSaathi API", version="2026-11-web", docs_url=None, openapi_url=None, redoc_url=None)
+app.add_middleware(GZipMiddleware, minimum_size=1024)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins(),
+    allow_origin_regex=os.getenv("SAFARSAATHI_CORS_ORIGIN_REGEX") or None,
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Content-Type"],
 )
+
+
+def is_api_route(route: str) -> bool:
+    return route in GET_ROUTES or route in POST_ROUTES or route.startswith(("/models/", "/destinations/"))
+
+
+def static_response(route: str):
+    root = static_root()
+    if root is None:
+        return None
+    candidate = (root / route.lstrip("/")).resolve()
+    if route not in ("", "/") and candidate.is_file() and root in candidate.parents:
+        immutable = "/assets/" in route
+        return FileResponse(candidate, headers={"Cache-Control": "public, max-age=31536000, immutable" if immutable else "no-cache"})
+    if Path(route).suffix and route not in ("", "/"):
+        return None  # a missing asset is a 404, not the SPA shell
+    return FileResponse(root / "index.html", headers={"Cache-Control": "no-cache"})
 
 
 def response(status: int | HTTPStatus, payload: object) -> JSONResponse:
@@ -46,6 +76,8 @@ def response(status: int | HTTPStatus, payload: object) -> JSONResponse:
 
 def get_route(target: str):
     route = target.split("?", 1)[0]
+    if route in resilience_api.GET_ROUTES:
+        return resilience_api.get(settings().project_root, target)
     adapted = integration_api.get(settings().project_root, target)
     if adapted is not None:
         return adapted
@@ -66,6 +98,8 @@ def get_route(target: str):
 
 
 def post_route(route: str, payload: object):
+    if route in resilience_api.POST_ROUTES:
+        return resilience_api.post(settings().project_root, route, payload)
     if route in integration_api.POST_ROUTES:
         result = integration_api.post(settings().project_root, route, payload)
         return result or (HTTPStatus.NOT_FOUND, {"detail": "Endpoint not found."})
@@ -93,6 +127,12 @@ def post_route(route: str, payload: object):
 @app.api_route("/{path:path}", methods=["GET", "POST"])
 async def api(request: Request, path: str):
     route = "/" + path
+    if route == "/api" or route.startswith("/api/"):
+        route = route[4:] or "/"  # same handlers under /api for reverse proxies and same-origin hosting
+    elif request.method == "GET" and not is_api_route(route):
+        served = static_response(route)
+        if served is not None:
+            return served
     target = route + (f"?{request.url.query}" if request.url.query else "")
     try:
         if request.method == "GET":
@@ -106,9 +146,12 @@ async def api(request: Request, path: str):
         try: payload = await request.json()
         except Exception: return response(HTTPStatus.BAD_REQUEST, {"detail": "Request body must be valid JSON."})
         return response(*post_route(route, payload))
+    except DataUnavailable as exc:
+        logger.warning("Dataset adapter unavailable for %s", route)
+        return response(HTTPStatus.SERVICE_UNAVAILABLE, {"status": "unavailable", "detail": str(exc)})
     except ValueError as exc:
         return response(HTTPStatus.UNPROCESSABLE_ENTITY, {"detail": str(exc)})
-    except (RegistryError, ArtifactUnavailable, OSError, DataUnavailable):
+    except (RegistryError, ArtifactUnavailable, OSError):
         logger.warning("Saved data unavailable for %s", route)
         return response(HTTPStatus.SERVICE_UNAVAILABLE, {"detail": "Saved model or data is unavailable."})
     except Exception:

@@ -1,0 +1,103 @@
+{
+  "generated_utc": "2026-10-30T03:56:35.913436+00:00",
+  "event_date_under_review": "2026-08-26",
+  "inventory_method": "Local manifest and benchmark metadata, not pixel/ground-truth validation.",
+  "collection_manifest_sha256": "118e0cbe0314ea67ee0440af08ed581bcf020eb85643652c029ef726f482cddb",
+  "raw_satellite_manifest_rows": 657,
+  "raw_satellite_geographic_coverage": [
+    "Uttarakhand, India (provisional pilot region) - scenes intersecting POLYGON((77.24 28.61, 81.45 28.61, 81.45 31.63, 77.24 31.63, 77.24 28.61))"
+  ],
+  "raw_satellite_product_ids": [
+    "S1A_IW_GRDH_1SDV_20210101T003511_20210101T003536_035937_043594_5D2E",
+    "S1A_IW_GRDH_1SDV_20210101T003536_20210101T003601_035937_043594_6D23",
+    "S1A_IW_GRDH_1SDV_20210501T003510_20210501T003535_037687_047261_BAFD",
+    "S1A_IW_GRDH_1SDV_20210702T125509_20210702T125538_038599_048DFB_8918",
+    "S1A_IW_GRDH_1SDV_20230601T004334_20230601T004359_048785_05DDF0_2B6B",
+    "S1A_IW_GRDH_1SDV_20230701T123137_20230701T123202_049230_05EB6E_376A",
+    "S2A_MSIL2A_20230103T051221_N0510_R019_T44RMT_20240810T024353.SAFE",
+    "S2A_MSIL2A_20230503T050651_N0510_R019_T44RMT_20240903T132333.SAFE",
+    "S2A_MSIL2A_20230702T050701_N0510_R019_T44RMT_20240912T201223.SAFE",
+    "S2A_MSIL2A_20230702T050701_N0510_R019_T44RMU_20240912T201223.SAFE",
+    "S2A_MSIL2A_20240101T052221_N0510_R062_T44RKU_20240101T084652.SAFE",
+    "S2A_MSIL2A_20241004T050651_N0511_R019_T44RMT_20241004T092300.SAFE"
+  ],
+  "raw_satellite_product_ids_in_2026": [],
+  "sturm_metadata": [
+    {
+      "file": "data/external/sturm_flood/12748983/Sentinel1_metadata.csv",
+      "sha256": "1f0d86ba7408d91955eb6ac4e74dfd3cb7e8530dbeec5f16e81cb7ccfd102840",
+      "rows": 21602,
+      "countries": [
+        "Albania",
+        "Australia",
+        "Austria",
+        "Belgium, Netherlands",
+        "Bosnia and Herzegovina",
+        "Croatia",
+        "France",
+        "Germany",
+        "Greece",
+        "Iran, Islamic Republic of",
+        "Iraq",
+        "Ireland",
+        "Italy",
+        "Latvia",
+        "Madagascar",
+        "Mexico",
+        "Netherlands",
+        "Norway",
+        "Pakistan",
+        "Romania",
+        "Slovakia",
+        "Spain",
+        "Timor-Leste",
+        "Togo",
+        "Uganda",
+        "Ukraine",
+        "United Kingdom"
+      ],
+      "nepal_country_rows": 0,
+      "sentinel_start": "2017-12-12T05:27:24",
+      "sentinel_end": "2022-10-12T19:41:12",
+      "sentinel_rows_on_event_date": 0
+    },
+    {
+      "file": "data/external/sturm_flood/12748983/Sentinel2_metadata.csv",
+      "sha256": "8757107bdf8a696419936cbfe5b31fcebc357a5ea56867e8b9acb89ae5a17a89",
+      "rows": 2675,
+      "countries": [
+        "Albania",
+        "Australia",
+        "Finland",
+        "France",
+        "Greece",
+        "Iran, Islamic Republic of",
+        "Italy",
+        "Madagascar",
+        "Malawi",
+        "Mexico",
+        "Moldova, Republic of, Romania, Ukraine",
+        "Norway",
+        "Pakistan",
+        "Spain",
+        "Sweden",
+        "Togo",
+        "Uganda",
+        "Ukraine",
+        "United Kingdom"
+      ],
+      "nepal_country_rows": 0,
+      "sentinel_start": "2018-04-13T10:40:19",
+      "sentinel_end": "2022-08-31T05:56:51",
+      "sentinel_rows_on_event_date": 0
+    }
+  ],
+  "dedicated_nepal_named_inventory_paths": [],
+  "nepal_event_model_validation": "NOT_EVALUATED_MISSING_ALIGNED_INPUTS_AND_REFERENCE",
+  "limitations": [
+    "Filename checks are discovery only, not proof that all files lack Nepal content.",
+    "The all-country World Bank collection can contain Nepal national statistics; it is not an event-level exposure panel.",
+    "Northern India OSM coverage is not certified as Nepal event infrastructure data.",
+    "Authoritative report links are remote leads, not loaded local imagery/vector/gauge data."
+  ]
+}

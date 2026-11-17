@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { isPageVisible } from '../services/pageVisibility.js';
 
 const CORRIDORS = [
   {
@@ -109,14 +110,14 @@ export default function LandingPage({ onNavigate }) {
             >
               What-If Simulation
             </button>
-            <button 
+            {isPageVisible('disaster-mode') && (<button 
               type="button" 
               onClick={() => onNavigate('disaster-mode')} 
               className="hover:text-[#f2ca50] transition-colors flex items-center gap-1.5"
             >
               <span>Disaster Mode</span>
               <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
-            </button>
+            </button>)}
           </nav>
 
           {/* Right Telemetry & Actions */}
@@ -191,14 +192,14 @@ export default function LandingPage({ onNavigate }) {
               <span className="material-symbols-outlined text-[16px] text-primary">tune</span>
               <span>What-If Simulator</span>
             </button>
-            <button
+            {isPageVisible('disaster-mode') && (<button
               type="button"
               onClick={() => onNavigate('disaster-mode')}
               className="px-4 py-2 rounded-lg bg-red-950/30 border border-red-500/40 hover:border-red-500 text-red-200 hover:text-white text-xs font-mono flex items-center gap-2 transition-all shadow-[0_0_12px_rgba(239,68,68,0.2)]"
             >
               <span className="material-symbols-outlined text-[16px] text-red-400">warning</span>
               <span>Disaster Mode</span>
-            </button>
+            </button>)}
           </div>
 
           {/* Animated Down Chevron */}
@@ -400,8 +401,8 @@ export default function LandingPage({ onNavigate }) {
               <button type="button" onClick={() => onNavigate('overview')} className="hover:text-[#f2ca50] transition-colors uppercase">Command Deck</button>
               <button type="button" onClick={() => onNavigate('destination-twin')} className="hover:text-[#f2ca50] transition-colors uppercase">Digital Twin</button>
               <button type="button" onClick={() => onNavigate('what-if-simulator')} className="hover:text-[#f2ca50] transition-colors uppercase">Simulator</button>
-              <button type="button" onClick={() => onNavigate('disaster-mode')} className="hover:text-red-400 transition-colors uppercase">Disaster Mode</button>
-              <button type="button" onClick={() => onNavigate('overview')} className="text-[#f2ca50] hover:underline uppercase font-medium">Officer Login</button>
+              {isPageVisible('disaster-mode') && (<button type="button" onClick={() => onNavigate('disaster-mode')} className="hover:text-red-400 transition-colors uppercase">Disaster Mode</button>)}
+              {isPageVisible('officer-login') && (<button type="button" onClick={() => onNavigate('overview')} className="text-[#f2ca50] hover:underline uppercase font-medium">Officer Login</button>)}
             </div>
           </div>
 

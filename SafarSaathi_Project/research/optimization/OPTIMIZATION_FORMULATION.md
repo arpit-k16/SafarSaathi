@@ -1,0 +1,9 @@
+# Explicit hypothetical allocation formulation
+
+Decision x_i is continuous visitor equivalents allocated to destination i during a common user-selected period. All capacities are visitor places for that same period, not PCU/hour or beds without conversion. Effective bound c_i = min(destination capacity × accessibility fraction, road-throughput capacity, emergency-resource-supported capacity). These are explicit hypothetical bottlenecks, not learned operational relations. Bounds: 0≤x_i≤c_i; sum x_i=D. Infeasible demand is rejected; it is not silently dropped or rerouted.
+
+Exposure proxy E=sum(x_i w_i)/D, with user-assumed weights 0≤w_i≤1. Utilization proxy U=sum(x_i²/c_i)/D (zero-capacity destinations receive zero). Scalar objective alpha E+(1−alpha)U; alpha∈[0,1]. Zero demand gives all-zero allocations/proxies. Proportional-effective-capacity allocation is the feasible baseline. Capacity-share variables normalize the numerical scale; capped-simplex water-filling projection repairs each candidate. Final bounds/conservation/finiteness are checked.
+
+This is convex as a mathematical proxy problem; a separate SLSQP numerical reference checks experiment results. GA/PSO are deliberately compared with a simple baseline/reference, not claimed necessary or globally optimal. No hazard depth, casualties, actual ecological stress, route graph, integer dispatch, costs or validated intervention benefits are inferred. User-supplied capacities/weights are not empirical evidence.
+
+Weighted-sum experiments at alpha=0,0.5,1 explore trade-offs and multiple seeds. They are not an exhaustive Pareto frontier or NSGA-II implementation. The fixture is synthetic/hypothetical and stored with a hash. No Nepal/Uttarakhand operational calibration is claimed. Independent seeds assess stochastic robustness, not uncertainty in the real world.

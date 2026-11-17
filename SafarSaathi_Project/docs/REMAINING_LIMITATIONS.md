@@ -1,5 +1,7 @@
 # Remaining limitations and unblock requirements
 
+> **Update, November 2026 (release v1.0).** The two blocked *learned* predictors below are still blocked for the reasons given. Their capabilities are now served by the MVP approaches named in the project report (§9.10): destination stress by the transparent Destination Stress Index on the digital twin, and disaster risk by rule- and scenario-based exposure (risk-aware routing, anomaly detection, cyclone forecaster). All six saved models passed the v1.0 release gate (`models/release_v1.json`).
+
 ## Predictors intentionally unavailable
 
 - **India-wide multi-disaster warning (`DATA_INSUFFICIENT`):** Available hazard material does not establish a complete, date-versioned India area/time panel with positive outcomes, observation completeness, verified negative windows, and predictors available before each forecast cutoff. A basin-wide cyclone archive-count series is not an India landfall or impact warning. To unblock: obtain licensed event outcomes and exposure/observation coverage by geography and time, document completeness and source vintage, then create spatially and temporally held-out evaluation with pre-event features and calibrated decision metrics.

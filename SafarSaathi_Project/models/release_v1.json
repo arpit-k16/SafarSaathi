@@ -1,0 +1,120 @@
+{
+  "release": "v1.0",
+  "frozen_utc": "2026-11-17T09:09:34+00:00",
+  "definition": "FINAL_V1 = frozen, checksum-verified, reload-tested, and at least as good as a naive baseline on held-out test data, within the documented scope. It does not mean operationally validated for real-world decisions.",
+  "passed": 6,
+  "total": 6,
+  "models": [
+    {
+      "model_id": "nlp-20261024T182952Z",
+      "task": "review classification",
+      "release": "v1.0",
+      "status": "FINAL_V1",
+      "gates": {
+        "G1_artifact_integrity": true,
+        "G2_beats_or_matches_naive_baseline": {
+          "metric": "accuracy (higher is better)",
+          "model": 0.8500199441563622,
+          "baseline": 0.5245313123254887,
+          "baseline_name": "always predict the majority class",
+          "passed": true
+        },
+        "G3_limitations_documented": true
+      },
+      "previous_status": null
+    },
+    {
+      "model_id": "tourism_demand_forecaster",
+      "task": "annual tourism demand forecasting",
+      "release": "v1.0",
+      "status": "FINAL_V1",
+      "gates": {
+        "G1_artifact_integrity": true,
+        "G2_beats_or_matches_naive_baseline": {
+          "metric": "1-year-ahead MAE, arrivals (lower is better)",
+          "model": 578589.4736842103,
+          "baseline": 961400.0,
+          "baseline_name": "naive: repeat last year",
+          "passed": true
+        },
+        "G3_limitations_documented": true
+      },
+      "previous_status": null
+    },
+    {
+      "model_id": "tourism_monthly_fta_forecaster",
+      "task": "monthly foreign tourist arrivals forecasting",
+      "release": "v1.0",
+      "status": "FINAL_V1",
+      "gates": {
+        "G1_artifact_integrity": true,
+        "G2_beats_or_matches_naive_baseline": {
+          "metric": "1-month-ahead MAE, arrivals (lower is better)",
+          "model": 100187.41666666667,
+          "baseline": 100187.41666666667,
+          "baseline_name": "naive: repeat last month",
+          "passed": true,
+          "baseline_model": true,
+          "note": "The selected model is the persistence baseline itself: it was chosen on validation data over drift, seasonal-naive and ridge."
+        },
+        "G3_limitations_documented": true
+      },
+      "previous_status": "TRAINED_BUT_EXPERIMENTAL"
+    },
+    {
+      "model_id": "flood_segmentation_model",
+      "task": "reference water/flood extent pixel segmentation",
+      "release": "v1.0",
+      "status": "FINAL_V1",
+      "gates": {
+        "G1_artifact_integrity": true,
+        "G2_beats_or_matches_naive_baseline": {
+          "metric": "test IoU on unseen countries (higher is better)",
+          "model": 0.31029377264551783,
+          "baseline": 0.0,
+          "baseline_name": "predict no water anywhere",
+          "passed": true,
+          "note": "Validation IoU 0.67 drops to 0.31 on test countries: generalisation to new regions is limited."
+        },
+        "G3_limitations_documented": true
+      },
+      "previous_status": "TRAINED_BUT_EXPERIMENTAL"
+    },
+    {
+      "model_id": "north_indian_cyclone_count_forecaster",
+      "task": "Distinct MAIN IBTrACS SIDs with NI tropical (TS) positions; includes depressions, counted in first qualifying month.",
+      "release": "v1.0",
+      "status": "FINAL_V1",
+      "gates": {
+        "G1_artifact_integrity": true,
+        "G2_beats_or_matches_naive_baseline": {
+          "metric": "test MAE (lower is better)",
+          "model": 0.6347619047619049,
+          "baseline": 0.8521428571428572,
+          "baseline_name": "constant mean",
+          "passed": true
+        },
+        "G3_limitations_documented": true
+      },
+      "previous_status": "TRAINED_BUT_EXPERIMENTAL"
+    },
+    {
+      "model_id": "india_pm25_exposure_forecaster",
+      "task": "India national population-weighted modeled annual PM2.5 exposure (World Bank EN.ATM.PM25.MC.M3 / GBD2023).",
+      "release": "v1.0",
+      "status": "FINAL_V1",
+      "gates": {
+        "G1_artifact_integrity": true,
+        "G2_beats_or_matches_naive_baseline": {
+          "metric": "test MAE (lower is better)",
+          "model": 2.5454047768139674,
+          "baseline": 2.647731155149728,
+          "baseline_name": "naive: repeat last year",
+          "passed": true
+        },
+        "G3_limitations_documented": true
+      },
+      "previous_status": "TRAINED_BUT_EXPERIMENTAL"
+    }
+  ]
+}

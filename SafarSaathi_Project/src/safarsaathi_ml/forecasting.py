@@ -179,9 +179,24 @@ def forecast(project: Path, destination: str, horizon: int) -> dict:
     last = bundle['years'][-1]
     return {'model_id': entry['model_id'], 'model_version': entry['model_version'], 'destination': 'IND',
             'status': 'historical_experimental_forecast', 'latest_observed_year': last, 'units': 'international tourist arrivals/year',
-            'forecast_origin_year': last, 'horizon': horizon, 'quality_status': 'TRAINED_BUT_EXPERIMENTAL', 'is_forecast': True,
+            'forecast_origin_year': last, 'horizon': horizon, 'quality_status': _status(project, entry['model_id']), 'is_forecast': True,
             'forecasts': [{'year': last + h, 'horizon': h, 'prediction': p} for h, p in enumerate(predicted, 1)],
-            'limitations': entry['limitations']}
+            'limitations': entry['limitations'], 'explanation': _explanation(entry, bundle, predicted)}
+
+
+def _status(project, model_id):
+    from .release_gate import status_for
+    return status_for(project, model_id, 'TRAINED_BUT_EXPERIMENTAL')
+
+
+def _explanation(entry, bundle, predicted):
+    try:
+        from .explain import ANNUAL_NAMES, explain
+        first = ((entry.get('metrics') or {}).get('by_horizon') or {}).get('1')
+        return explain(bundle['model'], features(bundle['values']), ANNUAL_NAMES, predicted[0], first,
+                       f"Latest observation {bundle['years'][-1]}; explains the first forecast step")
+    except Exception:
+        return None
 
 
 def evaluate_forecast(project: Path) -> dict:

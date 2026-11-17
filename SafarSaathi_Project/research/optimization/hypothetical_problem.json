@@ -1,0 +1,30 @@
+{
+  "demand": 120,
+  "exposure_tradeoff": 0.7,
+  "destinations": [
+    {
+      "id": "Hypothetical A",
+      "capacity": 80,
+      "accessibility": 1,
+      "road_capacity": 70,
+      "resource_capacity": 60,
+      "exposure_weight": 0.1
+    },
+    {
+      "id": "Hypothetical B",
+      "capacity": 90,
+      "accessibility": 0.8,
+      "road_capacity": 90,
+      "resource_capacity": 90,
+      "exposure_weight": 0.8
+    },
+    {
+      "id": "Hypothetical C",
+      "capacity": 60,
+      "accessibility": 1,
+      "road_capacity": 60,
+      "resource_capacity": 60,
+      "exposure_weight": 0.3
+    }
+  ]
+}

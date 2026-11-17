@@ -1,0 +1,7 @@
+# Sentinel-1: valid source files require geolocation and radiometric processing
+
+All 12 delivered measurement TIFFs have readable headers; native CRS is EPSG:4326 where declared by GeoTIFF keys. Files use geolocation control-point grids, not an affine pixel scale/transform. Their GCP geometry is compared against product footprints and annotation geolocation grids in the evidence. Pixel spacing from annotation is instrument/raster sampling metadata, not an affine geographic transform. Direct equal-index pre/post subtraction is not justified without calibrated, terrain-corrected co-registration.
+
+ProductInfo and actual annotation polarization are authoritative for this local payload: DV corresponds to delivered VV and VH bands. SOURCE_INFO.txt's HH+HV / SH wording is inconsistent with these actual files and is treated as a provenance-description defect; raw metadata is preserved. No raw-scene SAR-to-STURM preprocessing bridge is implemented.
+
+No arbitrary SAR threshold, flood-confidence map or live detection was manufactured. Required next steps: validate calibration/noise vectors and orbit/DEM terrain correction, transform GCPs onto a shared projected grid, align comparable orbit/polarizations, and evaluate against independent dated flood/permanent-water reference masks with event/spatial holdout. Existing source integrity is evidence of byte preservation, not that these steps have been completed.

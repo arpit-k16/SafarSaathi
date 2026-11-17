@@ -3,6 +3,7 @@ import { api } from '../services/api/resources.js';
 import { number } from '../services/api/adapters.js';
 import { useApiAction } from '../hooks/useApi.js';
 import ApiState, { DataTable, Limitations } from './ApiState.jsx';
+import { OptimizationTool } from './ResearchTools.jsx';
 
 const inputClass = 'bg-surface-container border border-white/10 rounded px-3 py-2 text-white text-xs font-mono max-w-full';
 const buttonClass = 'px-3 py-2 rounded bg-primary/20 border border-primary/40 text-primary text-xs font-mono hover:bg-primary/30 transition-colors disabled:opacity-40';
@@ -162,15 +163,9 @@ function ReportTool({ lastScenario }) {
   </>;
 }
 
-function OptimizerBoundary() {
-  const action = useApiAction();
-  return <><p className="text-amber-400 mb-3">OPTIMIZATION ENGINE NOT AVAILABLE. No GA/PSO execution, convergence or optimal intervention is claimed.</p>
-    <button className={buttonClass} disabled={action.loading} onClick={() => action.run(api.optimizationAvailability)}>Check optimization availability</button><ApiState {...action} /></>;
-}
-
 export default function IntegrationDetails({ tab, data, lastScenario, page, setPage }) {
   if (tab === 'simulation-results') return <ScenarioDetails result={lastScenario} />;
-  if (tab.includes('optim')) return <OptimizerBoundary />;
+  if (tab.includes('optim')) return <OptimizationTool />;
   if (tab === 'notifications' || tab === 'settings') return <p className="text-amber-400">NOT IMPLEMENTED — no live notification feed or persisted settings service is configured.</p>;
   if (!data) return null;
   if (tab === 'tourism-intelligence') return <>

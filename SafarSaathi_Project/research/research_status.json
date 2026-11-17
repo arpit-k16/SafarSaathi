@@ -1,0 +1,13 @@
+{
+  "status": "RESEARCH EVALUATED \u00b7 LIMITED HISTORICAL AND HYPOTHETICAL SCOPE",
+  "date": "2026-10-30",
+  "findings": [
+    "Six stored model metric sets reproduced on known historical holdouts; this is not prospective certification.",
+    "Monthly persistence weakens at longer horizons; PM2.5 heldout R\u00b2 is negative.",
+    "Flood reference-positive precision 0.330 and IoU 0.310; permanent water is included in its labels.",
+    "Rasuwagadhi event date/corridor verified; no aligned local imagery/reference masks for event accuracy.",
+    "GA/PSO available only for explicit hypothetical capacity allocation; no empirical intervention benefits.",
+    "Native satellite metadata require cloud-mask and registration checks; no live sensor feed exists."
+  ],
+  "geospatial_audit_status": "PASS"
+}

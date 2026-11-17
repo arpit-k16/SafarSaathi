@@ -1,0 +1,701 @@
+year,destination,id,indian,foreign,total,sum_check
+2000,Dehradun,dehradun,450391,9321,459712,True
+2000,Rishikesh,rishikesh,230857,6414,237271,True
+2000,Mussoorie,mussoorie,847191,3555,850746,True
+2000,Pauri,pauri,113982,276,114258,True
+2000,Srinagar (Garhwal),srinagar-pauri-garhwal,108634,109,108743,True
+2000,Kotdwar,kotdwar,99283,34,99317,True
+2000,Rudraprayag (excl. Kedarnath),rudraprayag,242370,570,242940,True
+2000,Kedarnath,kedarnath,300000,0,300000,True
+2000,Gopeshwar,gopeshwar,277707,1420,279127,True
+2000,Joshimath,joshimath,406228,1143,407371,True
+2000,Badrinath,badrinath,695332,0,695332,True
+2000,Auli,auli,8323,407,8730,True
+2000,Hemkund Sahib,hemkund-sahib,327550,0,327550,True
+2000,Valley of Flowers,valley-of-flowers,1089,12,1101,True
+2000,Tehri,tehri,388615,7321,395936,True
+2000,Uttarkashi,uttarkashi,263379,1178,264557,True
+2000,Gangotri,gangotri,208407,0,208407,True
+2000,Yamunotri,yamunotri,88672,0,88672,True
+2000,Haridwar,haridwar,5316980,7659,5324639,True
+2000,Almora,almora,64989,3633,68622,True
+2000,Ranikhet,ranikhet,62487,842,63329,True
+2000,Kausani & Bageshwar,kausani,67460,722,68182,True
+2000,Pithoragarh,pithoragarh,63929,504,64433,True
+2000,Champawat,champawat,33820,81,33901,True
+2000,Nainital,nainital,250947,7589,258536,True
+2000,Kathgodam,kathgodam,40642,266,40908,True
+2000,Corbett National Park,corbett-national-park,57877,3624,61501,True
+2000,Udham Singh Nagar,udham-singh-nagar,61673,86,61759,True
+2001,Dehradun,dehradun,442828,12667,455495,True
+2001,Rishikesh,rishikesh,224792,6536,231328,True
+2001,Mussoorie,mussoorie,888870,3068,891938,True
+2001,Pauri,pauri,124979,160,125139,True
+2001,Srinagar (Garhwal),srinagar-pauri-garhwal,113603,237,113840,True
+2001,Kotdwar,kotdwar,99102,13,99115,True
+2001,Rudraprayag (excl. Kedarnath),rudraprayag,304062,963,305025,True
+2001,Kedarnath,kedarnath,191465,2163,193628,True
+2001,Gopeshwar,gopeshwar,145444,529,145973,True
+2001,Joshimath,joshimath,214581,1060,215641,True
+2001,Badrinath,badrinath,430044,21,430065,True
+2001,Auli,auli,6459,167,6626,True
+2001,Hemkund Sahib,hemkund-sahib,210980,0,210980,True
+2001,Valley of Flowers,valley-of-flowers,2349,132,2481,True
+2001,Tehri,tehri,373755,6111,379866,True
+2001,Uttarkashi,uttarkashi,265308,731,266039,True
+2001,Gangotri,gangotri,131311,188,131499,True
+2001,Yamunotri,yamunotri,54015,59,54074,True
+2001,Haridwar,haridwar,5502273,6276,5508549,True
+2001,Almora,almora,67108,1664,68772,True
+2001,Ranikhet,ranikhet,65747,663,66410,True
+2001,Kausani & Bageshwar,kausani,66577,733,67310,True
+2001,Pithoragarh,pithoragarh,70805,444,71249,True
+2001,Champawat,champawat,33171,90,33261,True
+2001,Nainital,nainital,356941,5793,362734,True
+2001,Kathgodam,kathgodam,42899,251,43150,True
+2001,Corbett National Park,corbett-national-park,57113,3775,60888,True
+2001,Udham Singh Nagar,udham-singh-nagar,62203,207,62410,True
+2002,Dehradun,dehradun,700518,9672,710190,True
+2002,Rishikesh,rishikesh,268882,4573,273455,True
+2002,Mussoorie,mussoorie,988481,2863,991344,True
+2002,Pauri,pauri,72800,29,72829,True
+2002,Srinagar (Garhwal),srinagar-pauri-garhwal,118590,166,118756,True
+2002,Kotdwar,kotdwar,223840,8586,232426,True
+2002,Rudraprayag (excl. Kedarnath),rudraprayag,359642,376,360018,True
+2002,Kedarnath,kedarnath,167520,1697,169217,True
+2002,Gopeshwar,gopeshwar,148842,558,149400,True
+2002,Joshimath,joshimath,337303,515,337818,True
+2002,Badrinath,badrinath,448517,80,448597,True
+2002,Auli,auli,14148,221,14369,True
+2002,Hemkund Sahib,hemkund-sahib,340578,0,340578,True
+2002,Valley of Flowers,valley-of-flowers,1500,15,1515,True
+2002,Tehri,tehri,533378,6570,539948,True
+2002,Uttarkashi,uttarkashi,279284,660,279944,True
+2002,Gangotri,gangotri,118221,153,118374,True
+2002,Yamunotri,yamunotri,53976,47,54023,True
+2002,Haridwar,haridwar,5518270,6029,5524299,True
+2002,Almora,almora,71709,2398,74107,True
+2002,Ranikhet,ranikhet,63941,510,64451,True
+2002,Kausani & Bageshwar,kausani,65176,761,65937,True
+2002,Pithoragarh,pithoragarh,135412,914,136326,True
+2002,Champawat,champawat,35097,212,35309,True
+2002,Nainital,nainital,412440,4224,416664,True
+2002,Kathgodam,kathgodam,43813,256,44069,True
+2002,Corbett National Park,corbett-national-park,61712,3678,65390,True
+2002,Udham Singh Nagar,udham-singh-nagar,68428,211,68639,True
+2003,Dehradun,dehradun,917070,11922,928992,True
+2003,Rishikesh,rishikesh,220097,6047,226144,True
+2003,Mussoorie,mussoorie,1024752,2986,1027738,True
+2003,Pauri,pauri,73809,53,73862,True
+2003,Srinagar (Garhwal),srinagar-pauri-garhwal,207779,309,208088,True
+2003,Kotdwar,kotdwar,228737,7338,236075,True
+2003,Rudraprayag (excl. Kedarnath),rudraprayag,415645,835,416480,True
+2003,Kedarnath,kedarnath,231988,2509,234497,True
+2003,Gopeshwar,gopeshwar,141777,438,142215,True
+2003,Joshimath,joshimath,672970,684,673654,True
+2003,Badrinath,badrinath,580913,30,580943,True
+2003,Auli,auli,8973,262,9235,True
+2003,Hemkund Sahib,hemkund-sahib,391575,0,391575,True
+2003,Valley of Flowers,valley-of-flowers,4154,303,4457,True
+2003,Tehri,tehri,576274,7172,583446,True
+2003,Uttarkashi,uttarkashi,478612,827,479439,True
+2003,Gangotri,gangotri,139752,182,139934,True
+2003,Yamunotri,yamunotri,77998,52,78050,True
+2003,Haridwar,haridwar,5524432,7532,5531964,True
+2003,Almora,almora,80354,2931,83285,True
+2003,Ranikhet,ranikhet,68716,710,69426,True
+2003,Kausani & Bageshwar,kausani,70095,336,70431,True
+2003,Pithoragarh,pithoragarh,137618,704,138322,True
+2003,Champawat,champawat,38174,167,38341,True
+2003,Nainital,nainital,420016,4537,424553,True
+2003,Kathgodam,kathgodam,43813,246,44059,True
+2003,Corbett National Park,corbett-national-park,86886,4170,91056,True
+2003,Udham Singh Nagar,udham-singh-nagar,66614,217,66831,True
+2004,Dehradun,dehradun,1012535,11972,1024507,True
+2004,Rishikesh,rishikesh,323734,5918,329652,True
+2004,Mussoorie,mussoorie,1024985,2683,1027668,True
+2004,Pauri,pauri,74160,39,74199,True
+2004,Srinagar (Garhwal),srinagar-pauri-garhwal,174157,424,174581,True
+2004,Kotdwar,kotdwar,273863,9372,283235,True
+2004,Rudraprayag (excl. Kedarnath),rudraprayag,493824,1092,494916,True
+2004,Kedarnath,kedarnath,275149,1257,276406,True
+2004,Gopeshwar,gopeshwar,150997,300,151297,True
+2004,Joshimath,joshimath,452874,922,453796,True
+2004,Badrinath,badrinath,500579,0,500579,True
+2004,Auli,auli,7145,162,7307,True
+2004,Hemkund Sahib,hemkund-sahib,278918,0,278918,True
+2004,Valley of Flowers,valley-of-flowers,4514,437,4951,True
+2004,Tehri,tehri,591033,8699,599732,True
+2004,Uttarkashi,uttarkashi,541298,1075,542373,True
+2004,Gangotri,gangotri,160540,299,160839,True
+2004,Yamunotri,yamunotri,102194,137,102331,True
+2004,Haridwar,haridwar,6283726,11012,6294738,True
+2004,Almora,almora,80489,4106,84595,True
+2004,Ranikhet,ranikhet,69827,631,70458,True
+2004,Kausani & Bageshwar,kausani,75017,364,75381,True
+2004,Pithoragarh,pithoragarh,153635,971,154606,True
+2004,Champawat,champawat,40312,165,40477,True
+2004,Nainital,nainital,478133,6277,484410,True
+2004,Kathgodam,kathgodam,44754,259,45013,True
+2004,Corbett National Park,corbett-national-park,93707,5968,99675,True
+2004,Udham Singh Nagar,udham-singh-nagar,67946,220,68166,True
+2005,Dehradun,dehradun,1013959,12012,1025971,True
+2005,Rishikesh,rishikesh,369573,5538,375111,True
+2005,Mussoorie,mussoorie,1044245,3547,1047792,True
+2005,Pauri,pauri,80303,38,80341,True
+2005,Srinagar (Garhwal),srinagar-pauri-garhwal,188051,423,188474,True
+2005,Kotdwar,kotdwar,251563,14677,266240,True
+2005,Rudraprayag (excl. Kedarnath),rudraprayag,439719,1289,441008,True
+2005,Kedarnath,kedarnath,378162,4811,382973,True
+2005,Gopeshwar,gopeshwar,198785,313,199098,True
+2005,Joshimath,joshimath,934242,1410,935652,True
+2005,Badrinath,badrinath,566224,0,566224,True
+2005,Auli,auli,10525,456,10981,True
+2005,Hemkund Sahib,hemkund-sahib,548389,25,548414,True
+2005,Valley of Flowers,valley-of-flowers,4664,547,5211,True
+2005,Tehri,tehri,676223,9843,686066,True
+2005,Uttarkashi,uttarkashi,489990,1060,491050,True
+2005,Gangotri,gangotri,222834,227,223061,True
+2005,Yamunotri,yamunotri,168899,147,169046,True
+2005,Haridwar,haridwar,7527020,13624,7540644,True
+2005,Almora,almora,79435,4921,84356,True
+2005,Ranikhet,ranikhet,75165,867,76032,True
+2005,Kausani & Bageshwar,kausani,66335,419,66754,True
+2005,Pithoragarh,pithoragarh,160311,989,161300,True
+2005,Champawat,champawat,44623,128,44751,True
+2005,Nainital,nainital,510959,6789,517748,True
+2005,Kathgodam,kathgodam,46914,240,47154,True
+2005,Corbett National Park,corbett-national-park,114623,8199,122822,True
+2005,Udham Singh Nagar,udham-singh-nagar,69030,205,69235,True
+2006,Dehradun,dehradun,1016058,18051,1034109,True
+2006,Rishikesh,rishikesh,329392,5912,335304,True
+2006,Mussoorie,mussoorie,1050527,5309,1055836,True
+2006,Pauri,pauri,82237,32,82269,True
+2006,Srinagar (Garhwal),srinagar-pauri-garhwal,201677,411,202088,True
+2006,Kotdwar,kotdwar,261234,11279,272513,True
+2006,Rudraprayag (excl. Kedarnath),rudraprayag,496220,1430,497650,True
+2006,Kedarnath,kedarnath,485464,1539,487003,True
+2006,Gopeshwar,gopeshwar,231774,319,232093,True
+2006,Joshimath,joshimath,1047687,1214,1048901,True
+2006,Badrinath,badrinath,695230,12,695242,True
+2006,Auli,auli,11365,311,11676,True
+2006,Hemkund Sahib,hemkund-sahib,576626,32,576658,True
+2006,Valley of Flowers,valley-of-flowers,5489,455,5944,True
+2006,Tehri,tehri,817435,13473,830908,True
+2006,Uttarkashi,uttarkashi,512340,1273,513613,True
+2006,Gangotri,gangotri,263557,250,263807,True
+2006,Yamunotri,yamunotri,216723,160,216883,True
+2006,Haridwar,haridwar,9800770,11774,9812544,True
+2006,Almora,almora,81314,5225,86539,True
+2006,Ranikhet,ranikhet,76261,873,77134,True
+2006,Kausani & Bageshwar,kausani,72923,383,73306,True
+2006,Pithoragarh,pithoragarh,165561,705,166266,True
+2006,Champawat,champawat,49145,147,49292,True
+2006,Nainital,nainital,554527,7533,562060,True
+2006,Kathgodam,kathgodam,49521,284,49805,True
+2006,Corbett National Park,corbett-national-park,131496,7643,139139,True
+2006,Udham Singh Nagar,udham-singh-nagar,75900,235,76135,True
+2007,Dehradun,dehradun,1369950,17766,1387716,True
+2007,Rishikesh,rishikesh,558062,5109,563171,True
+2007,Mussoorie,mussoorie,1075898,5424,1081322,True
+2007,Pauri,pauri,82780,60,82840,True
+2007,Srinagar (Garhwal),srinagar-pauri-garhwal,222475,186,222661,True
+2007,Kotdwar,kotdwar,273106,16226,289332,True
+2007,Rudraprayag (excl. Kedarnath),rudraprayag,590136,1571,591707,True
+2007,Kedarnath,kedarnath,555918,1505,557423,True
+2007,Gopeshwar,gopeshwar,283368,162,283530,True
+2007,Joshimath,joshimath,1201174,832,1202006,True
+2007,Badrinath,badrinath,768025,82,768107,True
+2007,Auli,auli,19729,319,20048,True
+2007,Hemkund Sahib,hemkund-sahib,557066,63,557129,True
+2007,Valley of Flowers,valley-of-flowers,12531,308,12839,True
+2007,Tehri,tehri,851237,14389,865626,True
+2007,Uttarkashi,uttarkashi,616429,1340,617769,True
+2007,Gangotri,gangotri,329111,274,329385,True
+2007,Yamunotri,yamunotri,287688,182,287870,True
+2007,Haridwar,haridwar,11204275,15609,11219884,True
+2007,Almora,almora,88965,5131,94096,True
+2007,Ranikhet,ranikhet,77597,506,78103,True
+2007,Kausani & Bageshwar,kausani,75517,520,76037,True
+2007,Pithoragarh,pithoragarh,162478,1004,163482,True
+2007,Champawat,champawat,51872,224,52096,True
+2007,Nainital,nainital,580079,9437,589516,True
+2007,Kathgodam,kathgodam,56326,333,56659,True
+2007,Corbett National Park,corbett-national-park,120486,6682,127168,True
+2007,Udham Singh Nagar,udham-singh-nagar,81972,906,82878,True
+2008,Dehradun,dehradun,1422578,18483,1441061,True
+2008,Rishikesh,rishikesh,551495,5052,556547,True
+2008,Mussoorie,mussoorie,1086411,5545,1091956,True
+2008,Pauri,pauri,85447,53,85500,True
+2008,Srinagar (Garhwal),srinagar-pauri-garhwal,202486,306,202792,True
+2008,Kotdwar,kotdwar,310324,18252,328576,True
+2008,Rudraprayag (excl. Kedarnath),rudraprayag,592368,1429,593797,True
+2008,Kedarnath,kedarnath,468982,1066,470048,True
+2008,Gopeshwar,gopeshwar,389978,108,390086,True
+2008,Joshimath,joshimath,1279659,1411,1281070,True
+2008,Badrinath,badrinath,1075372,211,1075583,True
+2008,Auli,auli,24902,561,25463,True
+2008,Hemkund Sahib,hemkund-sahib,400410,123,400533,True
+2008,Valley of Flowers,valley-of-flowers,11551,511,12062,True
+2008,Tehri,tehri,1067869,14748,1082617,True
+2008,Uttarkashi,uttarkashi,656851,1817,658668,True
+2008,Gangotri,gangotri,326081,285,326366,True
+2008,Yamunotri,yamunotri,327421,190,327611,True
+2008,Haridwar,haridwar,11356250,17854,11374104,True
+2008,Almora,almora,615469,7070,622539,True
+2008,Ranikhet,ranikhet,69480,466,69946,True
+2008,Kausani & Bageshwar,kausani,186933,9001,195934,True
+2008,Pithoragarh,pithoragarh,86890,1212,88102,True
+2008,Champawat,champawat,93615,4821,98436,True
+2008,Nainital,nainital,80105,448,80553,True
+2008,Kathgodam,kathgodam,77184,525,77709,True
+2008,Corbett National Park,corbett-national-park,164225,653,164878,True
+2008,Udham Singh Nagar,udham-singh-nagar,53834,222,54056,True
+2009,Dehradun,dehradun,1123715,17051,1140766,True
+2009,Rishikesh,rishikesh,581869,4550,586419,True
+2009,Mussoorie,mussoorie,1096698,5869,1102567,True
+2009,Pauri,pauri,90960,32,90992,True
+2009,Srinagar (Garhwal),srinagar-pauri-garhwal,247974,339,248313,True
+2009,Kotdwar,kotdwar,310402,23532,333934,True
+2009,Rudraprayag (excl. Kedarnath),rudraprayag,416775,1581,418356,True
+2009,Kedarnath,kedarnath,402633,1003,403636,True
+2009,Gopeshwar,gopeshwar,401838,36,401874,True
+2009,Joshimath,joshimath,1350280,2219,1352499,True
+2009,Badrinath,badrinath,798063,141,798204,True
+2009,Auli,auli,40732,375,41107,True
+2009,Hemkund Sahib,hemkund-sahib,332451,15,332466,True
+2009,Valley of Flowers,valley-of-flowers,1419,356,1775,True
+2009,Tehri,tehri,871827,15329,887156,True
+2009,Uttarkashi,uttarkashi,680764,2418,683182,True
+2009,Gangotri,gangotri,379673,484,380157,True
+2009,Yamunotri,yamunotri,322001,241,322242,True
+2009,Haridwar,haridwar,12049450,20067,12069517,True
+2009,Almora,almora,749556,5722,755278,True
+2009,Ranikhet,ranikhet,112698,488,113186,True
+2009,Kausani & Bageshwar,kausani,191866,8617,200483,True
+2009,Pithoragarh,pithoragarh,95579,1254,96833,True
+2009,Champawat,champawat,97492,4530,102022,True
+2009,Nainital,nainital,88506,573,89079,True
+2009,Kathgodam,kathgodam,78987,237,79224,True
+2009,Corbett National Park,corbett-national-park,183484,926,184410,True
+2009,Udham Singh Nagar,udham-singh-nagar,56522,258,56780,True
+2010,Dehradun,dehradun,1401942,20699,1422641,True
+2010,Rishikesh,rishikesh,1093164,5548,1098712,True
+2010,Mussoorie,mussoorie,1098870,5926,1104796,True
+2010,Pauri,pauri,97516,160,97676,True
+2010,Srinagar (Garhwal),srinagar-pauri-garhwal,219103,1098,220201,True
+2010,Kotdwar,kotdwar,321438,26095,347533,True
+2010,Rudraprayag (excl. Kedarnath),rudraprayag,404527,380,404907,True
+2010,Kedarnath,kedarnath,400243,268,400511,True
+2010,Gopeshwar,gopeshwar,381722,32,381754,True
+2010,Joshimath,joshimath,1609216,2076,1611292,True
+2010,Badrinath,badrinath,921250,276,921526,True
+2010,Auli,auli,40290,376,40666,True
+2010,Hemkund Sahib,hemkund-sahib,308888,262,309150,True
+2010,Valley of Flowers,valley-of-flowers,4155,301,4456,True
+2010,Tehri,tehri,898505,16103,914608,True
+2010,Uttarkashi,uttarkashi,593290,2967,596257,True
+2010,Gangotri,gangotri,310255,306,310561,True
+2010,Yamunotri,yamunotri,309452,182,309634,True
+2010,Haridwar,haridwar,18837125,29555,18866680,True
+2010,Almora,almora,786705,7123,793828,True
+2010,Ranikhet,ranikhet,150423,691,151114,True
+2010,Kausani & Bageshwar,kausani,181000,7696,188696,True
+2010,Pithoragarh,pithoragarh,100457,1509,101966,True
+2010,Champawat,champawat,95947,5031,100978,True
+2010,Nainital,nainital,83211,398,83609,True
+2010,Kathgodam,kathgodam,70523,299,70822,True
+2010,Corbett National Park,corbett-national-park,189474,774,190248,True
+2010,Udham Singh Nagar,udham-singh-nagar,63443,328,63771,True
+2011,Dehradun,dehradun,1496137,19864,1516001,True
+2011,Rishikesh,rishikesh,1181535,4994,1186529,True
+2011,Mussoorie,mussoorie,1114305,5982,1120287,True
+2011,Pauri,pauri,98714,404,99118,True
+2011,Srinagar (Garhwal),srinagar-pauri-garhwal,291216,4735,295951,True
+2011,Kotdwar,kotdwar,324370,26749,351119,True
+2011,Rudraprayag (excl. Kedarnath),rudraprayag,464516,1222,465738,True
+2011,Kedarnath,kedarnath,569863,738,570601,True
+2011,Gopeshwar,gopeshwar,390580,35,390615,True
+2011,Joshimath,joshimath,1626275,2172,1628447,True
+2011,Badrinath,badrinath,935680,492,936172,True
+2011,Auli,auli,42372,456,42828,True
+2011,Hemkund Sahib,hemkund-sahib,423722,312,424034,True
+2011,Valley of Flowers,valley-of-flowers,4210,315,4525,True
+2011,Tehri,tehri,912909,20533,933442,True
+2011,Uttarkashi,uttarkashi,648860,2953,651813,True
+2011,Gangotri,gangotri,484826,311,485137,True
+2011,Yamunotri,yamunotri,448751,194,448945,True
+2011,Haridwar,haridwar,13454650,26722,13481372,True
+2011,Almora,almora,98766,4465,103231,True
+2011,Ranikhet,ranikhet,79983,398,80381,True
+2011,Kausani & Bageshwar,kausani,62485,303,62788,True
+2011,Pithoragarh,pithoragarh,193059,673,193732,True
+2011,Champawat,champawat,79247,250,79497,True
+2011,Nainital,nainital,834405,9410,843815,True
+2011,Kathgodam,kathgodam,162087,1360,163447,True
+2011,Corbett National Park,corbett-national-park,131728,4882,136610,True
+2011,Udham Singh Nagar,udham-singh-nagar,110502,1763,112265,True
+2012,Dehradun,dehradun,1686745,21884,1708629,True
+2012,Rishikesh,rishikesh,804578,5160,809738,True
+2012,Mussoorie,mussoorie,1199306,5985,1205291,True
+2012,Pauri,pauri,106604,457,107061,True
+2012,Srinagar (Garhwal),srinagar-pauri-garhwal,324218,5192,329410,True
+2012,Kotdwar,kotdwar,329562,26914,356476,True
+2012,Rudraprayag (excl. Kedarnath),rudraprayag,637706,800,638506,True
+2012,Kedarnath,kedarnath,572454,598,573052,True
+2012,Gopeshwar,gopeshwar,275058,45,275103,True
+2012,Joshimath,joshimath,1444900,1271,1446171,True
+2012,Badrinath,badrinath,1046297,322,1046619,True
+2012,Auli,auli,32209,436,32645,True
+2012,Hemkund Sahib,hemkund-sahib,291303,318,291621,True
+2012,Valley of Flowers,valley-of-flowers,5069,323,5392,True
+2012,Tehri,tehri,964380,15899,980279,True
+2012,Uttarkashi,uttarkashi,642459,2734,645193,True
+2012,Gangotri,gangotri,435220,332,435552,True
+2012,Yamunotri,yamunotri,413367,248,413615,True
+2012,Haridwar,haridwar,15231875,26875,15258750,True
+2012,Almora,almora,101125,4373,105498,True
+2012,Ranikhet,ranikhet,77315,430,77745,True
+2012,Kausani & Bageshwar,kausani,77205,940,78145,True
+2012,Pithoragarh,pithoragarh,195123,574,195697,True
+2012,Champawat,champawat,81044,242,81286,True
+2012,Nainital,nainital,898077,8254,906331,True
+2012,Kathgodam,kathgodam,129333,808,130141,True
+2012,Corbett National Park,corbett-national-park,205602,7279,212881,True
+2012,Udham Singh Nagar,udham-singh-nagar,121552,1831,123383,True
+2013,Dehradun,dehradun,1718783,18202,1736985,True
+2013,Rishikesh,rishikesh,370216,4193,374409,True
+2013,Mussoorie,mussoorie,1070925,5050,1075975,True
+2013,Pauri,pauri,65473,442,65915,True
+2013,Srinagar (Garhwal),srinagar-pauri-garhwal,118346,2009,120355,True
+2013,Kotdwar,kotdwar,319529,15561,335090,True
+2013,Rudraprayag (excl. Kedarnath),rudraprayag,393307,329,393636,True
+2013,Kedarnath,kedarnath,333693,81,333774,True
+2013,Gopeshwar,gopeshwar,71901,18,71919,True
+2013,Joshimath,joshimath,418882,559,419441,True
+2013,Badrinath,badrinath,476278,152,476430,True
+2013,Auli,auli,29345,248,29593,True
+2013,Hemkund Sahib,hemkund-sahib,77785,76,77861,True
+2013,Valley of Flowers,valley-of-flowers,870,68,938,True
+2013,Tehri,tehri,482865,13504,496369,True
+2013,Uttarkashi,uttarkashi,268573,1268,269841,True
+2013,Gangotri,gangotri,209919,320,210239,True
+2013,Yamunotri,yamunotri,253023,87,253110,True
+2013,Haridwar,haridwar,12763650,22611,12786261,True
+2013,Almora,almora,76958,3499,80457,True
+2013,Ranikhet,ranikhet,67432,439,67871,True
+2013,Kausani & Bageshwar,kausani,63740,792,64532,True
+2013,Pithoragarh,pithoragarh,153127,562,153689,True
+2013,Champawat,champawat,72494,349,72843,True
+2013,Nainital,nainital,737130,7088,744218,True
+2013,Kathgodam,kathgodam,118403,272,118675,True
+2013,Corbett National Park,corbett-national-park,172598,4204,176802,True
+2013,Udham Singh Nagar,udham-singh-nagar,122765,1613,124378,True
+2014,Dehradun,dehradun,1767197,18549,1785746,True
+2014,Rishikesh,rishikesh,328936,4052,332988,True
+2014,Mussoorie,mussoorie,1391355,5347,1396702,True
+2014,Pauri,pauri,41715,335,42050,True
+2014,Srinagar (Garhwal),srinagar-pauri-garhwal,77205,2873,80078,True
+2014,Kotdwar,kotdwar,282799,13476,296275,True
+2014,Rudraprayag (excl. Kedarnath),rudraprayag,85963,3228,89191,True
+2014,Kedarnath,kedarnath,40718,228,40946,True
+2014,Gopeshwar,gopeshwar,35436,25,35461,True
+2014,Joshimath,joshimath,173013,426,173439,True
+2014,Badrinath,badrinath,159405,170,159575,True
+2014,Auli,auli,26172,230,26402,True
+2014,Hemkund Sahib,hemkund-sahib,37678,0,37678,True
+2014,Valley of Flowers,valley-of-flowers,176,5,181,True
+2014,Tehri,tehri,553329,17718,571047,True
+2014,Uttarkashi,uttarkashi,206530,929,207459,True
+2014,Gangotri,gangotri,51555,139,51694,True
+2014,Yamunotri,yamunotri,38208,86,38294,True
+2014,Haridwar,haridwar,15456550,20992,15477542,True
+2014,Almora,almora,81345,4020,85365,True
+2014,Ranikhet,ranikhet,73825,451,74276,True
+2014,Kausani & Bageshwar,kausani,75398,824,76222,True
+2014,Pithoragarh,pithoragarh,179745,542,180287,True
+2014,Champawat,champawat,87799,208,88007,True
+2014,Nainital,nainital,750501,7622,758123,True
+2014,Kathgodam,kathgodam,141989,19,142008,True
+2014,Corbett National Park,corbett-national-park,246652,5733,252385,True
+2014,Udham Singh Nagar,udham-singh-nagar,128903,1721,130624,True
+2015,Dehradun,dehradun,1749930,18722,1768652,True
+2015,Rishikesh,rishikesh,434033,3723,437756,True
+2015,Mussoorie,mussoorie,2764773,4499,2769272,True
+2015,Pauri,pauri,65151,702,65853,True
+2015,Srinagar (Garhwal),srinagar-pauri-garhwal,81059,3762,84821,True
+2015,Kotdwar,kotdwar,249672,16698,266370,True
+2015,Rudraprayag (excl. Kedarnath),rudraprayag,196716,940,197656,True
+2015,Kedarnath,kedarnath,153821,614,154435,True
+2015,Gopeshwar,gopeshwar,45345,6,45351,True
+2015,Joshimath,joshimath,220301,191,220492,True
+2015,Badrinath,badrinath,366306,149,366455,True
+2015,Auli,auli,26126,170,26296,True
+2015,Hemkund Sahib,hemkund-sahib,67840,233,68073,True
+2015,Valley of Flowers,valley-of-flowers,4956,297,5253,True
+2015,Tehri,tehri,1141006,19329,1160335,True
+2015,Uttarkashi,uttarkashi,284224,2136,286360,True
+2015,Gangotri,gangotri,159684,508,160192,True
+2015,Yamunotri,yamunotri,122710,216,122926,True
+2015,Haridwar,haridwar,19332025,18615,19350640,True
+2015,Almora,almora,89850,3440,93290,True
+2015,Ranikhet,ranikhet,103448,738,104186,True
+2015,Kausani & Bageshwar,kausani,76267,673,76940,True
+2015,Pithoragarh,pithoragarh,190687,318,191005,True
+2015,Champawat,champawat,88552,169,88721,True
+2015,Nainital,nainital,808903,6902,815805,True
+2015,Kathgodam,kathgodam,146474,315,146789,True
+2015,Corbett National Park,corbett-national-park,194590,5258,199848,True
+2015,Udham Singh Nagar,udham-singh-nagar,130703,1771,132474,True
+2016,Dehradun,dehradun,1783637,23746,1807383,True
+2016,Rishikesh,rishikesh,589653,2574,592227,True
+2016,Mussoorie,mussoorie,2790511,4613,2795124,True
+2016,Pauri,pauri,70661,880,71541,True
+2016,Srinagar (Garhwal),srinagar-pauri-garhwal,38391,69,38460,True
+2016,Kotdwar,kotdwar,439034,9642,448676,True
+2016,Rudraprayag (excl. Kedarnath),rudraprayag,308667,108,308775,True
+2016,Kedarnath,kedarnath,309069,695,309764,True
+2016,Gopeshwar,gopeshwar,208840,1636,210476,True
+2016,Joshimath,joshimath,186191,155,186346,True
+2016,Badrinath,badrinath,654140,215,654355,True
+2016,Auli,auli,42888,93,42981,True
+2016,Hemkund Sahib,hemkund-sahib,108646,192,108838,True
+2016,Valley of Flowers,valley-of-flowers,11098,763,11861,True
+2016,Tehri,tehri,954927,21907,976834,True
+2016,Uttarkashi,uttarkashi,332568,2401,334969,True
+2016,Gangotri,gangotri,284350,1109,285459,True
+2016,Yamunotri,yamunotri,154563,566,155129,True
+2016,Haridwar,haridwar,20486775,21322,20508097,True
+2016,Almora,almora,101648,4358,106006,True
+2016,Ranikhet,ranikhet,137978,1332,139310,True
+2016,Kausani & Bageshwar,kausani,76807,353,77160,True
+2016,Pithoragarh,pithoragarh,171381,470,171851,True
+2016,Champawat,champawat,89241,237,89478,True
+2016,Nainital,nainital,866164,7231,873395,True
+2016,Kathgodam,kathgodam,150763,361,151124,True
+2016,Corbett National Park,corbett-national-park,182676,4043,186719,True
+2016,Udham Singh Nagar,udham-singh-nagar,132515,1728,134243,True
+2017,Dehradun,dehradun,2118533,27956,2146489,True
+2017,Rishikesh,rishikesh,673226,4815,678041,True
+2017,Mussoorie,mussoorie,2794108,1865,2795973,True
+2017,Pauri,pauri,73484,1100,74584,True
+2017,Srinagar (Garhwal),srinagar-pauri-garhwal,196805,256,197061,True
+2017,Kotdwar,kotdwar,350111,12786,362897,True
+2017,Rudraprayag (excl. Kedarnath),rudraprayag,484339,865,485204,True
+2017,Kedarnath,kedarnath,470517,718,471235,True
+2017,Gopeshwar,gopeshwar,232901,3141,236042,True
+2017,Joshimath,joshimath,236798,346,237144,True
+2017,Badrinath,badrinath,920078,388,920466,True
+2017,Auli,auli,85019,115,85134,True
+2017,Hemkund Sahib,hemkund-sahib,213279,122,213401,True
+2017,Valley of Flowers,valley-of-flowers,13285,569,13854,True
+2017,Tehri,tehri,1425732,37092,1462824,True
+2017,Uttarkashi,uttarkashi,335122,2304,337426,True
+2017,Gangotri,gangotri,408275,463,408738,True
+2017,Yamunotri,yamunotri,391732,476,392208,True
+2017,Haridwar,haridwar,20985975,23123,21009098,True
+2017,Almora,almora,108178,4524,112702,True
+2017,Ranikhet,ranikhet,145233,1514,146747,True
+2017,Kausani & Bageshwar,kausani,77650,376,78026,True
+2017,Pithoragarh,pithoragarh,243123,565,243688,True
+2017,Champawat,champawat,148812,259,149071,True
+2017,Nainital,nainital,910323,8329,918652,True
+2017,Kathgodam,kathgodam,150793,409,151202,True
+2017,Corbett National Park,corbett-national-park,248526,5972,254498,True
+2017,Udham Singh Nagar,udham-singh-nagar,139140,1654,140794,True
+2018,Dehradun,dehradun,2453998,30291,2484289,True
+2018,Rishikesh,rishikesh,656074,6044,662118,True
+2018,Mussoorie,mussoorie,2870475,1550,2872025,True
+2018,Pauri,pauri,77823,1238,79061,True
+2018,Srinagar (Garhwal),srinagar-pauri-garhwal,203912,276,204188,True
+2018,Kotdwar,kotdwar,415769,11537,427306,True
+2018,Rudraprayag (excl. Kedarnath),rudraprayag,273700,1847,275547,True
+2018,Kedarnath,kedarnath,730387,1604,731991,True
+2018,Gopeshwar,gopeshwar,245228,0,245228,True
+2018,Joshimath,joshimath,435537,516,436053,True
+2018,Badrinath,badrinath,1046987,1064,1048051,True
+2018,Auli,auli,151560,242,151802,True
+2018,Hemkund Sahib,hemkund-sahib,158817,286,159103,True
+2018,Valley of Flowers,valley-of-flowers,14128,664,14792,True
+2018,Tehri,tehri,2071142,46289,2117431,True
+2018,Uttarkashi,uttarkashi,320796,2001,322797,True
+2018,Gangotri,gangotri,447239,599,447838,True
+2018,Yamunotri,yamunotri,393963,482,394445,True
+2018,Haridwar,haridwar,21555000,22583,21577583,True
+2018,Almora,almora,114198,4144,118342,True
+2018,Ranikhet,ranikhet,148212,1683,149895,True
+2018,Kausani & Bageshwar,kausani,87217,1024,88241,True
+2018,Pithoragarh,pithoragarh,153729,656,154385,True
+2018,Champawat,champawat,188703,213,188916,True
+2018,Nainital,nainital,924316,9341,933657,True
+2018,Kathgodam,kathgodam,151528,437,151965,True
+2018,Corbett National Park,corbett-national-park,255218,6062,261280,True
+2018,Udham Singh Nagar,udham-singh-nagar,152022,1853,153875,True
+2019,Dehradun,dehradun,2875467,29836,2905303,True
+2019,Rishikesh,rishikesh,855798,8088,863886,True
+2019,Mussoorie,mussoorie,3022774,1065,3023839,True
+2019,Pauri,pauri,79186,866,80052,True
+2019,Srinagar (Garhwal),srinagar-pauri-garhwal,196188,234,196422,True
+2019,Kotdwar,kotdwar,441159,11307,452466,True
+2019,Rudraprayag (excl. Kedarnath),rudraprayag,334612,496,335108,True
+2019,Kedarnath,kedarnath,998956,1065,1000021,True
+2019,Gopeshwar,gopeshwar,255320,0,255320,True
+2019,Joshimath,joshimath,488638,882,489520,True
+2019,Badrinath,badrinath,1244100,893,1244993,True
+2019,Auli,auli,284489,409,284898,True
+2019,Hemkund Sahib,hemkund-sahib,239910,223,240133,True
+2019,Valley of Flowers,valley-of-flowers,16904,520,17424,True
+2019,Tehri,tehri,2296693,51348,2348041,True
+2019,Uttarkashi,uttarkashi,380230,1710,381940,True
+2019,Gangotri,gangotri,529880,454,530334,True
+2019,Yamunotri,yamunotri,465111,423,465534,True
+2019,Haridwar,haridwar,21749425,20807,21770232,True
+2019,Almora,almora,123416,5258,128674,True
+2019,Ranikhet,ranikhet,150664,1920,152584,True
+2019,Kausani & Bageshwar,kausani,104841,519,105360,True
+2019,Pithoragarh,pithoragarh,208897,754,209651,True
+2019,Champawat,champawat,210522,191,210713,True
+2019,Nainital,nainital,924341,9565,933906,True
+2019,Kathgodam,kathgodam,152552,413,152965,True
+2019,Corbett National Park,corbett-national-park,275521,7760,283281,True
+2019,Udham Singh Nagar,udham-singh-nagar,161182,1958,163140,True
+2020,Dehradun,dehradun,592079,1388,593467,True
+2020,Rishikesh,rishikesh,170598,1120,171718,True
+2020,Mussoorie,mussoorie,1016090,247,1016337,True
+2020,Pauri,pauri,27108,56,27164,True
+2020,Srinagar (Garhwal),srinagar-pauri-garhwal,78140,35,78175,True
+2020,Kotdwar,kotdwar,175178,6179,181357,True
+2020,Rudraprayag (excl. Kedarnath),rudraprayag,78007,215,78222,True
+2020,Kedarnath,kedarnath,135287,62,135349,True
+2020,Gopeshwar,gopeshwar,19231,153,19384,True
+2020,Joshimath,joshimath,193760,69,193829,True
+2020,Badrinath,badrinath,155009,46,155055,True
+2020,Auli,auli,190070,28,190098,True
+2020,Hemkund Sahib,hemkund-sahib,8290,0,8290,True
+2020,Valley of Flowers,valley-of-flowers,906,10,916,True
+2020,Tehri,tehri,225660,16445,242105,True
+2020,Uttarkashi,uttarkashi,63674,173,63847,True
+2020,Gangotri,gangotri,23736,38,23774,True
+2020,Yamunotri,yamunotri,7717,11,7728,True
+2020,Haridwar,haridwar,4016250,5581,4021831,True
+2020,Almora,almora,18499,702,19201,True
+2020,Ranikhet,ranikhet,20109,97,20206,True
+2020,Kausani & Bageshwar,kausani,11861,10,11871,True
+2020,Pithoragarh,pithoragarh,46179,153,46332,True
+2020,Champawat,champawat,47259,51,47310,True
+2020,Nainital,nainital,212981,2768,215749,True
+2020,Kathgodam,kathgodam,37397,143,37540,True
+2020,Corbett National Park,corbett-national-park,165461,2617,168078,True
+2020,Udham Singh Nagar,udham-singh-nagar,99466,366,99832,True
+2021,Dehradun,dehradun,2866107,1675,2867782,True
+2021,Rishikesh,rishikesh,291230,1576,292806,True
+2021,Mussoorie,mussoorie,1229528,280,1229808,True
+2021,Pauri,pauri,7350,0,7350,True
+2021,Srinagar (Garhwal),srinagar-pauri-garhwal,209555,0,209555,True
+2021,Kotdwar,kotdwar,108362,638,109000,True
+2021,Rudraprayag (excl. Kedarnath),rudraprayag,46479,36,46515,True
+2021,Kedarnath,kedarnath,242985,27,243012,True
+2021,Gopeshwar,gopeshwar,10163,53,10216,True
+2021,Joshimath,joshimath,167369,12,167381,True
+2021,Badrinath,badrinath,199406,3,199409,True
+2021,Auli,auli,127487,1,127488,True
+2021,Hemkund Sahib,hemkund-sahib,19909,0,19909,True
+2021,Valley of Flowers,valley-of-flowers,10383,15,10398,True
+2021,Tehri,tehri,490512,2300,492812,True
+2021,Uttarkashi,uttarkashi,80593,140,80733,True
+2021,Gangotri,gangotri,33771,0,33771,True
+2021,Yamunotri,yamunotri,33311,0,33311,True
+2021,Haridwar,haridwar,12717825,616,12718441,True
+2021,Almora,almora,38027,171,38198,True
+2021,Ranikhet,ranikhet,54265,0,54265,True
+2021,Kausani & Bageshwar,kausani,45807,8,45815,True
+2021,Pithoragarh,pithoragarh,53433,73,53506,True
+2021,Champawat,champawat,15704,7,15711,True
+2021,Nainital,nainital,325626,633,326259,True
+2021,Kathgodam,kathgodam,107932,177,108109,True
+2021,Corbett National Park,corbett-national-park,287324,6813,294137,True
+2021,Udham Singh Nagar,udham-singh-nagar,182262,156,182418,True
+2022,Dehradun,dehradun,5816212,13447,5829659,True
+2022,Rishikesh,rishikesh,756264,1817,758081,True
+2022,Mussoorie,mussoorie,1171786,1275,1173061,True
+2022,Pauri,pauri,12443,25,12468,True
+2022,Srinagar (Garhwal),srinagar-pauri-garhwal,456368,56,456424,True
+2022,Kotdwar,kotdwar,270907,4445,275352,True
+2022,Rudraprayag (excl. Kedarnath),rudraprayag,343423,130,343553,True
+2022,Kedarnath,kedarnath,1563280,968,1564248,True
+2022,Gopeshwar,gopeshwar,121985,65,122050,True
+2022,Joshimath,joshimath,704011,118,704129,True
+2022,Badrinath,badrinath,1763384,194,1763578,True
+2022,Auli,auli,412674,78,412752,True
+2022,Hemkund Sahib,hemkund-sahib,190198,86,190284,True
+2022,Valley of Flowers,valley-of-flowers,20550,280,20830,True
+2022,Tehri,tehri,2723603,22709,2746312,True
+2022,Uttarkashi,uttarkashi,153009,980,153989,True
+2022,Gangotri,gangotri,781903,58,781961,True
+2022,Yamunotri,yamunotri,621504,34,621538,True
+2022,Haridwar,haridwar,34252800,6607,34259407,True
+2022,Almora,almora,147195,1606,148801,True
+2022,Ranikhet,ranikhet,80074,52,80126,True
+2022,Kausani & Bageshwar,kausani,81952,154,82106,True
+2022,Pithoragarh,pithoragarh,116997,217,117214,True
+2022,Champawat,champawat,36334,208,36542,True
+2022,Nainital,nainital,525656,4020,529676,True
+2022,Kathgodam,kathgodam,215076,467,215543,True
+2022,Corbett National Park,corbett-national-park,349746,3537,353283,True
+2022,Udham Singh Nagar,udham-singh-nagar,227515,856,228371,True
+2023,Dehradun,dehradun,6113424,26262,6139686,True
+2023,Rishikesh,rishikesh,1038891,3993,1042884,True
+2023,Mussoorie,mussoorie,1469663,2250,1471913,True
+2023,Pauri,pauri,13735,29,13764,True
+2023,Srinagar (Garhwal),srinagar-pauri-garhwal,599598,111,599709,True
+2023,Kotdwar,kotdwar,342156,21817,363973,True
+2023,Rudraprayag (excl. Kedarnath),rudraprayag,401618,351,401969,True
+2023,Kedarnath,kedarnath,1957609,1254,1958863,True
+2023,Gopeshwar,gopeshwar,173833,2306,176139,True
+2023,Joshimath,joshimath,514340,1033,515373,True
+2023,Badrinath,badrinath,1779930,499,1780429,True
+2023,Auli,auli,181353,328,181681,True
+2023,Hemkund Sahib,hemkund-sahib,164501,45,164546,True
+2023,Valley of Flowers,valley-of-flowers,12831,401,13232,True
+2023,Tehri,tehri,3713970,47177,3761147,True
+2023,Uttarkashi,uttarkashi,362106,1333,363439,True
+2023,Gangotri,gangotri,712749,0,712749,True
+2023,Yamunotri,yamunotri,560918,0,560918,True
+2023,Haridwar,haridwar,37050845,20657,37071502,True
+2023,Almora,almora,235571,3040,238611,True
+2023,Ranikhet,ranikhet,125167,0,125167,True
+2023,Kausani & Bageshwar,kausani,81935,628,82563,True
+2023,Pithoragarh,pithoragarh,126989,408,127397,True
+2023,Champawat,champawat,227129,223,227352,True
+2023,Nainital,nainital,776526,7971,784497,True
+2023,Kathgodam,kathgodam,172741,355,173096,True
+2023,Corbett National Park,corbett-national-park,328372,4721,333093,True
+2023,Udham Singh Nagar,udham-singh-nagar,249689,1220,250909,True
+2024,Dehradun,dehradun,6461583,30457,6492040,True
+2024,Rishikesh,rishikesh,964036,4857,968893,True
+2024,Mussoorie,mussoorie,2131543,3083,2134626,True
+2024,Pauri,pauri,16074,15,16089,True
+2024,Srinagar (Garhwal),srinagar-pauri-garhwal,632931,111,633042,True
+2024,Kotdwar,kotdwar,395619,21149,416768,True
+2024,Rudraprayag (excl. Kedarnath),rudraprayag,491127,361,491488,True
+2024,Kedarnath,kedarnath,1652076,1505,1653581,True
+2024,Gopeshwar,gopeshwar,174268,192,174460,True
+2024,Joshimath,joshimath,154700,725,155425,True
+2024,Badrinath,badrinath,1772571,1693,1774264,True
+2024,Auli,auli,141674,553,142227,True
+2024,Hemkund Sahib,hemkund-sahib,185797,175,185972,True
+2024,Valley of Flowers,valley-of-flowers,19106,330,19436,True
+2024,Tehri,tehri,5007953,58855,5066808,True
+2024,Uttarkashi,uttarkashi,293487,1103,294590,True
+2024,Gangotri,gangotri,540190,0,540190,True
+2024,Yamunotri,yamunotri,515067,0,515067,True
+2024,Haridwar,haridwar,34912520,24204,34936724,True
+2024,Almora,almora,419510,2782,422292,True
+2024,Ranikhet,ranikhet,125620,625,126245,True
+2024,Kausani & Bageshwar,kausani,108670,579,109249,True
+2024,Pithoragarh,pithoragarh,192422,584,193006,True
+2024,Champawat,champawat,258807,452,259259,True
+2024,Nainital,nainital,1014602,9537,1024139,True
+2024,Kathgodam,kathgodam,160387,962,161349,True
+2024,Corbett National Park,corbett-national-park,351771,10120,361891,True
+2024,Udham Singh Nagar,udham-singh-nagar,279758,1399,281157,True

@@ -8,6 +8,7 @@ import DestinationDigitalTwin from './pages/DestinationDigitalTwin';
 import DisasterMode from './pages/DisasterMode';
 import WhatIfSimulator from './pages/WhatIfSimulator';
 import AuxiliaryView from './pages/AuxiliaryView';
+import { isPageVisible } from './services/pageVisibility.js';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('landing');
@@ -30,6 +31,7 @@ export default function App() {
   };
 
   const navigateTo = (tab) => {
+    if (!isPageVisible(tab)) return;
     setActiveTab(tab);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

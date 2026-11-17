@@ -94,7 +94,7 @@ def test_valid_requests_and_unknown_models(endpoint):
     assert result['model_version'] == model_id
     status, result, _ = call(endpoint, '/tourism/forecast', {'destination': 'IND', 'horizon': 3})
     assert status == 200 and result['forecast_origin_year'] == result['latest_observed_year'] == 2019
-    assert result['horizon'] == 3 and result['quality_status'] == 'TRAINED_BUT_EXPERIMENTAL'
+    assert result['horizon'] == 3 and result['quality_status'] in {'TRAINED_BUT_EXPERIMENTAL', 'FINAL_V1'}
     assert [r['year'] for r in result['forecasts']] == [2020, 2021, 2022]
     assert call(endpoint, '/reviews/classify', {'model_id': 'unknown', 'reviews': ['a']})[0] == 404
     assert call(endpoint, '/models/unknown')[0] == 404

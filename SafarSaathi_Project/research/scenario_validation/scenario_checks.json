@@ -1,0 +1,21 @@
+{
+  "controlled_cases": 21,
+  "repeatability_pass": true,
+  "unsupported_drivers": [
+    {
+      "input": "rainfall_mm",
+      "status": "REJECTED_UNSUPPORTED",
+      "detail": "Expected baseline_visitors, capacity, demand_change_percent and available_capacity_percent only."
+    },
+    {
+      "input": "road_accessibility",
+      "status": "REJECTED_UNSUPPORTED",
+      "detail": "Expected baseline_visitors, capacity, demand_change_percent and available_capacity_percent only."
+    },
+    {
+      "input": "emergency_resources",
+      "status": "REJECTED_UNSUPPORTED",
+      "detail": "Expected baseline_visitors, capacity, demand_change_percent and available_capacity_percent only."
+    }
+  ]
+}

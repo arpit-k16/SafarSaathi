@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { isPageVisible } from '../services/pageVisibility.js';
 import { useApiQuery } from '../hooks/useApi.js';
 import { api, pageLoaders } from '../services/api/resources.js';
 import { pageCards } from '../services/api/adapters.js';
 import ApiState from '../components/ApiState.jsx';
 import IntegrationDetails from '../components/IntegrationDetails.jsx';
+import { ResearchNotice } from '../components/ResearchTools.jsx';
 
 const TITLES = {
   'tourism-intelligence': 'Tourism Intelligence & Demographics',
@@ -26,6 +28,7 @@ export default function AuxiliaryView({ activeTab, onNavigate, lastScenario }) {
   };
   return (
     <div data-page={activeTab} className="flex flex-col w-full bg-surface text-on-surface p-gutter-lg pb-12">
+      {['ai-model-center', 'risk-resilience', 'satellite-intelligence', 'reports-briefs'].includes(activeTab) && <ResearchNotice />}
       {/* Header */}
       <div className="border-b border-white/5 pb-4 mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
@@ -104,14 +107,14 @@ export default function AuxiliaryView({ activeTab, onNavigate, lastScenario }) {
                 <span>Inspect Micro-Precinct Twin</span>
                 <span>→</span>
               </button>
-              <button
+              {isPageVisible('disaster-mode') && (<button
                 type="button"
                 onClick={() => onNavigate('disaster-mode')}
                 className="w-full py-2.5 px-3 rounded bg-red-950/40 hover:bg-red-900/50 border border-red-500/40 text-red-200 transition-all text-left flex items-center justify-between shadow-[0_0_12px_rgba(239,68,68,0.2)]"
               >
                 <span>Open Simulation Exercise</span>
                 <span>→</span>
-              </button>
+              </button>)}
             </div>
           </div>
         </div>

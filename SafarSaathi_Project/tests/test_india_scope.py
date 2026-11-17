@@ -89,12 +89,14 @@ def test_indicator_integrity_failure_is_rejected(tmp_path):
 
 def test_actual_scoped_http_and_unavailable_broad_models():
     status_map={item['model_id']:item['status'] for item in capabilities(settings().project_root)}
-    assert status_map['flood_segmentation_model']=='EXPERIMENTAL'
-    assert status_map['tourism_demand_forecaster']=='EXPERIMENTAL'
+    from safarsaathi_ml.release_gate import release
+    released='FINAL_V1' if release(settings().project_root) else 'EXPERIMENTAL'
+    assert status_map['flood_segmentation_model']==released
+    assert status_map['tourism_demand_forecaster']==released
     assert status_map['disaster_risk_predictor']=='DATA_INSUFFICIENT'
     assert status_map['destination_stress_predictor']=='DATA_INSUFFICIENT'
     broad={item['model_id']:item for item in capabilities(settings().project_root)}
-    assert broad['disaster_risk_predictor']['scoped_forecast']['status']=='EXPERIMENTAL'
+    assert broad['disaster_risk_predictor']['scoped_forecast']['status']==released
     assert broad['destination_stress_predictor']['historical_indicators']['status']=='INDICATOR_ONLY'
     server=ThreadingHTTPServer(('127.0.0.1',0),Handler);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
     def call(path,payload):

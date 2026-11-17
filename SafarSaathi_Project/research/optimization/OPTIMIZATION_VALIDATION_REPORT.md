@@ -1,0 +1,7 @@
+# Optimization validation
+
+18 seeded GA/PSO/weight experiments and 6 algorithm-budget sensitivity cases executed. Each primary experiment repeated exactly for allocations/objective traces at the same seed. Maximum recorded capacity violation: 0 visitor equivalents. Largest gap to the numerical convex reference: 4.6834593e-07 objective units; positive gaps are heuristic suboptimality, not suppressed. Constraint conservation errors and all runtimes are retained in OPTIMIZATION_COMPARISON.csv.
+
+Zero exposure weight (alpha=0) tests whether heuristics can improve an already suitable proportional-capacity baseline; no improvement is fabricated. Seed variation and proxy trade-offs must be interpreted on these explicit assumptions only. The CSV includes reference gaps, objective components, baseline scores and parameters. The fixture is synthetic, not empirical validation of tourism pressure or Nepal flood interventions.
+
+Core tests cover feasible/infeasible/missing/negative/nonfinite/extreme inputs, zero demand/capacity, inaccessible destinations, numerical projection, conservation, baseline comparison, one destination, large inputs and same-seed repeatability. API exposure is permitted only after core tests pass. Final counts/HTTP evidence are recorded in the central end-to-end report. Legacy /optimization/solve remains an explicit unavailable operational boundary; the new /optimization/allocate route supports this narrow research formulation.

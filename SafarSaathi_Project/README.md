@@ -1,110 +1,125 @@
-# SafarSaathi — verified ML research prototype
+# SafarSaathi
 
-Phase 2 integration (2026-10-30): the existing React/Vite frontend now reads actual
-backend data, runs supported model/scenario actions and generates JSON reports.
-CSS, assets, branding and navigation are preserved. Live operational panels remain
-explicit demonstrations; optimization and PDF export are unavailable. See the
-[frontend integration report](integration_docs/FRONTEND_API_INTEGRATION_REPORT.md),
-[current runbook](integration_docs/RUNBOOK.md),
-[API contract](integration_docs/API_CONTRACT.md), and
-[page status](integration_docs/FRONTEND_INTEGRATION_STATUS.md).
+**AI-Powered Tourism Intelligence & Resilience Platform** for Uttarakhand and India.
 
-Six persisted models support real inference: review classification, historical
-annual tourism, monthly foreign-tourist arrivals, and experimental flood-scene
-water segmentation, plus North Indian Ocean archived tropical-count and India
-national modeled-PM2.5 forecasts. The new forecasts have narrow, experimental
-targets. India-wide multi-disaster warnings and destination ecological-stress
-prediction remain disabled because appropriate observed outcome panels are absent.
-Historical national environmental and 36-State/UT visit indicators are available
-separately and are not trained stress predictions.
+SafarSaathi is a destination-level decision-support system. It puts visitor demand next to
+capacity, climate, flood and cyclone evidence, so destination managers can test a scenario
+before the season arrives, compare interventions, and keep a person in charge of the final call.
 
-The final quality audit preserves all four original model versions and earlier evidence.
-Tourism is **TRAINED_BUT_EXPERIMENTAL**: the original source has 25 annual India
-counts from 1995–2019; a separate monthly FTA model uses 72 observations through
-December 2024. These are different target definitions. Forecasts
-start from the last observation, not the current year. No current 2026 or
-Uttarakhand destination-demand accuracy is claimed.
+Core loop, from the project report: **predict → simulate → optimise → explain → support human action.**
 
-## Start and inspect
+## Run it
 
-Use Python with the libraries in `requirements.txt` installed and Node.js with
-the frontend dependencies from its package lock. The verified runtime versions
-are recorded in model metadata and the verification reports.
+**Windows, one click:** double-click `START_SAFARSAATHI.bat` in the repository root. It creates a
+Python environment, installs packages, stops any older SafarSaathi server, starts the server
+and opens <http://localhost:8000>.
 
-From `SafarSaathi_Project`:
+**Any platform:**
 
-```powershell
-$env:PYTHONPATH = 'src'
-python -m safarsaathi_ml.cli models
-python -m safarsaathi_ml.cli validate-artifacts
-python -m safarsaathi_ml.cli evaluate --model tourism_demand
-python -m safarsaathi_ml.cli predict --model tourism_demand --destination IND --horizon 3
-python -m safarsaathi_ml.cli serve --port 8000
-```
-
-In `frontend`, `npm run dev` starts Vite on its default port 5173. The production build command is
-`npm run build`; `npm run preview -- --host 127.0.0.1 --port 4173 --strictPort`
-serves it locally. The backend listens at `http://127.0.0.1:8000`;
-the centralized client defaults to that URL. VITE_SAFARSAATHI_API_URL configures it at Vite startup/build time.
-
-Read [ML_MODELS.md](ML_MODELS.md) for API schemas, model evaluation, tests,
-source attribution, training restrictions and release reproducibility.
-The consolidated [model cards](docs/MODEL_CARDS.md), [data provenance](docs/DATA_PROVENANCE.md),
-and [remaining limitations](docs/REMAINING_LIMITATIONS.md) document the six models,
-source reuse, blocked capabilities, and evidence needed to unblock them.
-
-## Final evidence
-
-The current versioned directory is
-`release/final_master_20261025_04/`:
-
-- `FINAL_VERIFICATION_REPORT.md` and `verification_report.json`.
-- `cyclone_count_evaluation_replay.json` and `pm25_evaluation_replay.json`: saved evaluation replays.
-- `disaster_data_readiness.json` and `destination_stress_data_readiness.json`.
-- `source_manifests.json`, `source_investigation.json` and `raw_checksums.json`.
-- `release_validation.json`: extracted-copy inference and ZIP checks.
-- `SafarSaathi_Final.zip`: the new release; earlier ZIPs remain preserved.
-
-Exact Python, Node and browser counts are recorded in the new release report.
-Isolated installed Chrome executes real form, navigation, error and mobile
-journeys; packaged final screenshots are in browser_visual. External Tailwind/fonts remain an
-offline-styling limitation. The approved STURM archive stays outside the ZIP.
-
-Read [the India scope guide](docs/INDIA_SCOPE_MODELS.md) for new CLI/API schemas,
-source definitions, training reproduction and troubleshooting. The prior four-model
-release is preserved in `release/final_working_20261025_02/`.
-
-The review classifier was not retrained. No raw datasets, original evaluation
-results, model versions, legacy archive files or earlier releases were replaced.
-
-## Launch the current backend
-
-From `SafarSaathi_Project`:
-
-```powershell
+```bash
+cd SafarSaathi_Project
 python -m pip install -r requirements.txt
-$env:PYTHONPATH = 'src'
-python -m safarsaathi_ml.cli serve --port 8000
+python run_safarsaathi.py            # or: PYTHONPATH=src uvicorn safarsaathi_ml.asgi:app --port 8000
 ```
 
-The frontend's `dev` script launches only Vite; run the backend separately.
+The built web console is served by the backend at `/`. To rebuild it: `cd web && npm ci && npm run build`.
+Map tiles use CARTO basemaps, which need a free key (<https://carto.com/basemaps/apikey>): copy
+`web/public/map-config.example.json` to `web/public/map-config.json`, add the key, and rebuild (or put the
+same file in `web/dist/`). The key file is git-ignored. Without a key the maps still work, with a watermark.
 
-## Deploy the backend on Render
+**Docker / Render:** `render.yaml` and `Dockerfile` build the console and serve it with the API from
+one container. See [docs/RENDER_DEPLOYMENT.md](docs/RENDER_DEPLOYMENT.md).
 
-Use the ASGI adapter, rather than `main:app`: `uvicorn safarsaathi_ml.asgi:app --host 0.0.0.0 --port $PORT`.
-The Render root directory is `SafarSaathi_Project`; set the Vercel API URL and the explicit
-`SAFARSAATHI_CORS_ORIGINS` allowlist as described in [Render deployment](docs/RENDER_DEPLOYMENT.md).
-In a second terminal from the project root:
+## What it does
 
-```powershell
-Set-Location frontend
-$env:SAFARSAATHI_VITE_CACHE = '../integration_docs/phase2_runtime/dev-cache'
-npm run dev -- --host 127.0.0.1 --port 5173 --strictPort --configLoader runner
+| Area | Page | What you get |
+|---|---|---|
+| Demand | Tourism demand | Annual and monthly arrival forecasts, held-out error, and a "why this forecast" explanation |
+| Places | Destinations and climate | 25 years of NASA POWER climate for 29 Uttarakhand locations |
+| Places | Hotspots and anomalies | DBSCAN / K-means hotspots of 28 destinations; anomaly detection on visitor and rainfall years, checked against the 2013 disaster and COVID |
+| Risk | Cyclone archive | North Indian Ocean cyclone-count forecaster |
+| Risk | Flood segmentation | Sentinel-1 water and flood-extent segmentation (STURM-Flood) |
+| Risk | Risk-aware routing | OpenStreetMap road network; fastest route vs a route weighing hazard, vulnerability, congestion and uncertainty; simulated closures |
+| Visitors | Review insights | TF-IDF + linear sentiment classifier |
+| Planning | Digital twin and stress | State of 28 destinations, a transparent Destination Stress Index, what-if scenarios, every value labelled observed / derived / simulated |
+| Planning | Capacity scenarios | Demand vs capacity arithmetic |
+| Planning | Allocation optimiser | GA / PSO visitor allocation, and an intervention planner that scores plans through the digital twin against do-nothing, greedy and the exhaustive optimum |
+| Evidence | Model center, Data hub, Reports, System | Model cards, release gate, data inventory, evidence reports, API console |
+
+## Models: release v1.0
+
+Every saved model passed the release gate in `src/safarsaathi_ml/release_gate.py`
+(results frozen in `models/release_v1.json`). The gate requires: (1) the artifact matches its
+checksum and reloads; (2) on held-out test data it does at least as well as a naive baseline;
+(3) its limitations are documented. **Final v1.0 means frozen, reproducible and baseline-checked
+within its documented scope, not operationally validated.**
+
+| Model | Held-out test | Naive baseline |
+|---|---|---|
+| Review classifier | accuracy 0.85 | 0.52 (majority class) |
+| Annual tourism demand (drift) | MAE 5.79 lakh arrivals | 9.61 lakh (repeat last year) |
+| Monthly foreign arrivals | is the persistence baseline itself, chosen on validation over drift, seasonal-naive and ridge | — |
+| Cyclone counts (seasonal mean) | MAE 0.63 | 0.85 (constant mean) |
+| PM2.5 exposure (ridge) | MAE 2.55 | 2.65 (repeat last year) |
+| Flood segmentation (gradient boosting) | IoU 0.31 on unseen countries (0.67 on validation) | 0 (no water) |
+
+Two capabilities are served by the report's MVP choices (§9.10) rather than learned models,
+because no outcome labels exist to train one:
+
+- **Destination stress**: the transparent Destination Stress Index (Index v1.0). Its ranking is robust to re-weighting (Spearman ρ ≈ 0.98).
+- **Disaster risk**: rule- and scenario-based exposure (Rule-based v1.0): risk-aware routing, anomaly detection and the cyclone forecaster.
+
+## Data
+
+| Source | Used for |
+|---|---|
+| Uttarakhand Tourism (UTDB) statistics, 2000–2024 | Visitors to 28 destinations; every row passes the Indian + foreign = total check |
+| World Bank, Ministry of Tourism | National annual and monthly arrivals |
+| NASA POWER daily reanalysis, 2000–2024 | Climate for 29 locations |
+| IBTrACS | North Indian Ocean cyclone tracks |
+| STURM-Flood (Sentinel-1) | Flood segmentation (CC BY 4.0) |
+| OpenStreetMap (ODbL), Geofabrik extract | Road network for routing |
+| World Bank / GBD | National PM2.5 exposure |
+
+Raw downloads are not in git (see `SafarSaathi_Datasets/DATA_MANIFEST.csv`). The repository carries
+the small processed files the app needs (`data/processed/`) and a checksum-verified
+`deploy_snapshot/`, so a fresh clone runs without the raw collection.
+Rebuild steps: `python -m safarsaathi_ml.utdb .` (visitor table), `scripts/osm_road_graph/` (road graph),
+`python -m safarsaathi_ml.cli build-snapshot`, `python -m safarsaathi_ml.release_gate .`.
+
+## Tests
+
+```bash
+cd SafarSaathi_Project
+python -m pip install -r requirements-dev.txt
+PYTHONPATH=src python -m pytest tests -q      # 204 tests
+cd web && npm test
 ```
 
-Open `http://127.0.0.1:5173`. `npm test` now runs the built-in Node API/adapter
-tests; set SAFARSAATHI_TEST_API to the local backend URL to include real requests.
-`npm run build -- --configLoader runner` and `npm run lint` were verified. The
-runbook explains redirecting build output outside frontend, supported inputs,
-unavailable capabilities and exact test evidence. Backend tests use
-`python -m pytest tests -q`; all six saved pipelines remain unchanged.
+## Limitations
+
+The stress index, routing risk terms and intervention effects are proxies built from public data:
+there is no observed crowding, landslide-susceptibility, live road-status or verified intervention-cost
+data in this project. Visitor counts are annual, not daily. Climate comes from a 0.5° grid.
+Each page lists its own limitations. SafarSaathi supports decisions; it does not predict sudden
+disasters or replace emergency authorities. See [docs/REMAINING_LIMITATIONS.md](docs/REMAINING_LIMITATIONS.md).
+
+## Repository layout
+
+```
+SafarSaathi_Project/
+  src/safarsaathi_ml/   backend: models, digital twin (resilience.py), routing, release gate, API
+  web/                  React + Vite console (served from web/dist)
+  models/               saved model artifacts, registry, release_v1.json
+  data/processed/       processed data the app reads at runtime
+  deploy_snapshot/      checksum-verified adapter outputs for hosted runs
+  scripts/              data build scripts (OpenStreetMap road graph, etc.)
+  tests/                pytest suite
+  docs/                 model cards, provenance, licences, deployment, history
+SafarSaathi_Datasets/   manifest and checksums for the raw collection
+```
+
+Earlier release notes: [docs/RELEASE_HISTORY.md](docs/RELEASE_HISTORY.md).
+Model details: [ML_MODELS.md](ML_MODELS.md) and [docs/MODEL_CARDS.md](docs/MODEL_CARDS.md).
+
+SafarSaathi is an AIML team project at Bennett University.

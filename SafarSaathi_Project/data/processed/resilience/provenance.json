@@ -1,0 +1,8 @@
+{
+  "built_utc": "2026-11-16T18:17:15+00:00",
+  "features_sha256": "1e0682b112c206d07288534198fa3925b5e8f27ecaf9013a57d413aac3f4ed13",
+  "sources": [
+    "data/processed/utdb_destinations/visits.csv",
+    "data/raw_v2/weather_power/POWER_*.json"
+  ]
+}

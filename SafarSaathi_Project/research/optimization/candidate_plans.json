@@ -1,0 +1,2054 @@
+[
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 5,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 45.0
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "candidate": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "objective_improvement": 0.0,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625
+    ],
+    "runtime_seconds": 0.17824979999568313,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 5,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 45.0
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "candidate": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "objective_improvement": 0.0,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625
+    ],
+    "runtime_seconds": 0.241694299998926,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 23,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 45.0
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "candidate": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "objective_improvement": 0.0,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625
+    ],
+    "runtime_seconds": 0.28848180000204593,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 23,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 45.0
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "candidate": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "objective_improvement": 0.0,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625
+    ],
+    "runtime_seconds": 0.35129930000402965,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 79,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 45.0
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "candidate": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "objective_improvement": 0.0,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625
+    ],
+    "runtime_seconds": 0.29855410000891425,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 79,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 45.0
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 37.5
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "candidate": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.625
+    },
+    "objective_improvement": 0.0,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625
+    ],
+    "runtime_seconds": 0.3390233999816701,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 5,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.5,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 47.271520394046945
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 31.52609367689426
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 41.20238592905879
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.525
+    },
+    "candidate": {
+      "exposure_proxy": 0.35257285633031454,
+      "utilization_proxy": 0.661177601673448,
+      "objective": 0.5068752290018812
+    },
+    "objective_improvement": 0.018124770998118822,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.5117926783297377,
+      0.5106140685505357,
+      0.5075791422175178,
+      0.5070418311223618,
+      0.5069443191153815,
+      0.5069443191153815,
+      0.5069443191153815,
+      0.5068932948624418,
+      0.5068932948624418,
+      0.5068932948624418,
+      0.5068932948624418,
+      0.5068932948624418,
+      0.5068759874310719,
+      0.5068759874310719,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068753640786973,
+      0.5068752578505626,
+      0.5068752578505626,
+      0.5068752578505626,
+      0.5068752578505626,
+      0.5068752340908687,
+      0.5068752290018812,
+      0.5068752290018812
+    ],
+    "runtime_seconds": 0.3738207999849692,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 5,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.5,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 47.25259962163729
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 31.498639617216778
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 41.24876076114594
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.525
+    },
+    "candidate": {
+      "exposure_proxy": 0.35248999903567446,
+      "utilization_proxy": 0.6612600023304294,
+      "objective": 0.5068750006830519
+    },
+    "objective_improvement": 0.01812499931694811,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.5117926783297377,
+      0.5072245041935266,
+      0.5072245041935266,
+      0.5072245041935266,
+      0.5072083347410435,
+      0.5069502774192003,
+      0.5069502774192003,
+      0.5068959895929553,
+      0.5068784434188217,
+      0.5068784434188217,
+      0.5068784434188217,
+      0.5068760238464298,
+      0.5068760238464298,
+      0.5068760238464298,
+      0.5068757256349684,
+      0.5068754590009159,
+      0.5068752974048797,
+      0.506875044205327,
+      0.506875044205327,
+      0.506875044205327,
+      0.506875044205327,
+      0.506875044205327,
+      0.506875044205327,
+      0.506875044205327,
+      0.5068750006830519,
+      0.5068750006830519,
+      0.5068750006830519,
+      0.5068750006830519,
+      0.5068750006830519,
+      0.5068750006830519,
+      0.5068750006830519
+    ],
+    "runtime_seconds": 0.20645080000394955,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 23,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.5,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 47.1833320639815
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 31.5290467112149
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 41.287621224803594
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.525
+    },
+    "candidate": {
+      "exposure_proxy": 0.3527321411900929,
+      "utilization_proxy": 0.6610187703464501,
+      "objective": 0.5068754557682715
+    },
+    "objective_improvement": 0.01812454423172849,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.5168084640049079,
+      0.5086011658591525,
+      0.5074269051588534,
+      0.5074269051588534,
+      0.507171336063464,
+      0.5070554427643256,
+      0.5070554427643256,
+      0.5069974235797928,
+      0.5069974235797928,
+      0.5069974235797928,
+      0.5069833230169677,
+      0.5069833230169677,
+      0.5069833230169677,
+      0.5069763666515159,
+      0.5069763666515159,
+      0.5069223926622857,
+      0.5069223926622857,
+      0.5069144263784007,
+      0.5069077070946875,
+      0.5069077070946875,
+      0.5068906174185306,
+      0.5068906174185306,
+      0.5068906174185306,
+      0.5068765167826216,
+      0.5068765167826216,
+      0.5068765167826216,
+      0.5068756616904131,
+      0.5068756503856431,
+      0.5068754557682715,
+      0.5068754557682715,
+      0.5068754557682715
+    ],
+    "runtime_seconds": 0.30651349999243394,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 23,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.5,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 47.2458792837423
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 31.496158390639295
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 41.25796232561841
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.525
+    },
+    "candidate": {
+      "exposure_proxy": 0.3524908611547599,
+      "utilization_proxy": 0.6612591517170782,
+      "objective": 0.5068750064359191
+    },
+    "objective_improvement": 0.018124993564080927,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.5168084640049079,
+      0.5108549019559352,
+      0.5099744838950891,
+      0.5074522663172141,
+      0.5070029277097319,
+      0.5070029277097319,
+      0.506899079607578,
+      0.506899079607578,
+      0.506899079607578,
+      0.5068889230767046,
+      0.506877089481551,
+      0.506877089481551,
+      0.506877089481551,
+      0.506875831855791,
+      0.506875831855791,
+      0.506875463298835,
+      0.5068751186881639,
+      0.5068751186881639,
+      0.5068751186881639,
+      0.5068751186881639,
+      0.5068750975880911,
+      0.5068750975880911,
+      0.5068750734049052,
+      0.5068750734049052,
+      0.5068750734049052,
+      0.5068750734049052,
+      0.5068750694983964,
+      0.5068750663235742,
+      0.5068750066592131,
+      0.5068750064359191,
+      0.5068750064359191
+    ],
+    "runtime_seconds": 0.32280619998346083,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 79,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.5,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 47.1948874935658
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 31.49444092257907
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 41.31067158385514
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.525
+    },
+    "candidate": {
+      "exposure_proxy": 0.3525686913548032,
+      "utilization_proxy": 0.6611822453371745,
+      "objective": 0.5068754683459888
+    },
+    "objective_improvement": 0.018124531654011178,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 1.4210854715202004e-14,
+    "convergence": [
+      0.5080051769161398,
+      0.5080051769161398,
+      0.5080051769161398,
+      0.5072730030182763,
+      0.5069998473311683,
+      0.5069475299767274,
+      0.5069475299767274,
+      0.5069354139470521,
+      0.5069354139470521,
+      0.5069354139470521,
+      0.5069354139470521,
+      0.5069354139470521,
+      0.5069354139470521,
+      0.5068894862045339,
+      0.5068894862045339,
+      0.5068894862045339,
+      0.5068894862045339,
+      0.5068894862045339,
+      0.5068894862045339,
+      0.5068894862045339,
+      0.5068797480625731,
+      0.5068788761462305,
+      0.5068755060256802,
+      0.5068755060256802,
+      0.5068755060256802,
+      0.5068755060256802,
+      0.50687550602568,
+      0.50687550602568,
+      0.5068754683459888,
+      0.5068754683459888,
+      0.5068754683459888
+    ],
+    "runtime_seconds": 0.35715570001048036,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 79,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 0.5,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 47.26241224991807
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 31.494153572156016
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 41.24343417792592
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.525
+    },
+    "candidate": {
+      "exposure_proxy": 0.35245495280078665,
+      "utilization_proxy": 0.6612950785405884,
+      "objective": 0.5068750156706876
+    },
+    "objective_improvement": 0.01812498432931242,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 1.4210854715202004e-14,
+    "convergence": [
+      0.5080051769161398,
+      0.5075047048349368,
+      0.5071779709332771,
+      0.5071779709332771,
+      0.507039132144613,
+      0.507039132144613,
+      0.507039132144613,
+      0.507039132144613,
+      0.5069203002082681,
+      0.5069203002082681,
+      0.5069203002082681,
+      0.5069203002082681,
+      0.5068899582527454,
+      0.5068771237211614,
+      0.5068764369400915,
+      0.5068764369400915,
+      0.5068764369400915,
+      0.5068755099259508,
+      0.5068755099259508,
+      0.5068755099259508,
+      0.5068755099259508,
+      0.5068751701477977,
+      0.5068750578879148,
+      0.5068750300082441,
+      0.5068750212200299,
+      0.5068750212200299,
+      0.5068750212200299,
+      0.5068750212200299,
+      0.5068750156706876,
+      0.5068750156706876,
+      0.5068750156706876
+    ],
+    "runtime_seconds": 0.37823289999505505,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 5,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 1.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 60.0
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 1.3322676295501878e-14
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 60.0
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.42500000000000004
+    },
+    "candidate": {
+      "exposure_proxy": 0.2000000000000001,
+      "utilization_proxy": 1.0,
+      "objective": 0.2000000000000001
+    },
+    "objective_improvement": 0.22499999999999995,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 1.4210854715202004e-14,
+    "convergence": [
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001
+    ],
+    "runtime_seconds": 0.40334799999254756,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 5,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 1.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 59.99999999999997
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 2.0660556598883772e-14
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 60.0
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.42500000000000004
+    },
+    "candidate": {
+      "exposure_proxy": 0.20000000000000012,
+      "utilization_proxy": 0.9999999999999996,
+      "objective": 0.20000000000000012
+    },
+    "objective_improvement": 0.22499999999999992,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012
+    ],
+    "runtime_seconds": 0.2900943999993615,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 23,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 1.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 59.99999999999997
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 2.0119632136385067e-14
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 59.99999999999999
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.42500000000000004
+    },
+    "candidate": {
+      "exposure_proxy": 0.20000000000000007,
+      "utilization_proxy": 0.9999999999999994,
+      "objective": 0.20000000000000007
+    },
+    "objective_improvement": 0.22499999999999998,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 1.4210854715202004e-14,
+    "convergence": [
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.20000000000000007
+    ],
+    "runtime_seconds": 0.3232904000033159,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 23,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 1.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 59.99999999999997
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 2.2065682614424986e-14
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 60.0
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.42500000000000004
+    },
+    "candidate": {
+      "exposure_proxy": 0.20000000000000012,
+      "utilization_proxy": 0.9999999999999996,
+      "objective": 0.20000000000000012
+    },
+    "objective_improvement": 0.22499999999999992,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012
+    ],
+    "runtime_seconds": 0.2256088999856729,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "ga",
+    "seed": 79,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 1.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 59.99999999999997
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 2.004840196156661e-14
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 59.99999999999999
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.42500000000000004
+    },
+    "candidate": {
+      "exposure_proxy": 0.20000000000000007,
+      "utilization_proxy": 0.9999999999999994,
+      "objective": 0.20000000000000007
+    },
+    "objective_improvement": 0.22499999999999998,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 1.4210854715202004e-14,
+    "convergence": [
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.2000000000000001,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007
+    ],
+    "runtime_seconds": 0.30512309999903664,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  },
+  {
+    "status": "EXPERIMENTAL_HYPOTHETICAL_ALLOCATION",
+    "formulation_version": "capacity-allocation-v1",
+    "algorithm": "pso",
+    "seed": 79,
+    "population": 16,
+    "iterations": 30,
+    "problem": {
+      "demand": 120,
+      "exposure_tradeoff": 1.0,
+      "destinations": [
+        {
+          "id": "Hypothetical A",
+          "capacity": 80,
+          "accessibility": 1,
+          "road_capacity": 70,
+          "resource_capacity": 60,
+          "exposure_weight": 0.1
+        },
+        {
+          "id": "Hypothetical B",
+          "capacity": 90,
+          "accessibility": 0.8,
+          "road_capacity": 90,
+          "resource_capacity": 90,
+          "exposure_weight": 0.8
+        },
+        {
+          "id": "Hypothetical C",
+          "capacity": 60,
+          "accessibility": 1,
+          "road_capacity": 60,
+          "resource_capacity": 60,
+          "exposure_weight": 0.3
+        }
+      ]
+    },
+    "units": "continuous visitor equivalents per common user-selected period",
+    "allocations": [
+      {
+        "id": "Hypothetical A",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 59.99999999999997
+      },
+      {
+        "id": "Hypothetical B",
+        "effective_capacity": 72.0,
+        "baseline": 45.0,
+        "candidate": 1.9984014443252818e-14
+      },
+      {
+        "id": "Hypothetical C",
+        "effective_capacity": 60.0,
+        "baseline": 37.5,
+        "candidate": 60.0
+      }
+    ],
+    "baseline": {
+      "exposure_proxy": 0.42500000000000004,
+      "utilization_proxy": 0.625,
+      "objective": 0.42500000000000004
+    },
+    "candidate": {
+      "exposure_proxy": 0.20000000000000012,
+      "utilization_proxy": 0.9999999999999996,
+      "objective": 0.20000000000000012
+    },
+    "objective_improvement": 0.22499999999999992,
+    "max_capacity_violation": 0.0,
+    "conservation_error": 0.0,
+    "convergence": [
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012,
+      0.20000000000000012
+    ],
+    "runtime_seconds": 0.26329320002696477,
+    "globally_optimal": false,
+    "limitations": [
+      "All capacities, accessibility and exposure weights are explicit user assumptions, not observed or validated local conditions.",
+      "Continuous visitor-equivalent allocation for one common period; fractional allocations are not dispatch instructions.",
+      "Exposure is a weighted proxy, not hazard probability, casualties, flood depth or measured tourist exposure.",
+      "Congestion is a capacity-utilization proxy, not a road-network traffic simulation.",
+      "GA/PSO return feasible candidate plans; no global optimum is claimed."
+    ]
+  }
+]

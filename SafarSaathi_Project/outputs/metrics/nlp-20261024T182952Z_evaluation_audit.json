@@ -1,0 +1,55 @@
+{
+  "model_id": "nlp-20261024T182952Z",
+  "evaluation_type": "post-hoc held-out replay; no retraining",
+  "source_rows": 17840,
+  "rows_after_cleaning": 12532,
+  "exact_duplicate_rows_removed": 5308,
+  "conflicting_label_text_groups": 0,
+  "train_rows": 10025,
+  "test_rows": 2507,
+  "exact_train_test_text_overlap": 0,
+  "normalised_text_overlap": 0,
+  "near_duplicate_method": "case-folded whitespace-normalised exact-match proxy only",
+  "near_duplicate_limitations": "Semantic and fuzzy near-duplicates were not exhaustively assessed; zero exact overlap is not proof of leakage-free evaluation.",
+  "accuracy": 0.8500199441563622,
+  "macro_f1": 0.8495165408050799,
+  "weighted_f1": 0.8499435657168573,
+  "classification_report": {
+    "NEGATIVE": {
+      "precision": 0.8511593118922962,
+      "recall": 0.8653992395437262,
+      "f1-score": 0.8582202111613876,
+      "support": 1315.0
+    },
+    "POSITIVE": {
+      "precision": 0.8487179487179487,
+      "recall": 0.8330536912751678,
+      "f1-score": 0.8408128704487722,
+      "support": 1192.0
+    },
+    "accuracy": 0.8500199441563622,
+    "macro avg": {
+      "precision": 0.8499386303051224,
+      "recall": 0.849226465409447,
+      "f1-score": 0.8495165408050799,
+      "support": 2507.0
+    },
+    "weighted avg": {
+      "precision": 0.8499985201476523,
+      "recall": 0.8500199441563622,
+      "f1-score": 0.8499435657168573,
+      "support": 2507.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1138,
+      177
+    ],
+    [
+      199,
+      993
+    ]
+  ],
+  "confusion_matrix_figure": "outputs/figures/nlp-20261024T182952Z_confusion_matrix.png"
+}

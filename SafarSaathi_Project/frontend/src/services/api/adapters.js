@@ -37,6 +37,7 @@ export function pageCards(tab, data, scenario) {
     kpi('SERVED VISITORS', scenario.scenario.served_visitors, 'Capacity accounting'),
     kpi('UNSERVED VISITORS', scenario.scenario.unserved_visitors, 'No exposure or injury inference'),
   ] : absent();
+  if (tab.includes('optim') && data?.status === 'OPTIMIZATION AVAILABLE') return [kpi('ENGINE', 'EXPERIMENTAL', data.status), kpi('GA / PSO', 'AVAILABLE', 'Seeded hypothetical allocation'), kpi('OBJECTIVE', 'ASSUMED PROXIES', 'Capacity and exposure trade-off'), kpi('OPTIMAL PLAN', 'NOT CLAIMED', 'Feasible heuristic candidate')];
   if (tab.includes('optim')) return [kpi('ENGINE', 'NOT AVAILABLE', 'OPTIMIZATION ENGINE NOT AVAILABLE'),
     kpi('GA / PSO', 'NOT IMPLEMENTED', 'No candidate generated'), kpi('OBJECTIVE', 'NOT DEFINED', 'Validated costs/benefits needed'), kpi('OPTIMAL PLAN', 'UNAVAILABLE', 'No optimization claim')];
   if (!data) return absent();

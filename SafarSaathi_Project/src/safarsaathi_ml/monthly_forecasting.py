@@ -159,9 +159,25 @@ def forecast_monthly(project,destination,horizon):
     entry,bundle=load_monthly(project);last=pd.Period(bundle['dates'][-1],freq='M')
     predictions=bundle['model'].forecast(bundle['values'],horizon)
     return {'model_id':MODEL_ID,'model_version':entry['model_version'],'destination':'IND','status':'historical_experimental_forecast',
-            'quality_status':'TRAINED_BUT_EXPERIMENTAL','latest_observed_date':str(last),'forecast_origin':str(last),'horizon':horizon,
+            'quality_status':_status(project),'latest_observed_date':str(last),'forecast_origin':str(last),'horizon':horizon,
             'units':entry['units'],'is_forecast':True,'target_definition':entry['target_definition'],
-            'forecasts':[{'date':str(last+h),'horizon':h,'prediction':p} for h,p in enumerate(predictions,1)],'limitations':LIMITATIONS}
+            'forecasts':[{'date':str(last+h),'horizon':h,'prediction':p} for h,p in enumerate(predictions,1)],'limitations':LIMITATIONS,
+            'explanation':_explanation(entry,bundle,predictions,last)}
+
+
+def _status(project):
+    from .release_gate import status_for
+    return status_for(project,MODEL_ID,'TRAINED_BUT_EXPERIMENTAL')
+
+
+def _explanation(entry,bundle,predictions,last):
+    try:
+        from .explain import MONTHLY_NAMES, explain
+        test=((entry.get('metrics') or {}).get('test') or {}).get(entry.get('method')) or {}
+        return explain(bundle['model'],monthly_features(bundle['values'],bundle['model'].first_month),MONTHLY_NAMES,predictions[0],test.get('1'),
+                       f'Latest observation {last}; explains the first forecast step')
+    except Exception:
+        return None
 
 
 def evaluate_monthly(project):

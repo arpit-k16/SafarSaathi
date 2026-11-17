@@ -1,4 +1,5 @@
 import React from 'react';
+import { isPageVisible } from '../services/pageVisibility.js';
 
 const navGroups = [
   {
@@ -74,7 +75,8 @@ export default function Sidebar({ activeTab, onSelectTab }) {
       {/* Nav List */}
       <div className="flex-1 overflow-y-auto px-space-sm py-space-md custom-scrollbar">
         <nav className="flex flex-col gap-space-md">
-          {navGroups.map((group) => (
+          {navGroups.map(group => ({ ...group, items: group.items.filter(item => isPageVisible(item.id)) }))
+            .filter(group => group.items.length > 0).map((group) => (
             <div key={group.title} className="flex flex-col gap-space-xs">
               <span className="px-space-sm font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-[10px] text-slate-400">
                 {group.title}

@@ -80,6 +80,7 @@ def load_scoped(project,kind):
     return entry,bundle
 
 def predict_scoped(project,kind,payload):
+    from .release_gate import status_for
     spec=SPECS[kind]
     if not isinstance(payload,dict) or set(payload)!={'geography','horizon'} or payload.get('geography')!=spec['geography'] or type(payload.get('horizon')) is not int or not 1<=payload['horizon']<=spec['max_horizon']:raise ValueError(f"Expected geography={spec['geography']} and integer horizon=1..{spec['max_horizon']} only.")
     entry,bundle=load_scoped(project,kind);horizon=payload['horizon'];origin=bundle['dates'][-1]
@@ -87,7 +88,7 @@ def predict_scoped(project,kind,payload):
         dates=pd.period_range(pd.Period(origin,freq='M')+1,periods=horizon,freq='M').astype(str).tolist();prediction=bundle['model'].predict(dates)
     else:dates=[str(int(origin)+1)];prediction=bundle['model'].forecast(bundle['values'],1)
     if not np.isfinite(prediction).all() or min(prediction)<0:raise ValueError('Invalid saved-model output.')
-    return {'status':'historical_experimental_forecast','model_id':entry['model_id'],'model_version':entry['model_version'],'quality_status':entry['quality_status'],'geography':spec['geography'],'target_definition':spec['target'],'units':spec['units'],'latest_observed_date':origin,'forecast_origin':origin,'horizon':horizon,'forecasts':[{'date':d,'horizon':i+1,'prediction':float(v)} for i,(d,v) in enumerate(zip(dates,prediction))],'limitations':spec['limitations']}
+    return {'status':'historical_experimental_forecast','model_id':entry['model_id'],'model_version':entry['model_version'],'quality_status':status_for(project,entry['model_id'],entry['quality_status']),'geography':spec['geography'],'target_definition':spec['target'],'units':spec['units'],'latest_observed_date':origin,'forecast_origin':origin,'horizon':horizon,'forecasts':[{'date':d,'horizon':i+1,'prediction':float(v)} for i,(d,v) in enumerate(zip(dates,prediction))],'limitations':spec['limitations']}
 
 def train_scoped(project,kind):
     spec=SPECS[kind]

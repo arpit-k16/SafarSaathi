@@ -5,6 +5,8 @@ decision-support system that links visitor demand with capacity, climate, flood 
 
 **Predict → simulate → optimise → explain → support human action.**
 
+**Live:** <https://safarsaathi-gd25.onrender.com> (free hosting: the first visit after a quiet spell takes about a minute to wake up)
+
 - Tourism demand forecasts with held-out error and explanations
 - A digital twin of 28 Uttarakhand destinations with a transparent Destination Stress Index and what-if scenarios
 - Hotspot clustering and anomaly detection (checked against the 2013 disaster and COVID)
